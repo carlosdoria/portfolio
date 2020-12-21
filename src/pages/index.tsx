@@ -16,19 +16,19 @@ export default function Home() {
     <React.Fragment>
       <Navbar />
       <S.Main>
-        <S.Section id="home">
-          <S.Data>
-            <S.Title>
+        <S.HomeSection id="home">
+          <S.HomeData>
+            <S.HomeTitle>
               Olá, <br />
               Sou
-              <S.Name> Carlos</S.Name>
+              <S.HomeTitleName> Carlos</S.HomeTitleName>
               <br />
               Desenvolvedor Front-End
-            </S.Title>
-            <S.ContactLink href="#">Contato</S.ContactLink>
-          </S.Data>
+            </S.HomeTitle>
+            <S.HomeContactLink href="#">Contato</S.HomeContactLink>
+          </S.HomeData>
 
-          <S.DivSocialMedias>
+          <S.HomeDivSocialMedias>
             <S.Icon href="#">
               <FaLinkedin />
             </S.Icon>
@@ -38,16 +38,56 @@ export default function Home() {
             <S.Icon href="#">
               <FaInstagram />
             </S.Icon>
-          </S.DivSocialMedias>
+          </S.HomeDivSocialMedias>
 
-          <S.DivImage>
-            <S.Image
+          <S.HomeDivImage>
+            <S.HomeImage
               src="https://github.com/carlosdoria.png"
-              alt="foto de perfil"></S.Image>
-          </S.DivImage>
-        </S.Section>
+              alt="foto de perfil"
+            />
+          </S.HomeDivImage>
+        </S.HomeSection>
 
-        <S.Section id="about"></S.Section>
+        <S.AboutSections id="about">
+          <S.SectionTitle>Sobre mim</S.SectionTitle>
+          <S.AboutContainer>
+            <S.AboutDivImage>
+              <S.AboutImage
+                src="https://github.com/carlosdoria.png"
+                alt="foto de perfil"
+              />
+            </S.AboutDivImage>
+
+            <div>
+              <S.AboutSubtitle>Sou Carlos</S.AboutSubtitle>
+              <S.AboutText>
+                Desenvolvedor Front-end Júnior e Advogado, focado em desenvolver
+                aplicações web com JavaScript e React.
+                <br />
+                Em 2018 me tornei bacharel em Direito formado pelo Centro
+                Universitário CESMAC, posteriormente iniciei minha carreira na
+                advocacia, atuando como advogado previdenciarista, durante minha
+                jornada desenvolvi diversas planilhas de cálculos em Excel, onde
+                aprendi sobre funções e macros.
+                <br />
+                No decorrer do desenvolvimentos das planilhas conheci o VBA -
+                Visual Basic for Applications, que foi meu primeiro contato com
+                uma linguagem de programação e nesse momento vi o imenso
+                universo por trás da programação e assim percebi o prazer que
+                tinha em desenvolver e solucionar problemas durante o
+                desenvolvimento de aplicações.
+                <br />
+                Por volta do segundo semestre deste ano tomei uma das decisões
+                mais difíceis, que foi realizar minha transição de carreira,
+                deixando a advocacia de lado para focar todo o meu tempo no
+                estudo e desenvolvimento de aplicações web, com foco em HTML,
+                CSS, JavaScritp e React. Desde então, venho me desafiando cada
+                vez mais a aprender coisas novas e me aperfeiçoar como
+                desenvolvedor.
+              </S.AboutText>
+            </div>
+          </S.AboutContainer>
+        </S.AboutSections>
       </S.Main>
     </React.Fragment>
   );

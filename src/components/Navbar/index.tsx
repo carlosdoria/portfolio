@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
     <S.Header>
       <S.Nav>
         <div>
-          <Link href="#">
+          <Link href="#home">
             <S.Logo>Carlos Dória</S.Logo>
           </Link>
         </div>
@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
         <S.ButtonsContainer activeMenu={enableMenu}>
           <S.NavList>
             <Button path="#">Home</Button>
-            <Button path="#">Sobre</Button>
+            <Button path="#about">Sobre</Button>
             <Button path="#">Skills</Button>
             <Button path="#">Work</Button>
             <Button path="#">Contato</Button>

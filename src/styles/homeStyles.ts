@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const Main = styled.main``;
 
-export const Section = styled.section`
+// SECTIONS
+
+export const HomeSection = styled.section`
   height: calc(100vh - 3rem);
-  row-gap: 1rem;
   max-width: 1024px;
   width: calc(100% - 2rem);
+  row-gap: 1rem;
 
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
@@ -16,26 +18,55 @@ export const Section = styled.section`
   grid-column-gap: 2rem;
 `;
 
-export const Data = styled.div`
+export const AboutSections = styled.section`
+  min-height: 100vh;
+`;
+
+export const SectionTitle = styled.h2`
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-top: var(--mb-3);
+  margin-bottom: var(--mb-4);
+  text-align: center;
+
+  :after {
+    position: absolute;
+    content: '';
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    background-color: var(--first-color);
+  }
+`;
+
+// HOME
+
+export const HomeData = styled.div`
   align-self: center;
 `;
 
-export const Title = styled.h1`
+export const HomeTitle = styled.h1`
   margin-bottom: var(--mb-5);
 
   font-size: var(--big-font-size);
 `;
 
-export const Name = styled.span`
+export const HomeTitleName = styled.span`
   color: var(--first-color);
 `;
 
-export const ContactLink = styled.a`
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
+export const HomeContactLink = styled.a`
   padding: 0.75rem 2.5rem;
+
+  display: inline-block;
+
+  color: #fff;
   font-weight: var(--font-semi);
+  background-color: var(--first-color);
   border-radius: 0.5rem;
 
   :hover {
@@ -43,7 +74,7 @@ export const ContactLink = styled.a`
   }
 `;
 
-export const DivSocialMedias = styled.div`
+export const HomeDivSocialMedias = styled.div`
   display: flex;
   flex-direction: column;
 `;
@@ -61,13 +92,49 @@ export const Icon = styled.a`
   }
 `;
 
-export const DivImage = styled.div`
+export const HomeDivImage = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 295px;
+
+  width: 70%;
 `;
 
-export const Image = styled.img`
+export const HomeImage = styled.img`
   border-radius: 9.3rem 7.5rem 9.3rem 5.6rem;
+`;
+
+// ABOUT
+
+export const AboutContainer = styled.div`
+  row-gap: 2rem;
+  text-align: center;
+
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+`;
+
+export const AboutDivImage = styled.div`
+  justify-self: center;
+`;
+
+export const AboutImage = styled.img`
+  width: 200px;
+  border-radius: 0.5rem;
+`;
+
+// export const AboutDivText = styled.div``;
+
+export const AboutSubtitle = styled.h2`
+  margin-bottom: var(--mb-2);
+`;
+
+export const AboutText = styled.p`
+  text-indent: 3rem;
+  text-align: justify;
 `;

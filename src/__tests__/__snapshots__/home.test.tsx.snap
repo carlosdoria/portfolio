@@ -123,7 +123,7 @@ exports[`<Home /> should render the heading 1`] = `
         >
           <a
             class="c6"
-            href="#"
+            href="#about"
           >
             Sobre
           </a>

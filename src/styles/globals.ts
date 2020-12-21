@@ -61,12 +61,16 @@ const GlobalStyles = createGlobalStyle`
 
     font-size: var(----normal-font-size);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--secondary-text-color);
+    color: var(--second-color);
   }
 
-  section {
+  /* h1,h2,p{
+    margin: 0;
+} */
+
+  section + section {
     padding-top: 3rem;
-  padding-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   a {
