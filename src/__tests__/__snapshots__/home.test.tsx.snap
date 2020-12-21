@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render the heading 1`] = `
+.c5 {
+  margin-bottom: var(--mb-4);
+}
+
+.c6 {
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+.c6:hover {
+  position: relative;
+}
+
+.c6:hover::after {
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  content: '';
+  height: 0.18rem;
+  width: 100%;
+  background-color: var(--first-color);
+}
+
+.c0 {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(146,161,176,0.15);
+}
+
+.c1 {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+  height: var(--header-height);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: var(--font-semi);
+}
+
+.c2 {
+  color: var(--second-color);
+}
+
+.c4 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c7 {
+  color: var(--second-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+  .c3 {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+
+<header
+  class="c0"
+>
+  <nav
+    class="c1"
+  >
+    <div>
+      <a
+        class="c2"
+      >
+        Carlos Dória
+      </a>
+    </div>
+    <div
+      class="c3"
+    >
+      <ul
+        class="c4"
+      >
+        <li
+          class="c5"
+        >
+          <a
+            class="c6"
+            href="#"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="c5"
+        >
+          <a
+            class="c6"
+            href="#"
+          >
+            Sobre
+          </a>
+        </li>
+        <li
+          class="c5"
+        >
+          <a
+            class="c6"
+            href="#"
+          >
+            Skills
+          </a>
+        </li>
+        <li
+          class="c5"
+        >
+          <a
+            class="c6"
+            href="#"
+          >
+            Work
+          </a>
+        </li>
+        <li
+          class="c5"
+        >
+          <a
+            class="c6"
+            href="#"
+          >
+            Contato
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="c7"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </div>
+  </nav>
+</header>
+`;
