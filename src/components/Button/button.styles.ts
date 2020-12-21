@@ -6,6 +6,7 @@ export const Container = styled.li`
 
 export const Link = styled.a`
   position: relative;
+
   color: #fff;
   cursor: pointer;
 

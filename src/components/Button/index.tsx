@@ -1,4 +1,4 @@
-import * as S from './buttonStyles';
+import * as S from './button.styles';
 
 interface Text {
   children: string;

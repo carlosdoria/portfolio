@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import * as S from 'styles/pageNotFoundStyles';
+import * as S from 'styles/pageNotFound.styles';
 
 const PageNotFound = () => {
   const router = useRouter();

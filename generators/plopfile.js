@@ -1,34 +1,57 @@
 module.exports = function (plop) {
   // controller generator
   plop.setGenerator('component', {
-    description: 'application component logic',
+    description: 'Create component',
     prompts: [
       {
         type: 'input',
         name: 'name',
-        message: 'controller name please',
+        message: 'component name please',
       },
     ],
     actions: [
       {
         type: 'add',
         path: '../src/components/{{pascalCase name}}/index.tsx',
-        templateFile: 'templates/index.tsx.hbs',
+        templateFile: 'templates/components/index.tsx.hbs',
       },
       {
         type: 'add',
         path: '../src/components/{{pascalCase name}}/{{name}}Styles.ts',
-        templateFile: 'templates/styles.ts.hbs',
+        templateFile: 'templates/components/styles.ts.hbs',
       },
       {
         type: 'add',
         path: '../src/components/{{pascalCase name}}/{{name}}.stories.tsx',
-        templateFile: 'templates/stories.tsx.hbs',
+        templateFile: 'templates/components/stories.tsx.hbs',
       },
       {
         type: 'add',
         path: '../src/components/{{pascalCase name}}/{{name}}.test.tsx',
-        templateFile: 'templates/test.tsx.hbs',
+        templateFile: 'templates/components/test.tsx.hbs',
+      },
+    ],
+  });
+
+  plop.setGenerator('page', {
+    description: 'Create page',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'page name please',
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: '../src/pages/{{name}}.tsx',
+        templateFile: 'templates/pages/index.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: '../src/styles/{{name}}.styles.ts',
+        templateFile: 'templates/pages/styles.ts.hbs',
       },
     ],
   });
