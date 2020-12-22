@@ -26,6 +26,8 @@ interface IWorks {
 }
 
 export default function Home() {
+  const YEAR = new Date();
+
   const [skills, setSkills] = useState<ISkill[]>([
     {
       name: 'JavaScript',
@@ -76,7 +78,6 @@ export default function Home() {
       <Navbar />
       <S.Main>
         {/* === SECTION HOME === */}
-
         <S.HomeSection id="home">
           <S.HomeData>
             <S.HomeTitle>
@@ -110,7 +111,6 @@ export default function Home() {
         </S.HomeSection>
 
         {/* === SECTION ABOUT === */}
-
         <S.AboutSection id="about">
           <S.SectionTitle>Sobre mim</S.SectionTitle>
           <S.AboutContainer>
@@ -156,7 +156,6 @@ export default function Home() {
         </S.AboutSection>
 
         {/* === SECTION SKILLS === */}
-
         <S.SkillsSection id="skills">
           <S.SectionTitle>Minhas skills</S.SectionTitle>
           <S.SkillsContainer>
@@ -185,7 +184,6 @@ export default function Home() {
         </S.SkillsSection>
 
         {/* === SECTION WORKS === */}
-
         <S.WorksSection id="works">
           <S.SectionTitle>Trabalhos</S.SectionTitle>
           <S.WorksContainer>
@@ -200,7 +198,6 @@ export default function Home() {
         </S.WorksSection>
 
         {/* === SECTION CONTACT === */}
-
         <S.ContactSection id="contact">
           <S.SectionTitle>Contato</S.SectionTitle>
           <S.ContactContainer>
@@ -212,6 +209,23 @@ export default function Home() {
             </S.Form>
           </S.ContactContainer>
         </S.ContactSection>
+
+        {/* === SECTION FOOTER === */}
+        <S.Footer>
+          <S.FooterTitle>Carlos</S.FooterTitle>
+          <S.FooterSocialMedias>
+            <S.FooterIcon href="#">
+              <FaLinkedin />
+            </S.FooterIcon>
+            <S.FooterIcon href="#">
+              <FaGithubAlt />
+            </S.FooterIcon>
+            <S.FooterIcon href="#">
+              <FaInstagram />
+            </S.FooterIcon>
+          </S.FooterSocialMedias>
+          {'\u00A9'} {YEAR.getFullYear()}, copyright all rights reserved
+        </S.Footer>
       </S.Main>
     </React.Fragment>
   );
