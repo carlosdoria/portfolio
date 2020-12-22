@@ -22,7 +22,9 @@ export const AboutSection = styled.section`
   min-height: 100vh;
 `;
 
-export const SkillsSection = styled.section``;
+export const SkillsSection = styled.section`
+  min-height: 100vh;
+`;
 
 export const SectionTitle = styled.h2`
   position: relative;
@@ -143,8 +145,30 @@ export const AboutText = styled.p`
 
 // ===== SKILLS =====
 
-export const SkillsContainer = styled.div``;
+export const SkillsContainer = styled.div`
+  row-gap: 2rem;
+  text-align: center;
 
-export const SkillsSubtitle = styled.h2``;
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+`;
 
-export const SkillsText = styled.p``;
+export const SkillsSubtitle = styled.h2`
+  margin-bottom: var(--mb-2);
+`;
+
+export const SkillsText = styled.p`
+  margin-bottom: var(--mb-2);
+
+  text-indent: 3rem;
+  text-align: justify;
+`;
+
+export const SkillImage = styled.img`
+  border-radius: 0.5rem;
+`;

@@ -1,11 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Skills /> should render the heading 1`] = `
-<main
-  class=""
+.c0 {
+  position: relative;
+  margin-bottom: var(--mb-4);
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: var(--font-semi);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 25px rgba(14,36,49,0.15);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  height: 2rem;
+  width: 2rem;
+  margin-right: var(--mb-2);
+  color: var(--first-color);
+}
+
+.c3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: var(--z-back);
+  height: 0.25rem;
+  background-color: var(--first-color);
+  border-radius: 0.5rem;
+}
+
+<div
+  class="c0"
 >
-  <h1>
-    Skills
-  </h1>
-</main>
+  <div
+    class="c1"
+  >
+    <img
+      alt="undefined logo"
+      class="c2"
+    />
+    <span
+      class=""
+    />
+  </div>
+  <div>
+    <span
+      class=""
+    />
+  </div>
+  <div
+    class="c3"
+  />
+</div>
 `;
