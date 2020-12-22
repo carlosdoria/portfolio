@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaLinkedin, FaGithubAlt, FaInstagram } from 'react-icons/fa';
 
 import Skills from 'components/Skills';
+import Works from 'components/Works';
 
 // import Prismic from 'prismic-javascript';
 // import { Client } from '../../prismic-configuration';
@@ -17,6 +18,11 @@ interface ISkill {
   name: string;
   percentage: string;
   link: string;
+}
+
+interface IWorks {
+  imageLink: string;
+  imageDescription: string;
 }
 
 export default function Home() {
@@ -44,6 +50,24 @@ export default function Home() {
       percentage: '70%',
       link:
         'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png',
+    },
+  ]);
+
+  const [works, setWorks] = useState<IWorks[]>([
+    {
+      imageLink:
+        'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',
+      imageDescription: 'imagem com dois computadores',
+    },
+    {
+      imageLink:
+        'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',
+      imageDescription: 'imagem com dois computadores',
+    },
+    {
+      imageLink:
+        'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',
+      imageDescription: 'imagem com dois computadores',
     },
   ]);
 
@@ -161,6 +185,21 @@ export default function Home() {
             />
           </S.SkillsContainer>
         </S.SkillsSection>
+
+        {/* === SECTION HOME === */}
+
+        <S.WorksSection id="works">
+          <S.SectionTitle>Trabalhos</S.SectionTitle>
+          <S.WorksContainer>
+            {works.map((work, index) => (
+              <Works
+                key={index}
+                imageLink={work.imageLink}
+                imageDescription={work.imageDescription}
+              />
+            ))}
+          </S.WorksContainer>
+        </S.WorksSection>
       </S.Main>
     </React.Fragment>
   );

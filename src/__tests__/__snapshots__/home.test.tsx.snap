@@ -143,9 +143,9 @@ exports[`<Home /> should render the heading 1`] = `
         >
           <a
             class="c6"
-            href="#"
+            href="#works"
           >
-            Work
+            Trabalhos
           </a>
         </li>
         <li

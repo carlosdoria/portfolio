@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
             <Button path="#home">Home</Button>
             <Button path="#about">Sobre</Button>
             <Button path="#skills">Skills</Button>
-            <Button path="#">Work</Button>
+            <Button path="#works">Trabalhos</Button>
             <Button path="#">Contato</Button>
           </S.NavList>
         </S.ButtonsContainer>
