@@ -30,6 +30,10 @@ export const WorksSection = styled.section`
   min-height: 100vh;
 `;
 
+export const ContactSection = styled.section`
+  min-height: 100vh;
+`;
+
 export const SectionTitle = styled.h2`
   position: relative;
   font-size: var(--h2-font-size);
@@ -177,7 +181,7 @@ export const SkillImage = styled.img`
   border-radius: 0.5rem;
 `;
 
-// ===== SKILLS =====
+// ===== WORKS =====
 
 export const WorksContainer = styled.div`
   row-gap: 2rem;
@@ -189,4 +193,90 @@ export const WorksContainer = styled.div`
   width: calc(100% - 2rem);
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
+`;
+
+// ===== CONTACT =====
+
+export const ContactContainer = styled.div`
+  /* row-gap: 2rem;
+  justify-items: center; */
+
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+`;
+
+export const Form = styled.form``;
+
+export const InputText = styled.input`
+  width: 100%;
+
+  margin-bottom: var(--mb-4);
+
+  padding: 1rem;
+
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+
+  border: 1.5px solid var(--second-color);
+  border-radius: 0.5rem;
+  outline: none;
+`;
+
+export const InputEmail = styled.input`
+  width: 100%;
+
+  margin-bottom: var(--mb-4);
+
+  padding: 1rem;
+
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+
+  border: 1.5px solid var(--second-color);
+  border-radius: 0.5rem;
+  outline: none;
+`;
+
+export const TextArea = styled.textarea`
+  width: 100%;
+
+  margin-bottom: var(--mb-4);
+
+  padding: 1rem;
+
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+
+  border: 1.5px solid var(--second-color);
+  border-radius: 0.5rem;
+  outline: none;
+`;
+
+export const InputButton = styled.input`
+  margin-left: auto;
+
+  padding: 0.75rem 2.5rem;
+
+  display: block;
+
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+
+  color: #fff;
+  background-color: var(--first-color);
+
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+
+  cursor: pointer;
+
+  :hover {
+    box-shadow: 0 10px 36px rgba(1, 0, 0, 0.4);
+  }
 `;

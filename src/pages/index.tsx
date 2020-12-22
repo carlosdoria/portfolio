@@ -124,34 +124,32 @@ export default function Home() {
             <div>
               <S.AboutSubtitle>Sou Carlos</S.AboutSubtitle>
               <S.AboutText>
-                <blockquote>
-                  Desenvolvedor Front-end Júnior e Advogado, focado em
-                  desenvolver aplicações web com JavaScript e React.
-                </blockquote>
-                <blockquote>
-                  Em 2018 me tornei bacharel em Direito formado pelo Centro
-                  Universitário CESMAC, posteriormente iniciei minha carreira na
-                  advocacia, atuando como advogado previdenciarista, durante
-                  minha jornada desenvolvi diversas planilhas de cálculos em
-                  Excel, onde aprendi sobre funções e macros.
-                </blockquote>
-                <blockquote>
-                  No decorrer do desenvolvimentos das planilhas conheci o VBA -
-                  Visual Basic for Applications, que foi meu primeiro contato
-                  com uma linguagem de programação e nesse momento vi o imenso
-                  universo por trás da programação e assim percebi o prazer que
-                  tinha em desenvolver e solucionar problemas durante o
-                  desenvolvimento de aplicações.
-                </blockquote>
-                <blockquote>
-                  Por volta do segundo semestre deste ano tomei uma das decisões
-                  mais difíceis, que foi realizar minha transição de carreira,
-                  deixando a advocacia de lado para focar todo o meu tempo no
-                  estudo e desenvolvimento de aplicações web, com foco em HTML,
-                  CSS, JavaScritp e React. Desde então, venho me desafiando cada
-                  vez mais a aprender coisas novas e me aperfeiçoar como
-                  desenvolvedor.
-                </blockquote>
+                Desenvolvedor Front-end Júnior e Advogado, focado em desenvolver
+                aplicações web com JavaScript e React.{' '}
+              </S.AboutText>
+              <S.AboutText>
+                Em 2018 me tornei bacharel em Direito formado pelo Centro
+                Universitário CESMAC, posteriormente iniciei minha carreira na
+                advocacia, atuando como advogado previdenciarista, durante minha
+                jornada desenvolvi diversas planilhas de cálculos em Excel, onde
+                aprendi sobre funções e macros.{' '}
+              </S.AboutText>
+              <S.AboutText>
+                No decorrer do desenvolvimentos das planilhas conheci o VBA -
+                Visual Basic for Applications, que foi meu primeiro contato com
+                uma linguagem de programação e nesse momento vi o imenso
+                universo por trás da programação e assim percebi o prazer que
+                tinha em desenvolver e solucionar problemas durante o
+                desenvolvimento de aplicações.{' '}
+              </S.AboutText>
+              <S.AboutText>
+                Por volta do segundo semestre deste ano tomei uma das decisões
+                mais difíceis, que foi realizar minha transição de carreira,
+                deixando a advocacia de lado para focar todo o meu tempo no
+                estudo e desenvolvimento de aplicações web, com foco em HTML,
+                CSS, JavaScritp e React. Desde então, venho me desafiando cada
+                vez mais a aprender coisas novas e me aperfeiçoar como
+                desenvolvedor.
               </S.AboutText>
             </div>
           </S.AboutContainer>
@@ -186,7 +184,7 @@ export default function Home() {
           </S.SkillsContainer>
         </S.SkillsSection>
 
-        {/* === SECTION HOME === */}
+        {/* === SECTION WORKS === */}
 
         <S.WorksSection id="works">
           <S.SectionTitle>Trabalhos</S.SectionTitle>
@@ -200,6 +198,20 @@ export default function Home() {
             ))}
           </S.WorksContainer>
         </S.WorksSection>
+
+        {/* === SECTION CONTACT === */}
+
+        <S.ContactSection id="contact">
+          <S.SectionTitle>Contato</S.SectionTitle>
+          <S.ContactContainer>
+            <S.Form>
+              <S.InputText type="text" placeholder="Nome" />
+              <S.InputEmail type="email" placeholder="Email" />
+              <S.TextArea cols={0} rows={10}></S.TextArea>
+              <S.InputButton type="button" value="Enviar" />
+            </S.Form>
+          </S.ContactContainer>
+        </S.ContactSection>
       </S.Main>
     </React.Fragment>
   );
