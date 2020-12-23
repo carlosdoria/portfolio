@@ -60,7 +60,9 @@ exports[`<Home /> should render the heading 1`] = `
 }
 
 .c2 {
+  font-weight: bold;
   color: var(--second-color);
+  cursor: pointer;
 }
 
 .c4 {
@@ -75,7 +77,40 @@ exports[`<Home /> should render the heading 1`] = `
   cursor: pointer;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (min-width:768px) {
+  .c5 {
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c6 {
+    color: var(--second-color);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    height: calc(var(--header-height) + 1rem);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    height: calc(var(--header-height) + 2rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width:767px) {
   .c3 {
     position: fixed;
     top: var(--header-height);
@@ -87,6 +122,114 @@ exports[`<Home /> should render the heading 1`] = `
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
+}
+
+@media screen and (min-width:767px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:1024px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:1024px) {
+
+}
+
+@media screen and (min-width:600px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:520px) {
+
+}
+
+@media screen and (min-width:1020px) and (min-height:500px) {
+
+}
+
+@media screen and (min-width:925px) and (min-height:875px) {
+
+}
+
+@media screen and (max-width:425px) and (max-height:490px) {
+
+}
+
+@media screen and (min-width:1024px) {
+
+}
+
+@media screen and (max-width:425px) and (max-height:490px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (max-width:425px) and (max-height:490px) {
+
+}
+
+@media screen and (min-height:575px) {
+
+}
+
+@media screen and (min-width:768px) and (min-height:650px) {
+
+}
+
+@media screen and (min-width:1045px) and (min-height:800px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
 }
 
 <header

@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
 
-        <S.ButtonsContainer activeMenu={enableMenu}>
+        <S.NavMenu activeMenu={enableMenu}>
           <S.NavList>
             <Button path="#home">Home</Button>
             <Button path="#about">Sobre</Button>
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
             <Button path="#works">Trabalhos</Button>
             <Button path="#contact">Contato</Button>
           </S.NavList>
-        </S.ButtonsContainer>
+        </S.NavMenu>
 
         <S.IconMenu>
           <FiMenu onClick={() => setEnableMenu(!enableMenu)} />

@@ -14,18 +14,26 @@ const GlobalStyles = createGlobalStyle`
   }
   /* VARIEBLE FONTS AND TYPES */
   :root {
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 0.938rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    :root {
-    --big-font-size: 3.5rem;
-    --h2-font-size: 2rem;
+    --extraLarge-font-size: 2.8rem;
+    --large-font-size: 2rem;
+    --medium-font-size: 1.8rem;
+    --h2-font-size: 1.8rem;
     --normal-font-size: 1rem;
+
+
+    @media screen and (min-width: 600px) {
+      --extraLarge-font-size: 4rem;
+      --large-font-size: 2.8rem;
+      --medium-font-size: 2.8rem;
+      --h2-font-size: 2.4rem;
+      --normal-font-size: 1.1rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      --large-font-size: 3.3rem;
     }
   }
+
 
   :root {
     --mb-1: 0.5rem;
@@ -51,26 +59,28 @@ const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100vh;
-    /* background-color: #ecf1f8; */
 
     scroll-behavior: smooth;
   }
 
   body {
-    margin: var(----header-height) 0 0 0;
-
-    font-size: var(----normal-font-size);
+    font-size: var(--normal-font-size);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--second-color);
-  }
 
-  /* h1,h2,p{
-    margin: 0;
-} */
+    @media screen and (max-height: 650px) {
+      margin-top: var(--header-height);
+    }
+  }
 
   section + section {
     padding-top: 3rem;
     padding-bottom: 2rem;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+    }
   }
 
   a {
@@ -82,6 +92,8 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     display: block;
   }
+
+
 `;
 
 export default GlobalStyles;

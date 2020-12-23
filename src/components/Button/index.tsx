@@ -8,7 +8,7 @@ interface Text {
 const Button = ({ children, path }: Text) => {
   return (
     <S.Container>
-      <S.Link href={path}>{children}</S.Link>
+      <S.NavLink href={path}>{children}</S.NavLink>
     </S.Container>
   );
 };

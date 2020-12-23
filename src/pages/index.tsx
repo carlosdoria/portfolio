@@ -87,7 +87,9 @@ export default function Home() {
               <br />
               Desenvolvedor Front-End
             </S.HomeTitle>
-            <S.HomeContactLink href="#">Contato</S.HomeContactLink>
+            <div>
+              <S.HomeContactLink href="#">Contato</S.HomeContactLink>
+            </div>
           </S.HomeData>
 
           <S.HomeDivSocialMedias>
@@ -159,23 +161,26 @@ export default function Home() {
         <S.SkillsSection id="skills">
           <S.SectionTitle>Minhas skills</S.SectionTitle>
           <S.SkillsContainer>
-            <S.SkillsSubtitle>Profissional Skills</S.SkillsSubtitle>
-            <S.SkillsText>
-              Por volta do segundo semestre deste ano tomei uma das decisões
-              mais difíceis, que foi realizar minha transição de carreira,
-              deixando a advocacia de lado para focar todo o meu tempo no estudo
-              e desenvolvimento de aplicações web, com foco em HTML, CSS,
-              JavaScritp e React. Desde então, venho me desafiando cada vez mais
-              a aprender coisas novas e me aperfeiçoar como desenvolvedor.
-            </S.SkillsText>
-            {skills.map((skill, index) => (
-              <Skills
-                key={index}
-                name={skill.name}
-                percentage={skill.percentage}
-                link={skill.link}
-              />
-            ))}
+            <div>
+              <S.SkillsSubtitle>Profissional Skills</S.SkillsSubtitle>
+              <S.SkillsText>
+                Por volta do segundo semestre deste ano tomei uma das decisões
+                mais difíceis, que foi realizar minha transição de carreira,
+                deixando a advocacia de lado para focar todo o meu tempo no
+                estudo e desenvolvimento de aplicações web, com foco em HTML,
+                CSS, JavaScritp e React. Desde então, venho me desafiando cada
+                vez mais a aprender coisas novas e me aperfeiçoar como
+                desenvolvedor.
+              </S.SkillsText>
+              {skills.map((skill, index) => (
+                <Skills
+                  key={index}
+                  name={skill.name}
+                  percentage={skill.percentage}
+                  link={skill.link}
+                />
+              ))}
+            </div>
             <S.SkillImage
               src="https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg"
               alt="imagem com dois computadores"
