@@ -1,5 +1,11 @@
-import React, { useState } from 'react';
-import { FaLinkedin, FaGithubAlt, FaInstagram } from 'react-icons/fa';
+import React, { useRef, useState } from 'react';
+import {
+  FaLinkedin,
+  FaGithubAlt,
+  FaInstagram,
+  FaWhatsapp,
+} from 'react-icons/fa';
+// import ScrollReveal from 'scrollreveal';
 
 import Skills from 'components/Skills';
 import Works from 'components/Works';
@@ -73,6 +79,17 @@ export default function Home() {
     },
   ]);
 
+  const homeTitle = useRef(null);
+
+  // ScrollReveal().reveal('oi', {
+  //   origin: 'top',
+  //   distance: '80px',
+  //   duration: 2000,
+  //   reset: true,
+  // });
+
+  // sr.reveal(homeTitle, {});
+
   return (
     <React.Fragment>
       <Navbar />
@@ -80,7 +97,7 @@ export default function Home() {
         {/* === SECTION HOME === */}
         <S.HomeSection id="home">
           <S.HomeData>
-            <S.HomeTitle>
+            <S.HomeTitle className="oi" ref={homeTitle}>
               Olá, <br />
               Sou
               <S.HomeTitleName> Carlos</S.HomeTitleName>
@@ -88,19 +105,32 @@ export default function Home() {
               Desenvolvedor Front-End
             </S.HomeTitle>
             <div>
-              <S.HomeContactLink href="#">Contato</S.HomeContactLink>
+              <S.HomeContactLink
+                href="https://api.whatsapp.com/send?phone=5582988970954"
+                target="_blank">
+                Contato
+              </S.HomeContactLink>
             </div>
           </S.HomeData>
 
           <S.HomeDivSocialMedias>
-            <S.Icon href="#">
+            <S.Icon
+              href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
+              target="_blank">
               <FaLinkedin />
             </S.Icon>
-            <S.Icon href="#">
+            <S.Icon href="https://github.com/carlosdoria" target="_blank">
               <FaGithubAlt />
             </S.Icon>
-            <S.Icon href="#">
+            <S.Icon
+              href="https://www.instagram.com/carlosc.doria/"
+              target="_blank">
               <FaInstagram />
+            </S.Icon>
+            <S.Icon
+              href="https://api.whatsapp.com/send?phone=5582988970954"
+              target="_blank">
+              <FaWhatsapp />
             </S.Icon>
           </S.HomeDivSocialMedias>
 
@@ -217,16 +247,25 @@ export default function Home() {
 
         {/* === SECTION FOOTER === */}
         <S.Footer>
-          <S.FooterTitle>Carlos</S.FooterTitle>
+          {/* <S.FooterTitle>Carlos</S.FooterTitle> */}
           <S.FooterSocialMedias>
-            <S.FooterIcon href="#">
+            <S.FooterIcon
+              href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
+              target="_blank">
               <FaLinkedin />
             </S.FooterIcon>
-            <S.FooterIcon href="#">
+            <S.FooterIcon href="https://github.com/carlosdoria" target="_blank">
               <FaGithubAlt />
             </S.FooterIcon>
-            <S.FooterIcon href="#">
+            <S.FooterIcon
+              href="https://www.instagram.com/carlosc.doria/"
+              target="_blank">
               <FaInstagram />
+            </S.FooterIcon>
+            <S.FooterIcon
+              href="https://api.whatsapp.com/send?phone=5582988970954"
+              target="_blank">
+              <FaWhatsapp />
             </S.FooterIcon>
           </S.FooterSocialMedias>
           {'\u00A9'} {YEAR.getFullYear()}, copyright all rights reserved

@@ -2,8 +2,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FiMenu } from 'react-icons/fi';
 
-import Button from '../Button';
-
 import * as S from './navbar.styles';
 
 const Navbar: React.FC = () => {
@@ -20,11 +18,21 @@ const Navbar: React.FC = () => {
 
         <S.NavMenu activeMenu={enableMenu}>
           <S.NavList>
-            <Button path="#home">Home</Button>
-            <Button path="#about">Sobre</Button>
-            <Button path="#skills">Skills</Button>
-            <Button path="#works">Trabalhos</Button>
-            <Button path="#contact">Contato</Button>
+            <S.NavContainer>
+              <S.NavLink href="#home">Home</S.NavLink>
+            </S.NavContainer>
+            <S.NavContainer>
+              <S.NavLink href="#about">Sobre</S.NavLink>
+            </S.NavContainer>
+            <S.NavContainer>
+              <S.NavLink href="#skills">Skills</S.NavLink>
+            </S.NavContainer>
+            <S.NavContainer>
+              <S.NavLink href="#works">Trabalhos</S.NavLink>
+            </S.NavContainer>
+            <S.NavContainer>
+              <S.NavLink href="#contact">Contato</S.NavLink>
+            </S.NavContainer>
           </S.NavList>
         </S.NavMenu>
 

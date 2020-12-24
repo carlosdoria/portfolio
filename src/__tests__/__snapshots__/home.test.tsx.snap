@@ -1,30 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> should render the heading 1`] = `
-.c5 {
-  margin-bottom: var(--mb-4);
-}
-
-.c6 {
-  position: relative;
-  color: #fff;
-  cursor: pointer;
-}
-
-.c6:hover {
-  position: relative;
-}
-
-.c6:hover::after {
-  position: absolute;
-  left: 0;
-  top: 2rem;
-  content: '';
-  height: 0.18rem;
-  width: 100%;
-  background-color: var(--first-color);
-}
-
 .c0 {
   width: 100%;
   position: fixed;
@@ -71,23 +47,34 @@ exports[`<Home /> should render the heading 1`] = `
   list-style: none;
 }
 
+.c5 {
+  margin-bottom: var(--mb-4);
+}
+
+.c6 {
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+.c6:hover {
+  position: relative;
+}
+
+.c6:hover::after {
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  content: '';
+  height: 0.18rem;
+  width: 100%;
+  background-color: var(--first-color);
+}
+
 .c7 {
   color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-@media screen and (min-width:768px) {
-  .c5 {
-    margin-left: var(--mb-6);
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c6 {
-    color: var(--second-color);
-  }
 }
 
 @media screen and (min-width:768px) {
@@ -131,6 +118,19 @@ exports[`<Home /> should render the heading 1`] = `
     display: -ms-flexbox;
     display: flex;
     padding-top: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c5 {
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c6 {
+    color: var(--second-color);
   }
 }
 
