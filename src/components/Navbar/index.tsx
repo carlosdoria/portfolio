@@ -19,19 +19,33 @@ const Navbar: React.FC = () => {
         <S.NavMenu activeMenu={enableMenu}>
           <S.NavList>
             <S.NavContainer>
-              <S.NavLink href="#home">Home</S.NavLink>
+              <S.NavLink
+                href="#home"
+                onClick={e => {
+                  setEnableMenu(false), console.log(e);
+                }}>
+                Home
+              </S.NavLink>
             </S.NavContainer>
             <S.NavContainer>
-              <S.NavLink href="#about">Sobre</S.NavLink>
+              <S.NavLink href="#about" onClick={() => setEnableMenu(false)}>
+                Sobre
+              </S.NavLink>
             </S.NavContainer>
             <S.NavContainer>
-              <S.NavLink href="#skills">Skills</S.NavLink>
+              <S.NavLink href="#skills" onClick={() => setEnableMenu(false)}>
+                Skills
+              </S.NavLink>
             </S.NavContainer>
             <S.NavContainer>
-              <S.NavLink href="#works">Trabalhos</S.NavLink>
+              <S.NavLink href="#works" onClick={() => setEnableMenu(false)}>
+                Trabalhos
+              </S.NavLink>
             </S.NavContainer>
             <S.NavContainer>
-              <S.NavLink href="#contact">Contato</S.NavLink>
+              <S.NavLink href="#contact" onClick={() => setEnableMenu(false)}>
+                Contato
+              </S.NavLink>
             </S.NavContainer>
           </S.NavList>
         </S.NavMenu>
