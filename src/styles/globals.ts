@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     --first-color: #4070f4;
     --second-color: #0E2431;
   }
+
   /* VARIEBLE FONTS AND TYPES */
   :root {
     --extraLarge-font-size: 2.8rem;
@@ -19,7 +20,6 @@ const GlobalStyles = createGlobalStyle`
     --medium-font-size: 1.8rem;
     --h2-font-size: 1.8rem;
     --normal-font-size: 1rem;
-
 
     @media screen and (min-width: 600px) {
       --extraLarge-font-size: 4rem;
@@ -33,7 +33,6 @@ const GlobalStyles = createGlobalStyle`
       --large-font-size: 3.3rem;
     }
   }
-
 
   :root {
     --mb-1: 0.5rem;
@@ -63,9 +62,9 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  body {
+  body, textarea {
     font-size: var(--normal-font-size);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--second-color);
 
     @media screen and (max-height: 650px) {
