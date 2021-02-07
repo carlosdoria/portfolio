@@ -71,6 +71,7 @@ export const SkillsText = styled.p`
 
   text-indent: 3rem;
   text-align: justify;
+  line-height: 1.6rem;
 `
 
 export const SkillImage = styled.img`

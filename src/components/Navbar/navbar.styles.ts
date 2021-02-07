@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface INavMenu {
   activeMenu: boolean;
@@ -16,7 +16,7 @@ export const Header = styled.header`
   @media screen and (min-width: 768px) {
     font-size: 1.3rem;
   }
-`;
+`
 
 export const Nav = styled.nav`
   max-width: 1024px;
@@ -43,20 +43,20 @@ export const Nav = styled.nav`
     margin-left: auto;
     margin-right: auto;
   }
-`;
+`
 
 export const Logo = styled.a`
   font-weight: bold;
   color: var(--second-color);
 
   cursor: pointer;
-`;
+`
 
 export const NavMenu = styled.div<INavMenu>`
   @media screen and (max-width: 767px) {
     position: fixed;
     top: var(--header-height);
-    right: ${props => (props.activeMenu ? 0 : '-100%')};
+    right: ${props => ( props.activeMenu ? 0 : '-100%' )};
 
     width: 80%;
     height: 100%;
@@ -67,7 +67,7 @@ export const NavMenu = styled.div<INavMenu>`
 
     transition: 0.5s;
   }
-`;
+`
 
 export const NavList = styled.ul`
   margin: 0;
@@ -78,7 +78,7 @@ export const NavList = styled.ul`
     display: flex;
     padding-top: 0;
   }
-`;
+`
 
 export const NavContainer = styled.li`
   margin-bottom: var(--mb-4);
@@ -87,16 +87,22 @@ export const NavContainer = styled.li`
     margin-left: var(--mb-6);
     margin-bottom: 0;
   }
-`;
+`
 
 export const NavLink = styled.a`
   position: relative;
 
   color: #fff;
   cursor: pointer;
+  /* font-size: 2rem; */
 
   :hover {
     position: relative;
+  }
+
+  ::after {
+    width: 0;
+    transition: all 3s;
   }
 
   :hover::after {
@@ -114,7 +120,7 @@ export const NavLink = styled.a`
   @media screen and (min-width: 768px) {
     color: var(--second-color);
   }
-`;
+`
 
 export const IconMenu = styled.div`
   color: var(--second-color);
@@ -125,4 +131,4 @@ export const IconMenu = styled.div`
   @media screen and (min-width: 768px) {
     display: none;
   }
-`;
+`

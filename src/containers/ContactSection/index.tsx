@@ -1,43 +1,54 @@
 import React, { useState } from 'react'
 import * as S from './styles'
 import { ApiEmail } from '../../services/api'
+import { toast, Flip } from 'react-toastify'
 
 const ContactSection = () => {
 
   const [ email, setEmail ] = useState( {
+    'name': '',
+    'email': '',
+    'message': ''
+  } )
+
+  const handleClick = ( event: React.FormEvent ) => {
+    event.preventDefault()
+    ApiEmail.post( '/send', email )
+    clearFields()
+    return (
+      toast.info( 'Email enviado com sucesso', {
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        transition: Flip
+      } )
+    )
+  }
+
+  const handleChange = ( name: string, value: string ) => {
+
+    setEmail( {
+      ...email,
+      [ name ]: value
+    } )
+  }
+
+  const clearFields = () => {
+    setEmail( {
       'name': '',
       'email': '',
       'message': ''
-    } ),
-
-    handleClick = ( event: React.FormEvent ) => {
-      event.preventDefault()
-      ApiEmail.post( '/send', email )
-      clearFields()
-
-    },
-
-    handleChange = ( name: string, value: string ) => {
-
-      setEmail( {
-        ...email,
-        [ name ]: value
-      } )
-
-    },
-
-    clearFields = () => {
-      setEmail( {
-        'name': '',
-        'email': '',
-        'message': ''
-      } )
-
-    }
+    } )
+  }
 
   return (
     <S.ContactSection id="contact">
       <S.SectionTitle>Contato</S.SectionTitle>
+      {/* <button onClick={() => test()}>asd</button> */}
       <S.ContactContainer>
         <S.Form onSubmit={e => handleClick( e )}>
           <S.InputText

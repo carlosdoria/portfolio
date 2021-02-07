@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { FiMenu } from 'react-icons/fi';
+import { useState } from 'react'
+import Link from 'next/link'
+import { FiMenu } from 'react-icons/fi'
 
-import * as S from './navbar.styles';
+import * as S from './navbar.styles'
 
 const Navbar: React.FC = () => {
-  const [enableMenu, setEnableMenu] = useState(false);
+  const [ enableMenu, setEnableMenu ] = useState( false )
 
   return (
     <S.Header>
@@ -22,28 +22,28 @@ const Navbar: React.FC = () => {
               <S.NavLink
                 href="#home"
                 onClick={e => {
-                  setEnableMenu(false), console.log(e);
+                  setEnableMenu( false ), console.log( e )
                 }}>
                 Home
               </S.NavLink>
             </S.NavContainer>
             <S.NavContainer>
-              <S.NavLink href="#about" onClick={() => setEnableMenu(false)}>
+              <S.NavLink href="#about" onClick={() => setEnableMenu( false )}>
                 Sobre
               </S.NavLink>
             </S.NavContainer>
             <S.NavContainer>
-              <S.NavLink href="#skills" onClick={() => setEnableMenu(false)}>
+              <S.NavLink href="#skills" onClick={() => setEnableMenu( false )}>
                 Skills
               </S.NavLink>
             </S.NavContainer>
             <S.NavContainer>
-              <S.NavLink href="#works" onClick={() => setEnableMenu(false)}>
+              <S.NavLink href="#works" onClick={() => setEnableMenu( false )}>
                 Trabalhos
               </S.NavLink>
             </S.NavContainer>
             <S.NavContainer>
-              <S.NavLink href="#contact" onClick={() => setEnableMenu(false)}>
+              <S.NavLink href="#contact" onClick={() => setEnableMenu( false )}>
                 Contato
               </S.NavLink>
             </S.NavContainer>
@@ -51,11 +51,11 @@ const Navbar: React.FC = () => {
         </S.NavMenu>
 
         <S.IconMenu>
-          <FiMenu onClick={() => setEnableMenu(!enableMenu)} />
+          <FiMenu onClick={() => setEnableMenu( !enableMenu )} />
         </S.IconMenu>
       </S.Nav>
     </S.Header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

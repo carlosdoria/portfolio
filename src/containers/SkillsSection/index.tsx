@@ -17,6 +17,18 @@ const SkillsSection = () => {
         'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png',
     },
     {
+      name: 'NodeJS',
+      percentage: '60%',
+      link:
+        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png',
+    },
+    {
+      name: 'Typescript',
+      percentage: '50%',
+      link:
+        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png',
+    },
+    {
       name: 'HTML5',
       percentage: '85%',
       link:
@@ -24,9 +36,15 @@ const SkillsSection = () => {
     },
     {
       name: 'CSS',
-      percentage: '80%',
+      percentage: '65%',
       link:
         'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png',
+    },
+    {
+      name: 'Bootstrap',
+      percentage: '55%',
+      link:
+        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png',
     },
   ] )
 
