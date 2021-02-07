@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const HomeSection = styled.section`
   height: 100vh;
@@ -24,7 +24,7 @@ export const HomeSection = styled.section`
     margin-left: auto;
     margin-right: auto;
   }
-`;
+`
 
 export const HomeData = styled.div`
   align-self: center;
@@ -32,7 +32,7 @@ export const HomeData = styled.div`
   @media screen and (min-width: 768px) {
     align-self: flex-end;
   }
-`;
+`
 
 export const HomeTitle = styled.h1`
   margin-top: var(--header-height);
@@ -53,11 +53,11 @@ export const HomeTitle = styled.h1`
   @media screen and (min-width: 925px) and (min-height: 875px) {
     width: 100%;
   }
-`;
+`
 
 export const HomeTitleName = styled.span`
   color: var(--first-color);
-`;
+`
 
 export const HomeContactLink = styled.a`
   padding: 0.75rem 2.5rem;
@@ -82,7 +82,7 @@ export const HomeContactLink = styled.a`
   @media screen and (min-width: 1024px) {
     font-size: 1.8rem;
   }
-`;
+`
 
 export const HomeDivSocialMedias = styled.div`
   display: flex;
@@ -101,7 +101,7 @@ export const HomeDivSocialMedias = styled.div`
     flex-direction: row;
     align-self: flex-end;
   }
-`;
+`
 
 export const Icon = styled.a`
   width: max-content;
@@ -120,7 +120,7 @@ export const Icon = styled.a`
     margin-right: var(--mb-4);
     font-size: 2rem;
   }
-`;
+`
 
 export const HomeDivImage = styled.div`
   position: absolute;
@@ -150,8 +150,8 @@ export const HomeDivImage = styled.div`
   @media screen and (min-width: 1045px) and (min-height: 800px) {
     max-width: none;
   }
-`;
+`
 
 export const HomeImage = styled.img`
   border-radius: 19.3rem 7.5rem 9.3rem 5.6rem;
-`;
+`

@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ContactSection = styled.section`
   min-height: 100vh;
-`;
+`
 
 export const SectionTitle = styled.h2`
   position: relative;
@@ -31,7 +31,7 @@ export const SectionTitle = styled.h2`
       top: 3.2rem;
     }
   }
-`;
+`
 
 const SectionContainer = styled.div`
   max-width: 1024px;
@@ -46,21 +46,21 @@ const SectionContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
-`;
+`
 
-export const ContactContainer = styled(SectionContainer)`
+export const ContactContainer = styled( SectionContainer )`
   /* row-gap: 2rem;
 justify-items: center; */
   @media screen and (min-width: 768px) {
     justify-items: center;
   }
-`;
+`
 
 export const Form = styled.form`
   @media screen and (min-width: 768px) {
     width: 560px;
   }
-`;
+`
 
 export const InputText = styled.input`
   width: 100%;
@@ -75,7 +75,7 @@ export const InputText = styled.input`
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
   outline: none;
-`;
+`
 
 export const InputEmail = styled.input`
   width: 100%;
@@ -90,7 +90,7 @@ export const InputEmail = styled.input`
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
   outline: none;
-`;
+`
 
 export const TextArea = styled.textarea`
   width: 100%;
@@ -105,7 +105,7 @@ export const TextArea = styled.textarea`
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
   outline: none;
-`;
+`
 
 export const InputButton = styled.input`
   margin-left: auto;
@@ -129,4 +129,4 @@ export const InputButton = styled.input`
   :hover {
     box-shadow: 0 10px 36px rgba(1, 0, 0, 0.4);
   }
-`;
+`

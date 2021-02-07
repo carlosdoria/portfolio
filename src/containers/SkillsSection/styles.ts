@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const SectionContainer = styled.div`
   max-width: 1024px;
@@ -13,11 +13,11 @@ const SectionContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
-`;
+`
 
 export const SkillsSection = styled.section`
   min-height: 100vh;
-`;
+`
 
 export const SectionTitle = styled.h2`
   position: relative;
@@ -46,9 +46,9 @@ export const SectionTitle = styled.h2`
       top: 3.2rem;
     }
   }
-`;
+`
 
-export const SkillsContainer = styled(SectionContainer)`
+export const SkillsContainer = styled( SectionContainer )`
   row-gap: 2rem;
   text-align: center;
 
@@ -58,21 +58,21 @@ export const SkillsContainer = styled(SectionContainer)`
 
     text-align: initial;
   }
-`;
+`
 
 export const SkillsSubtitle = styled.h2`
   margin-bottom: var(--mb-2);
 
   text-align: center;
-`;
+`
 
 export const SkillsText = styled.p`
   margin-bottom: var(--mb-2);
 
   text-indent: 3rem;
   text-align: justify;
-`;
+`
 
 export const SkillImage = styled.img`
   border-radius: 0.5rem;
-`;
+`

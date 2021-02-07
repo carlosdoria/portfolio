@@ -1,40 +1,37 @@
 import React, { useState } from 'react'
 import * as S from './styles'
+import { ApiEmail } from '../../services/api'
 
 const ContactSection = () => {
 
-  const [
-    email,
-    setEmail
-  ] = useState({
-    'name': '',
-    'email': '',
-    'message': ''
-  }),
+  const [ email, setEmail ] = useState( {
+      'name': '',
+      'email': '',
+      'message': ''
+    } ),
 
-    handleClick = (event: React.FormEvent) => {
-
+    handleClick = ( event: React.FormEvent ) => {
       event.preventDefault()
-      alert(`${email.name}, ${email.email}, ${email.message}`)
+      ApiEmail.post( '/send', email )
       clearFields()
 
     },
 
-    handleChange = (name: string, value: string) => {
+    handleChange = ( name: string, value: string ) => {
 
-      setEmail({
+      setEmail( {
         ...email,
-        [name]: value
-      })
+        [ name ]: value
+      } )
 
     },
 
     clearFields = () => {
-      setEmail({
+      setEmail( {
         'name': '',
         'email': '',
         'message': ''
-      })
+      } )
 
     }
 
@@ -42,12 +39,12 @@ const ContactSection = () => {
     <S.ContactSection id="contact">
       <S.SectionTitle>Contato</S.SectionTitle>
       <S.ContactContainer>
-        <S.Form onSubmit={(e) => handleClick(e)}>
+        <S.Form onSubmit={e => handleClick( e )}>
           <S.InputText
             type="text"
             value={email.name}
             placeholder="Nome"
-            onChange={(e) => handleChange(
+            onChange={e => handleChange(
               'name',
               e.currentTarget.value
             )}
@@ -58,7 +55,7 @@ const ContactSection = () => {
             value={email.email}
             placeholder="Email"
             required
-            onChange={(e) => handleChange(
+            onChange={e => handleChange(
               'email',
               e.currentTarget.value
             )}
@@ -68,7 +65,7 @@ const ContactSection = () => {
             cols={0}
             rows={10}
             placeholder="Digite sua mensagem"
-            onChange={(e) => handleChange(
+            onChange={e => handleChange(
               'message',
               e.currentTarget.value
             )}

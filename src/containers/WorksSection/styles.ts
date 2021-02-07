@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const SectionContainer = styled.div`
   max-width: 1024px;
@@ -13,7 +13,7 @@ const SectionContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
-`;
+`
 
 export const SectionTitle = styled.h2`
   position: relative;
@@ -42,13 +42,13 @@ export const SectionTitle = styled.h2`
       top: 3.2rem;
     }
   }
-`;
+`
 
 export const WorksSection = styled.section`
   min-height: 100vh;
-`;
+`
 
-export const WorksContainer = styled(SectionContainer)`
+export const WorksContainer = styled( SectionContainer )`
   row-gap: 2rem;
 
   @media screen and (min-width: 768px) {
@@ -56,4 +56,4 @@ export const WorksContainer = styled(SectionContainer)`
     grid-template-rows: repeat(2, 1fr);
     column-gap: 2rem;
   }
-`;
+`

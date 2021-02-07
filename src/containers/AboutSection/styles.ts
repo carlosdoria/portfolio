@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const SectionContainer = styled.div`
   max-width: 1024px;
@@ -13,7 +13,7 @@ const SectionContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
-`;
+`
 
 export const SectionTitle = styled.h2`
   position: relative;
@@ -42,13 +42,13 @@ export const SectionTitle = styled.h2`
       top: 3.2rem;
     }
   }
-`;
+`
 
 export const AboutSection = styled.section`
   min-height: 100vh;
-`;
+`
 
-export const AboutContainer = styled(SectionContainer)`
+export const AboutContainer = styled( SectionContainer )`
   row-gap: 2rem;
   text-align: center;
 
@@ -58,11 +58,11 @@ export const AboutContainer = styled(SectionContainer)`
 
     text-align: initial;
   }
-`;
+`
 
 export const AboutDivImage = styled.div`
   justify-self: center;
-`;
+`
 
 export const AboutImage = styled.img`
   width: 200px;
@@ -72,7 +72,7 @@ export const AboutImage = styled.img`
   @media screen and (min-width: 768px) {
     width: 300px;
   }
-`;
+`
 
 // export const AboutDivText = styled.div``;
 
@@ -80,9 +80,10 @@ export const AboutSubtitle = styled.h2`
   margin-bottom: var(--mb-2);
 
   text-align: center;
-`;
+`
 
 export const AboutText = styled.p`
   text-indent: 3rem;
   text-align: justify;
-`;
+  line-height: 1.6rem;
+`

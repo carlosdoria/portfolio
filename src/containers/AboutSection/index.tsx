@@ -1,22 +1,22 @@
-import * as S from './styles';
+import * as S from './styles'
 
 const AboutSection = () => {
   return (
-    <S.AboutSection id="about">
+    <S.AboutSection id='about'>
       <S.SectionTitle>Sobre mim</S.SectionTitle>
       <S.AboutContainer>
         <S.AboutDivImage>
           <S.AboutImage
-            src="https://github.com/carlosdoria.png"
-            alt="foto de perfil"
+            src='https://github.com/carlosdoria.png'
+            alt='foto de perfil'
           />
         </S.AboutDivImage>
 
         <div>
           <S.AboutSubtitle>Sou Carlos</S.AboutSubtitle>
           <S.AboutText>
-            Desenvolvedor Front-end Júnior e Advogado, focado em desenvolver
-            aplicações web com JavaScript e React.{' '}
+            Desenvolvedor full stack e Advogado, focado no desenvolvimento de
+            aplicações web com React e NodeJS.{' '}
           </S.AboutText>
           <S.AboutText>
             Em 2018 me tornei bacharel em Direito formado pelo Centro
@@ -44,7 +44,7 @@ const AboutSection = () => {
         </div>
       </S.AboutContainer>
     </S.AboutSection>
-  );
-};
+  )
+}
 
-export default AboutSection;
+export default AboutSection

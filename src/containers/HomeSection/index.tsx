@@ -1,15 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef } from 'react'
 import {
   FaLinkedin,
   FaGithubAlt,
   FaInstagram,
   FaWhatsapp,
-} from 'react-icons/fa';
+} from 'react-icons/fa'
 
-import * as S from './styles';
+import * as S from './styles'
 
 const HomeSectoion = () => {
-  const homeTitle = useRef(null);
+  const homeTitle = useRef( null )
 
   return (
     <S.HomeSection id="home">
@@ -52,7 +52,7 @@ const HomeSectoion = () => {
         />
       </S.HomeDivImage>
     </S.HomeSection>
-  );
-};
+  )
+}
 
-export default HomeSectoion;
+export default HomeSectoion
