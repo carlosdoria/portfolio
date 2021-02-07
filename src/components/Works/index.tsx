@@ -1,4 +1,4 @@
-import * as S from './Works.styles'
+import * as S from './styles'
 
 interface ILinkImage {
   imageLink: string;

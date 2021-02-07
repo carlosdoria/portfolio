@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const HomeSection = styled.section`
   height: 100vh;
@@ -64,13 +65,22 @@ export const HomeContactLink = styled.a`
 
   display: inline-block;
 
-  color: #fff;
   font-weight: var(--font-semi);
+
+  color: #fff;
   background-color: var(--first-color);
+
   border-radius: 0.5rem;
 
+  transition: .5s;
+
   :hover {
-    box-shadow: 0 10px 36px rgba(1, 0, 0, 0.4);
+    color: var(--first-color);
+    background-color: #fff;
+
+    border: 1px solid var(--first-color);
+
+    box-shadow: 10px 10px 40px rgba(1, 0, 0, 0.4);
   }
 
   @media screen and (max-width: 425px) and (max-height: 490px) {
@@ -103,7 +113,7 @@ export const HomeDivSocialMedias = styled.div`
   }
 `
 
-export const Icon = styled.a`
+export const Icon = styled( motion.a )`
   width: max-content;
 
   margin-bottom: var(--mb-2);

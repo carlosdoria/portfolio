@@ -15,7 +15,7 @@ const AboutSection = () => {
         <div>
           <S.AboutSubtitle>Sou Carlos</S.AboutSubtitle>
           <S.AboutText>
-            Desenvolvedor full stack e Advogado, focado no desenvolvimento de
+            Desenvolvedor Full Stack e advogado, focado no desenvolvimento de
             aplicações web com React e NodeJS.{' '}
           </S.AboutText>
           <S.AboutText>

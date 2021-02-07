@@ -94,31 +94,40 @@ export const NavLink = styled.a`
 
   color: #fff;
   cursor: pointer;
-  /* font-size: 2rem; */
 
-  :hover {
-    position: relative;
-  }
+  transition: .5s;
 
   ::after {
-    width: 0;
-    transition: all 3s;
-  }
-
-  :hover::after {
     position: absolute;
     left: 0;
     top: 2rem;
     content: '';
 
-    height: 0.18rem;
-    width: 100%;
+    height: 0.20rem;
 
     background-color: var(--first-color);
+
+    transition: .5s;
+    opacity: 0;
+  }
+
+  :hover::after {
+    width: 100%;
+    opacity: 1;
   }
 
   @media screen and (min-width: 768px) {
     color: var(--second-color);
+    text-decoration: none;
+
+    ::after {
+      width: 0;
+      transition: .5s;
+    }
+
+    :hover {
+      color: var(--first-color);
+    }
   }
 `
 

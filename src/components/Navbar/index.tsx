@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { FiMenu } from 'react-icons/fi'
 
-import * as S from './navbar.styles'
+import * as S from './styles'
 
 const Navbar: React.FC = () => {
   const [ enableMenu, setEnableMenu ] = useState( false )

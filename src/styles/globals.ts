@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
@@ -93,6 +93,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

@@ -11,6 +11,10 @@ import * as S from './styles'
 const HomeSectoion = () => {
   const homeTitle = useRef( null )
 
+  const WHILE_HOVER = {
+    scale: 1.4, transition: { duration: .3 }
+  }
+
   return (
     <S.HomeSection id="home">
       <S.HomeData>
@@ -22,25 +26,39 @@ const HomeSectoion = () => {
           Desenvolvedor Full Stack
         </S.HomeTitle>
         <div>
-          <S.HomeContactLink href="#contact">Contato</S.HomeContactLink>
+          <S.HomeContactLink href="#contact">
+            Contato
+          </S.HomeContactLink>
         </div>
       </S.HomeData>
 
       <S.HomeDivSocialMedias>
         <S.Icon
+          whileHover={WHILE_HOVER}
           href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
-          target="_blank">
+          target="_blank"
+        >
           <FaLinkedin />
         </S.Icon>
-        <S.Icon href="https://github.com/carlosdoria" target="_blank">
+        <S.Icon
+          whileHover={WHILE_HOVER}
+          href="https://github.com/carlosdoria"
+          target="_blank"
+        >
           <FaGithubAlt />
         </S.Icon>
-        <S.Icon href="https://www.instagram.com/carlosc.doria/" target="_blank">
+        <S.Icon
+          whileHover={WHILE_HOVER}
+          href="https://www.instagram.com/carlosc.doria/"
+          target="_blank"
+        >
           <FaInstagram />
         </S.Icon>
         <S.Icon
+          whileHover={WHILE_HOVER}
           href="https://api.whatsapp.com/send?phone=5582988970954"
-          target="_blank">
+          target="_blank"
+        >
           <FaWhatsapp />
         </S.Icon>
       </S.HomeDivSocialMedias>

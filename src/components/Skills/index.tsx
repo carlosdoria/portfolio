@@ -1,4 +1,4 @@
-import * as S from './skills.styles';
+import * as S from './styles'
 
 interface ISkill {
   name: string;
@@ -6,7 +6,7 @@ interface ISkill {
   link: string;
 }
 
-const Skills = ({ name, percentage, link }: ISkill) => {
+const Skills = ( { name, percentage, link }: ISkill ) => {
   return (
     <S.Container>
       <S.DivName>
@@ -18,7 +18,7 @@ const Skills = ({ name, percentage, link }: ISkill) => {
       </div>
       <S.SkillBar percentage={percentage}></S.SkillBar>
     </S.Container>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

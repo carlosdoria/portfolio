@@ -1,19 +1,18 @@
 // import App from "next/app";
 import { AppProps /* , AppContext */ } from 'next/app'
 import Head from 'next/head'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import GlobalStyles from 'styles/globals'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-toastify/dist/ReactToastify.css'
 import 'react-toastify/dist/ReactToastify.min.css'
 import { ToastContainer, Slide } from 'react-toastify'
-
-import GlobalStyles from 'styles/globals'
 
 function MyApp ( { Component, pageProps }: AppProps ) {
   return (
     <>
       <Head>
         <title>My Portifólio</title>
-        <meta name="description" content="My boilerplete" />
+        <meta name="description" content="Meu portifólio pessoal" />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />

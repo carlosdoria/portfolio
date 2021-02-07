@@ -70,7 +70,7 @@ export const InputText = styled.input`
   padding: 1rem;
 
   font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
+  /* font-weight: var(--font-semi); */
 
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
@@ -85,7 +85,7 @@ export const InputEmail = styled.input`
   padding: 1rem;
 
   font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
+  /* font-weight: var(--font-semi); */
 
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
@@ -100,7 +100,7 @@ export const TextArea = styled.textarea`
   padding: 1rem;
 
   font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
+  /* font-weight: var(--font-semi); */
 
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
@@ -126,7 +126,14 @@ export const InputButton = styled.input`
 
   cursor: pointer;
 
+  transition: .5s;
+
   :hover {
+    color: var(--first-color);
+    background-color: #fff;
+
+    border: 1px solid var(--first-color);
+
     box-shadow: 0 10px 36px rgba(1, 0, 0, 0.4);
   }
 `

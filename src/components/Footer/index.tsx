@@ -1,14 +1,14 @@
-import React from 'react';
-import * as S from './styles';
+import React from 'react'
+import * as S from './styles'
 import {
   FaLinkedin,
   FaGithubAlt,
   FaInstagram,
   FaWhatsapp,
-} from 'react-icons/fa';
+} from 'react-icons/fa'
 
 const Footer = () => {
-  const YEAR = new Date();
+  const YEAR = new Date()
 
   return (
     <S.Footer>
@@ -19,7 +19,9 @@ const Footer = () => {
           target="_blank">
           <FaLinkedin />
         </S.FooterIcon>
-        <S.FooterIcon href="https://github.com/carlosdoria" target="_blank">
+        <S.FooterIcon
+          href="https://github.com/carlosdoria"
+          target="_blank">
           <FaGithubAlt />
         </S.FooterIcon>
         <S.FooterIcon
@@ -35,7 +37,7 @@ const Footer = () => {
       </S.FooterSocialMedias>
       {'\u00A9'} {YEAR.getFullYear()}, copyright all rights reserved
     </S.Footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
