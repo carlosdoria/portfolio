@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   HomeSectoion,
   AboutSection,
@@ -18,7 +17,7 @@ import * as S from '../styles/home.styles'
 
 const Home = () => {
   return (
-    <React.Fragment>
+    <>
       <Navbar />
       <S.Main>
         {/* === SECTION HOME === */}
@@ -39,7 +38,7 @@ const Home = () => {
         {/* === SECTION FOOTER === */}
         <Footer />
       </S.Main>
-    </React.Fragment>
+    </>
   )
 }
 

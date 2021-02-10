@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 const SectionContainer = styled.div`
   max-width: 1024px;
@@ -44,7 +45,7 @@ export const SectionTitle = styled.h2`
   }
 `
 
-export const AboutSection = styled.section`
+export const AboutSection = styled( motion.section )`
   min-height: 100vh;
 `
 
