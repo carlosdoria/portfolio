@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export const HomeSection = styled.section`
+export const HomeSection = styled( motion.section )`
   height: 100vh;
 
   row-gap: 1rem;
@@ -27,7 +27,7 @@ export const HomeSection = styled.section`
   }
 `
 
-export const HomeData = styled.div`
+export const HomeData = styled( motion.div )`
   align-self: center;
 
   @media screen and (min-width: 768px) {
@@ -60,11 +60,12 @@ export const HomeTitleName = styled.span`
   color: var(--first-color);
 `
 
-export const HomeContactLink = styled.a`
+export const HomeContactLink = styled( motion.a )`
   padding: 0.75rem 2.5rem;
 
   display: inline-block;
 
+  font-size: 1.4rem;
   font-weight: var(--font-semi);
 
   color: #fff;
@@ -90,11 +91,11 @@ export const HomeContactLink = styled.a`
   }
 
   @media screen and (min-width: 1024px) {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 `
 
-export const HomeDivSocialMedias = styled.div`
+export const HomeDivSocialMedias = styled( motion.div )`
   display: flex;
   flex-direction: column;
 
@@ -118,7 +119,7 @@ export const Icon = styled( motion.a )`
 
   margin-bottom: var(--mb-2);
 
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--second-color);
 
   :hover {
@@ -128,11 +129,11 @@ export const Icon = styled( motion.a )`
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
     margin-right: var(--mb-4);
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 `
 
-export const HomeDivImage = styled.div`
+export const HomeDivImage = styled( motion.div )`
   position: absolute;
   right: 0;
   bottom: 0;

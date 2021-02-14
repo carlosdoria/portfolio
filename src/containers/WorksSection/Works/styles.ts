@@ -7,10 +7,10 @@ export const Container = styled.div`
 `
 
 export const WorkImage = styled.img`
-  transition: 1s;
+  transition: 1.2s;
   cursor: pointer;
 
   :hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 `

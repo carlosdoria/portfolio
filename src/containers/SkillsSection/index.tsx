@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Skills from 'components/Skills'
+import Skills from 'containers/SkillsSection/Skills'
 import * as S from './styles'
 
 interface ISkill {
@@ -9,7 +9,8 @@ interface ISkill {
 }
 
 const SkillsSection = () => {
-  const [ skills, setSkills ] = useState<ISkill[]>( [
+
+  const [ skills, ] = useState<ISkill[]>( [
     {
       name: 'React',
       percentage: '70%',

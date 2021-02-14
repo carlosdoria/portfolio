@@ -1,20 +1,5 @@
 import styled from 'styled-components'
 
-const SectionContainer = styled.div`
-  max-width: 1024px;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
-  width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-
-  @media screen and (min-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
-
 export const SectionTitle = styled.h2`
   position: relative;
   font-size: var(--h2-font-size);
@@ -48,12 +33,27 @@ export const WorksSection = styled.section`
   min-height: 100vh;
 `
 
-export const WorksContainer = styled( SectionContainer )`
+export const WorksContainer = styled.div`
+  width: calc(100% - 2rem);
+  max-width: 1024px;
+
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
   row-gap: 2rem;
+
 
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     column-gap: 2rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `

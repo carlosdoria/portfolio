@@ -12,13 +12,16 @@ const HomeSectoion = () => {
   const homeTitle = useRef( null )
 
   const WHILE_HOVER = {
-    scale: 1.4, transition: { duration: .3 }
+    scale: [ 1, 1.6, 1.4 ], transition: { duration: .5 }
   }
 
   return (
-    <S.HomeSection id="home">
-      <S.HomeData>
-        <S.HomeTitle className="oi" ref={homeTitle}>
+    <S.HomeSection id="home"
+    >
+
+      <S.HomeData
+      >
+        <S.HomeTitle ref={homeTitle}>
           Olá, <br />
           Sou
           <S.HomeTitleName> Carlos</S.HomeTitleName>
@@ -26,13 +29,30 @@ const HomeSectoion = () => {
           Desenvolvedor Full Stack
         </S.HomeTitle>
         <div>
-          <S.HomeContactLink href="#contact">
+          <S.HomeContactLink
+            href="#contact"
+            initial={{ scale: .6, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1, transition: { delay: .3 } }}
+            transition={{
+              type: 'spring',
+              stiffness: 260,
+              damping: 20
+            }}
+          >
             Contato
           </S.HomeContactLink>
         </div>
       </S.HomeData>
 
-      <S.HomeDivSocialMedias>
+      <S.HomeDivSocialMedias
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{
+          type: 'spring',
+          stiffness: 320,
+          damping: 80
+        }}
+      >
         <S.Icon
           whileHover={WHILE_HOVER}
           href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
@@ -63,7 +83,8 @@ const HomeSectoion = () => {
         </S.Icon>
       </S.HomeDivSocialMedias>
 
-      <S.HomeDivImage>
+      <S.HomeDivImage
+      >
         <S.HomeImage
           src="https://github.com/carlosdoria.png"
           alt="foto de perfil"
