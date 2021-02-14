@@ -7,6 +7,7 @@ import {
 } from 'react-icons/fa'
 
 import * as S from './styles'
+import { Fade } from 'react-awesome-reveal'
 
 const HomeSectoion = () => {
   const homeTitle = useRef( null )
@@ -16,80 +17,80 @@ const HomeSectoion = () => {
   }
 
   return (
-    <S.HomeSection id="home">
-
-      <S.HomeData
-      >
-        <S.HomeTitle ref={homeTitle}>
+    <Fade>
+      <S.HomeSection id="home">
+        <S.HomeData>
+          <S.HomeTitle ref={homeTitle}>
           Olá, <br />
           Sou
-          <S.HomeTitleName> Carlos</S.HomeTitleName>
-          <br />
+            <S.HomeTitleName> Carlos</S.HomeTitleName>
+            <br />
           Desenvolvedor Full Stack
-        </S.HomeTitle>
-        <div>
-          <S.HomeContactLink
-            href="#contact"
-            initial={{ scale: .6, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1, transition: { delay: .3 } }}
-            transition={{
-              type: 'spring',
-              stiffness: 260,
-              damping: 20
-            }}
-          >
+          </S.HomeTitle>
+          <div>
+            <S.HomeContactLink
+              href="#contact"
+              initial={{ scale: .6, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1, transition: { delay: .3 } }}
+              transition={{
+                type: 'spring',
+                stiffness: 260,
+                damping: 20
+              }}
+            >
             Contato
-          </S.HomeContactLink>
-        </div>
-      </S.HomeData>
+            </S.HomeContactLink>
+          </div>
+        </S.HomeData>
 
-      <S.HomeDivSocialMedias
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{
-          type: 'spring',
-          stiffness: 320,
-          damping: 80
-        }}
-      >
-        <S.Icon
-          whileHover={WHILE_HOVER}
-          href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
-          target="_blank"
+        <S.HomeDivSocialMedias
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 320,
+            damping: 80
+          }}
         >
-          <FaLinkedin />
-        </S.Icon>
-        <S.Icon
-          whileHover={WHILE_HOVER}
-          href="https://github.com/carlosdoria"
-          target="_blank"
-        >
-          <FaGithubAlt />
-        </S.Icon>
-        <S.Icon
-          whileHover={WHILE_HOVER}
-          href="https://www.instagram.com/carlosc.doria/"
-          target="_blank"
-        >
-          <FaInstagram />
-        </S.Icon>
-        <S.Icon
-          whileHover={WHILE_HOVER}
-          href="https://api.whatsapp.com/send?phone=5582988970954"
-          target="_blank"
-        >
-          <FaWhatsapp />
-        </S.Icon>
-      </S.HomeDivSocialMedias>
+          <S.Icon
+            whileHover={WHILE_HOVER}
+            href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
+            target="_blank"
+          >
+            <FaLinkedin />
+          </S.Icon>
+          <S.Icon
+            whileHover={WHILE_HOVER}
+            href="https://github.com/carlosdoria"
+            target="_blank"
+          >
+            <FaGithubAlt />
+          </S.Icon>
+          <S.Icon
+            whileHover={WHILE_HOVER}
+            href="https://www.instagram.com/carlosc.doria/"
+            target="_blank"
+          >
+            <FaInstagram />
+          </S.Icon>
+          <S.Icon
+            whileHover={WHILE_HOVER}
+            href="https://api.whatsapp.com/send?phone=5582988970954"
+            target="_blank"
+          >
+            <FaWhatsapp />
+          </S.Icon>
+        </S.HomeDivSocialMedias>
 
-      <S.HomeDivImage
-      >
-        <S.HomeImage
-          src="https://github.com/carlosdoria.png"
-          alt="foto de perfil"
-        />
-      </S.HomeDivImage>
-    </S.HomeSection>
+        <S.HomeDivImage
+        >
+          <S.HomeImage
+            src="https://github.com/carlosdoria.png"
+            alt="foto de perfil"
+          />
+        </S.HomeDivImage>
+      </S.HomeSection>
+    </Fade>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Skills from 'containers/SkillsSection/Skills'
 import * as S from './styles'
+import { Fade } from 'react-awesome-reveal'
 
 interface ISkill {
   name: string;
@@ -51,27 +52,29 @@ const SkillsSection = () => {
 
   return (
     <S.SkillsSection id="skills">
-      <S.SectionTitle>Minhas skills</S.SectionTitle>
-      <S.SkillsContainer>
-        <div>
-          <S.SkillsSubtitle>Profissional Skills</S.SkillsSubtitle>
-          <S.SkillsText>
+      <Fade>
+        <S.SectionTitle>Minhas skills</S.SectionTitle>
+        <S.SkillsContainer>
+          <div>
+            <S.SkillsSubtitle>Profissional Skills</S.SkillsSubtitle>
+            <S.SkillsText>
             Atualmente focado em ReactJS e NodeJS.
-          </S.SkillsText>
-          {skills.map( ( skill, index ) => (
-            <Skills
-              key={index}
-              name={skill.name}
-              percentage={skill.percentage}
-              link={skill.link}
-            />
-          ) )}
-        </div>
-        <S.SkillImage
-          src="https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg"
-          alt="imagem com dois computadores"
-        />
-      </S.SkillsContainer>
+            </S.SkillsText>
+            {skills.map( ( skill, index ) => (
+              <Skills
+                key={index}
+                name={skill.name}
+                percentage={skill.percentage}
+                link={skill.link}
+              />
+            ) )}
+          </div>
+          <S.SkillImage
+            src="https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg"
+            alt="imagem com dois computadores"
+          />
+        </S.SkillsContainer>
+      </Fade>
     </S.SkillsSection>
   )
 }

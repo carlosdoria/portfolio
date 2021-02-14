@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import * as S from './styles'
 import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'
+import { Fade } from 'react-awesome-reveal'
 
 const ContactSection = () => {
 
@@ -47,44 +48,46 @@ const ContactSection = () => {
 
   return (
     <S.ContactSection id="contact">
-      <S.SectionTitle>Contato</S.SectionTitle>
-      {/* <button onClick={() => test()}>asd</button> */}
-      <S.ContactContainer>
-        <S.Form onSubmit={e => handleClick( e )}>
-          <S.InputText
-            type="text"
-            value={email.name}
-            placeholder="Nome"
-            onChange={e => handleChange(
-              'name',
-              e.currentTarget.value
-            )}
-            required
-          />
-          <S.InputEmail
-            type="email"
-            value={email.email}
-            placeholder="Email"
-            required
-            onChange={e => handleChange(
-              'email',
-              e.currentTarget.value
-            )}
-          />
-          <S.TextArea
-            value={email.message}
-            cols={0}
-            rows={10}
-            placeholder="Digite sua mensagem"
-            required
-            onChange={e => handleChange(
-              'message',
-              e.currentTarget.value
-            )}
-          />
-          <S.InputButton type="submit" value="Enviar" />
-        </S.Form>
-      </S.ContactContainer>
+      <Fade>
+        <S.SectionTitle>Contato</S.SectionTitle>
+        {/* <button onClick={() => test()}>asd</button> */}
+        <S.ContactContainer>
+          <S.Form onSubmit={e => handleClick( e )}>
+            <S.InputText
+              type="text"
+              value={email.name}
+              placeholder="Nome"
+              onChange={e => handleChange(
+                'name',
+                e.currentTarget.value
+              )}
+              required
+            />
+            <S.InputEmail
+              type="email"
+              value={email.email}
+              placeholder="Email"
+              required
+              onChange={e => handleChange(
+                'email',
+                e.currentTarget.value
+              )}
+            />
+            <S.TextArea
+              value={email.message}
+              cols={0}
+              rows={10}
+              placeholder="Digite sua mensagem"
+              required
+              onChange={e => handleChange(
+                'message',
+                e.currentTarget.value
+              )}
+            />
+            <S.InputButton type="submit" value="Enviar" />
+          </S.Form>
+        </S.ContactContainer>
+      </Fade>
     </S.ContactSection>
   )
 

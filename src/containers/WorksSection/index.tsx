@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Works from 'containers/WorksSection/Works'
 import * as S from './styles'
+import { Fade } from 'react-awesome-reveal'
 
 interface IWorks {
   imageLink: string;
@@ -29,16 +30,18 @@ const WorksSection = () => {
 
   return (
     <S.WorksSection id="works">
-      <S.SectionTitle>Trabalhos</S.SectionTitle>
-      <S.WorksContainer>
-        {works.map( ( work, index ) => (
-          <Works
-            key={index}
-            imageLink={work.imageLink}
-            imageDescription={work.imageDescription}
-          />
-        ) )}
-      </S.WorksContainer>
+      <Fade>
+        <S.SectionTitle>Trabalhos</S.SectionTitle>
+        <S.WorksContainer>
+          {works.map( ( work, index ) => (
+            <Works
+              key={index}
+              imageLink={work.imageLink}
+              imageDescription={work.imageDescription}
+            />
+          ) )}
+        </S.WorksContainer>
+      </Fade>
     </S.WorksSection>
   )
 }
