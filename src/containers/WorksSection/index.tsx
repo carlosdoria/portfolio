@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Works from 'components/Works'
+import Works from 'containers/WorksSection/Works'
 import * as S from './styles'
 
 interface IWorks {
@@ -8,7 +8,8 @@ interface IWorks {
 }
 
 const WorksSection = () => {
-  const [ works, setWorks ] = useState<IWorks[]>( [
+
+  const [ works, ] = useState<IWorks[]>( [
     {
       imageLink:
         'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',

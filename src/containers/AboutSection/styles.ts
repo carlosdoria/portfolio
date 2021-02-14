@@ -1,22 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-const SectionContainer = styled.div`
-  max-width: 1024px;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
-  width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-
-  @media screen and (min-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
-
-export const SectionTitle = styled.h2`
+export const SectionTitle = styled( motion.h2 )`
   position: relative;
   font-size: var(--h2-font-size);
   color: var(--first-color);
@@ -49,8 +34,18 @@ export const AboutSection = styled( motion.section )`
   min-height: 100vh;
 `
 
-export const AboutContainer = styled( SectionContainer )`
+export const AboutContainer = styled( motion.div )`
+  max-width: 1024px;
+  width: calc(100% - 2rem);
+
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
   row-gap: 2rem;
+
   text-align: center;
 
   @media screen and (min-width: 768px) {
@@ -58,6 +53,11 @@ export const AboutContainer = styled( SectionContainer )`
     align-items: center;
 
     text-align: initial;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `
 

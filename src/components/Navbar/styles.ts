@@ -46,10 +46,15 @@ export const Nav = styled.nav`
 `
 
 export const Logo = styled.a`
+  font-size: 1.4rem;
   font-weight: bold;
   color: var(--second-color);
 
   cursor: pointer;
+
+  @media screen and (min-width: 1024px) {
+  font-size: 1.7rem;
+  }
 `
 
 export const NavMenu = styled.div<INavMenu>`

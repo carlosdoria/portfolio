@@ -2,25 +2,17 @@ import * as S from './styles'
 
 const AboutSection = () => {
 
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  }
-
   return (
     <S.AboutSection
       id='about'
-      variants={container}
     >
-      <S.SectionTitle>Sobre mim</S.SectionTitle>
-      <S.AboutContainer>
+      <S.SectionTitle
+      >
+        Sobre mim
+      </S.SectionTitle>
+      <S.AboutContainer
+
+      >
         <S.AboutDivImage>
           <S.AboutImage
             src='https://github.com/carlosdoria.png'
