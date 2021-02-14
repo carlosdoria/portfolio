@@ -8,7 +8,15 @@ const Navbar: React.FC = () => {
   const [ enableMenu, setEnableMenu ] = useState( false )
 
   return (
-    <S.Header>
+    <S.Header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: .3, duration: .5 } }}
+      // transition={{
+      //   type: 'spring',
+      //   stiffness: 260,
+      //   damping: 20
+      // }}
+    >
       <S.Nav>
         <div>
           <Link href="#home">

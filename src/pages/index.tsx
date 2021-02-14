@@ -20,7 +20,7 @@ import { Zoom, Fade } from 'react-awesome-reveal'
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <Navbar/>
 
       <S.Main>
         {/* === SECTION HOME === */}

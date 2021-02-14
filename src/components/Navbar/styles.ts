@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 interface INavMenu {
   activeMenu: boolean;
 }
 
-export const Header = styled.header`
+export const Header = styled( motion.header )`
   width: 100%;
   position: fixed;
   top: 0;
