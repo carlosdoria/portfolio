@@ -76,6 +76,7 @@ const ContactSection = () => {
             cols={0}
             rows={10}
             placeholder="Digite sua mensagem"
+            required
             onChange={e => handleChange(
               'message',
               e.currentTarget.value
