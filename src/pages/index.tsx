@@ -9,7 +9,6 @@ import {
 import { Navbar, Footer } from '../components'
 
 import * as S from '../styles/home.styles'
-import { Zoom, Fade } from 'react-awesome-reveal'
 
 // import Prismic from 'prismic-javascript';
 // import { Client } from '../../prismic-configuration';
@@ -24,29 +23,19 @@ const Home = () => {
 
       <S.Main>
         {/* === SECTION HOME === */}
-        <Fade>
-          <HomeSectoion />
-        </Fade>
+        <HomeSectoion />
 
         {/* === SECTION ABOUT === */}
-        <Fade>
-          <AboutSection />
-        </Fade>
+        <AboutSection />
 
         {/* === SECTION SKILLS === */}
-        <Fade>
-          <SkillsSection />
-        </Fade>
+        <SkillsSection />
 
         {/* === SECTION WORKS === */}
-        <Fade>
-          <WorksSection />
-        </Fade>
+        <WorksSection />
 
         {/* === SECTION CONTACT === */}
-        <Fade>
-          <ContactSection />
-        </Fade>
+        <ContactSection />
 
         {/* === SECTION FOOTER === */}
         <Footer />

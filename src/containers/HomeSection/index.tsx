@@ -16,8 +16,7 @@ const HomeSectoion = () => {
   }
 
   return (
-    <S.HomeSection id="home"
-    >
+    <S.HomeSection id="home">
 
       <S.HomeData
       >
