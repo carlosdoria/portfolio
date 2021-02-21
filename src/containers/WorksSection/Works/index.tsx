@@ -1,19 +1,34 @@
+import React, { useState } from 'react'
 import * as S from './styles'
-
-interface ILinkImage {
-  imageLink: string;
-  imageDescription: string;
-}
 
 interface IWorks {
   imageLink: string;
   imageDescription: string;
 }
 
-const Works = ( { works } ) => {
+const Works = ( ) => {
+
+  const [ works, ] = useState<IWorks[]>( [
+    {
+      imageLink:
+        'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',
+      imageDescription: 'imagem com dois computadores',
+    },
+    {
+      imageLink:
+        'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',
+      imageDescription: 'imagem com dois computadores',
+    },
+    {
+      imageLink:
+        'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',
+      imageDescription: 'imagem com dois computadores',
+    },
+  ] )
+
   return (
     <S.WorksContainer>
-      {works.map( ( work: IWorks, index: number ) => (
+      {works.map( ( work, index ) => (
         <S.Container
           key={index}
         >
