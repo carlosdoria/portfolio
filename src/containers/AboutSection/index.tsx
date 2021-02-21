@@ -6,9 +6,7 @@ const AboutSection = () => {
   return (
     <S.AboutSection id='about'>
       <Fade>
-        <S.SectionTitle>
-        Sobre mim
-        </S.SectionTitle>
+        <S.SectionTitle>Sobre mim</S.SectionTitle>
         <S.AboutContainer
 
         >

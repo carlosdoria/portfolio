@@ -72,13 +72,18 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  section + section {
+  section {
     padding-top: 3rem;
     padding-bottom: 2rem;
 
     @media screen and (min-width: 768px) {
       padding-top: 5rem;
       padding-bottom: 3rem;
+    }
+
+    :first-child {
+      padding-top: 0rem;
+      padding-bottom: 0rem;
     }
   }
 

@@ -1,7 +1,10 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 
-export const SectionTitle = styled( motion.h2 )`
+export const AboutSection = styled.section `
+  min-height: 100vh;
+`
+
+export const SectionTitle = styled.h2`
   position: relative;
   font-size: var(--h2-font-size);
   color: var(--first-color);
@@ -30,11 +33,7 @@ export const SectionTitle = styled( motion.h2 )`
   }
 `
 
-export const AboutSection = styled( motion.section )`
-  min-height: 100vh;
-`
-
-export const AboutContainer = styled( motion.div )`
+export const AboutContainer = styled.div`
   max-width: 1024px;
   width: calc(100% - 2rem);
 
