@@ -18,7 +18,7 @@ import * as S from '../styles/home.styles'
 
 const Home = () => {
   return (
-    <>
+    <div style={{ background: '#000' }}>
       <Navbar/>
 
       <S.Main>
@@ -40,7 +40,7 @@ const Home = () => {
         {/* === SECTION FOOTER === */}
         <Footer />
       </S.Main>
-    </>
+    </div>
   )
 }
 

@@ -22,8 +22,8 @@ const HomeSectoion = () => {
         <S.HomeData>
           <S.HomeTitle ref={homeTitle}>
           Olá, <br />
-          Sou
-            <S.HomeTitleName> Carlos</S.HomeTitleName>
+          Sou{' '}
+            <S.HomeName>Carlos</S.HomeName>
             <br />
           Desenvolvedor Full Stack
           </S.HomeTitle>
@@ -84,10 +84,42 @@ const HomeSectoion = () => {
 
         <S.HomeDivImage
         >
-          <S.HomeImage
+          {/* <S.HomeImage
             src="https://github.com/carlosdoria.png"
             alt="foto de perfil"
-          />
+          /> */}
+          <S.Container>
+            <S.Plate></S.Plate>
+            <S.Cup>
+              <S.Top>
+                <S.Vapour>
+                  <S.Span n={1}></S.Span>
+                  <S.Span n={3}></S.Span>
+                  <S.Span n={16}></S.Span>
+                  <S.Span n={5}></S.Span>
+                  <S.Span n={13}></S.Span>
+                  <S.Span n={20}></S.Span>
+                  <S.Span n={6}></S.Span>
+                  <S.Span n={7}></S.Span>
+                  <S.Span n={10}></S.Span>
+                  <S.Span n={8}></S.Span>
+                  <S.Span n={17}></S.Span>
+                  <S.Span n={11}></S.Span>
+                  <S.Span n={12}></S.Span>
+                  <S.Span n={14}></S.Span>
+                  <S.Span n={2}></S.Span>
+                  <S.Span n={9}></S.Span>
+                  <S.Span n={15}></S.Span>
+                  <S.Span n={4}></S.Span>
+                  <S.Span n={19}></S.Span>
+                </S.Vapour>
+                <S.Circle>
+                  <S.Tea />
+                </S.Circle>
+              </S.Top>
+              <S.Handle></S.Handle>
+            </S.Cup>
+          </S.Container>
         </S.HomeDivImage>
       </S.HomeSection>
     </Fade>

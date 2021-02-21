@@ -12,7 +12,6 @@ export const WorksContainer = styled.div`
   grid-column-gap: 2rem;
   row-gap: 2rem;
 
-
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -29,7 +28,7 @@ export const Container = styled.div`
   position: relative;
   width: 300px;
   display: flex;
-  justify-content: center;
+  justify-self: center;
   align-items: center;
 
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);

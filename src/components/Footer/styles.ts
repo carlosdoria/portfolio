@@ -9,7 +9,7 @@ export const Footer = styled.footer`
   font-weight: var(--font-semi);
 
   color: #fff;
-  background-color: var(--second-color);
+  background-color: black;
 `
 
 export const FooterTitle = styled.p`
