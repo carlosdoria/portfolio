@@ -5,11 +5,26 @@ interface ILinkImage {
   imageDescription: string;
 }
 
-const Works = ( { imageLink, imageDescription }: ILinkImage ) => {
+interface IWorks {
+  imageLink: string;
+  imageDescription: string;
+}
+
+const Works = ( { works } ) => {
   return (
-    <S.Container>
-      <S.WorkImage src={imageLink} alt={imageDescription} />
-    </S.Container>
+    <S.WorksContainer>
+      {works.map( ( work: IWorks, index: number ) => (
+        <S.Container
+          key={index}
+        >
+          <S.Span></S.Span>
+          <S.Span></S.Span>
+          <S.Span></S.Span>
+          <S.Span></S.Span>
+          <S.WorkImage src={work.imageLink} alt={work.imageDescription} />
+        </S.Container>
+      ) )}
+    </S.WorksContainer>
   )
 }
 

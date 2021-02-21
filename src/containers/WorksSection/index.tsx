@@ -32,15 +32,9 @@ const WorksSection = () => {
     <S.WorksSection id="works">
       <Fade>
         <S.SectionTitle>Trabalhos</S.SectionTitle>
-        <S.WorksContainer>
-          {works.map( ( work, index ) => (
-            <Works
-              key={index}
-              imageLink={work.imageLink}
-              imageDescription={work.imageDescription}
-            />
-          ) )}
-        </S.WorksContainer>
+        <Works
+          works={works}
+        />
       </Fade>
     </S.WorksSection>
   )
