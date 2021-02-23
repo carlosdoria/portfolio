@@ -23,7 +23,7 @@ const HomeSectoion = () => {
           <S.HomeTitle ref={homeTitle}>
           Olá, <br />
           Sou
-            <S.HomeTitleName> Carlos</S.HomeTitleName>
+            <S.HomeTitleName>  Carlos</S.HomeTitleName>
             <br />
           Desenvolvedor Full Stack
           </S.HomeTitle>
