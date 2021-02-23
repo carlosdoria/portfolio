@@ -11,7 +11,7 @@ export const Header = styled( motion.header )`
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: var(--first-background-color);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 
   @media screen and (min-width: 768px) {

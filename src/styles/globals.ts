@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
   /* VARIEBLE COLORS */
   :root {
+    --first-background-color: #000;
     --first-color: #4070f4;
     --second-color: #0E2431;
   }
@@ -58,6 +59,8 @@ const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100vh;
+
+    background-color: var(--first-background-color);
 
     scroll-behavior: smooth;
   }
