@@ -51,6 +51,16 @@ export const Logo = styled.a`
   font-weight: bold;
   color: var(--second-color);
 
+  /* :hover { */
+    text-shadow:
+        0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        /* 0 0 30px #00b3ff,
+        0 0 60px #00b3ff, */
+        0 0 10px #00b3ff
+      ;
+  /* } */
+
   cursor: pointer;
 
   @media screen and (min-width: 1024px) {
@@ -112,6 +122,13 @@ export const NavLink = styled.a`
     height: 0.20rem;
 
     background-color: var(--first-color);
+    text-shadow:
+      0 0 10px #00b3ff,
+      0 0 20px #00b3ff,
+      0 0 40px #00b3ff,
+      0 0 80px #00b3ff,
+      0 0 10px #00b3ff
+    ;
 
     transition: .5s;
     opacity: 0;
@@ -132,8 +149,12 @@ export const NavLink = styled.a`
     }
 
     :hover {
-      color: var(--first-color);
-    }
+      text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 10px #00b3ff
+  ;    }
   }
 `
 

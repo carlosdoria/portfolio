@@ -40,6 +40,7 @@ export const HomeTitle = styled.h1`
   margin-bottom: var(--mb-5);
 
   font-size: var(--large-font-size);
+  position: relative;
 
   @media screen and (min-width: 520px) {
     width: 50%;
@@ -57,7 +58,13 @@ export const HomeTitle = styled.h1`
 `
 
 export const HomeTitleName = styled.span`
-  color: var(--first-color);
+  color: #fff;
+  text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    /* 0 0 40px #00b3ff, */
+    /* 0 0 80px #00b3ff, */
+    0 0 10px #00b3ff
+  ;
 `
 
 export const HomeContactLink = styled( motion.a )`
@@ -79,9 +86,8 @@ export const HomeContactLink = styled( motion.a )`
     color: var(--first-color);
     background-color: #fff;
 
-    border: 1px solid var(--first-color);
+    /* border: 1px solid var(--first-color); */
 
-    box-shadow: 10px 10px 40px rgba(1, 0, 0, 0.4);
   }
 
   @media screen and (max-width: 425px) and (max-height: 490px) {

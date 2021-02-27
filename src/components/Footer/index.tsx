@@ -14,26 +14,31 @@ const Footer = () => {
     <S.Footer>
       {/* <S.FooterTitle>Carlos</S.FooterTitle> */}
       <S.FooterSocialMedias>
-        <S.FooterIcon
+        <S.Icon
           href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
-          target="_blank">
+          target="_blank"
+        >
           <FaLinkedin />
-        </S.FooterIcon>
-        <S.FooterIcon
+        </S.Icon>
+        <S.Icon
           href="https://github.com/carlosdoria"
-          target="_blank">
+          target="_blank"
+        >
           <FaGithubAlt />
-        </S.FooterIcon>
-        <S.FooterIcon
+        </S.Icon>
+        <S.Icon
           href="https://www.instagram.com/carlosc.doria/"
-          target="_blank">
+          target="_blank"
+        >
           <FaInstagram />
-        </S.FooterIcon>
-        <S.FooterIcon
+        </S.Icon>
+        <S.Icon
           href="https://api.whatsapp.com/send?phone=5582988970954"
-          target="_blank">
+          target="_blank"
+        >
           <FaWhatsapp />
-        </S.FooterIcon>
+        </S.Icon>
+
       </S.FooterSocialMedias>
       {'\u00A9'} {YEAR.getFullYear()}, copyright all rights reserved
     </S.Footer>

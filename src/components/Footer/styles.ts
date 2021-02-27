@@ -8,24 +8,29 @@ export const Footer = styled.footer`
 
   font-weight: var(--font-semi);
 
-  color: #fff;
+  color: var(--footer-copyright-color);
   background-color: var(--first-background-color);
 `
 
-export const FooterTitle = styled.p`
-  margin-bottom: var(--mb-4);
+// export const FooterTitle = styled.p`
+//   margin-bottom: var(--mb-4);
 
-  font-size: 2rem;
-`
+//   /* font-size: 2rem; */
+// `
 
 export const FooterSocialMedias = styled.div`
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-3);
 `
 
-export const FooterIcon = styled( motion.a )`
+export const Icon = styled.a`
   margin: 0 var(--mb-2);
 
-  font-size: 1.5rem;
+  font-size: 2rem;
 
-  color: #fff;
+  color: var(--footer-first-color);
+  transition: .4s;
+
+  :hover {
+    color: var(--footer-second-color);
+  }
 `

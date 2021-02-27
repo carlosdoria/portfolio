@@ -9,9 +9,11 @@ const GlobalStyles = createGlobalStyle`
 
   /* VARIEBLE COLORS */
   :root {
-    --first-background-color: #000;
-    --first-color: #4070f4;
-    --second-color: #0E2431;
+    --first-background-color: #050410;
+    --first-color: #3f70f3;
+    --second-color: #fff;
+    --footer-first-color: #fff;
+    --footer-second-color: #3f70f3;
   }
 
   /* VARIEBLE FONTS AND TYPES */
@@ -61,7 +63,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
 
     background-color: var(--first-background-color);
-
+    cursor: initial;
     scroll-behavior: smooth;
   }
 

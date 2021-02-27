@@ -1,4 +1,3 @@
-import React, { useRef } from 'react'
 import {
   FaLinkedin,
   FaGithubAlt,
@@ -10,7 +9,6 @@ import * as S from './styles'
 import { Fade } from 'react-awesome-reveal'
 
 const HomeSectoion = () => {
-  const homeTitle = useRef( null )
 
   const WHILE_HOVER = {
     scale: [ 1, 1.6, 1.4 ], transition: { duration: .5 }
@@ -20,11 +18,10 @@ const HomeSectoion = () => {
     <Fade>
       <S.HomeSection id="home">
         <S.HomeData>
-          <S.HomeTitle ref={homeTitle}>
+          <S.HomeTitle>
           Olá, <br />
           Sou
-            <S.HomeTitleName>  Carlos</S.HomeTitleName>
-            <br />
+            <S.HomeTitleName>  Carlos</S.HomeTitleName> <br />
           Desenvolvedor Full Stack
           </S.HomeTitle>
           <div>
