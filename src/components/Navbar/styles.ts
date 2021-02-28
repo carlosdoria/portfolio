@@ -121,8 +121,8 @@ export const NavLink = styled.a`
 
     height: 0.20rem;
 
-    background-color: var(--first-color);
-    text-shadow:
+    background-color: var(--second-color);
+    box-shadow:
       0 0 10px #00b3ff,
       0 0 20px #00b3ff,
       0 0 40px #00b3ff,

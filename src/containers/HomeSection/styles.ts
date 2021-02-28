@@ -35,12 +35,37 @@ export const HomeData = styled( motion.div )`
   }
 `
 
-export const HomeTitle = styled.h1`
+export const HomeTitle = styled.div`
+  position: relative;
+`
+
+export const HomeTitleText = styled.h1`
+  position: relative;
+
   margin-top: var(--header-height);
   margin-bottom: var(--mb-5);
 
   font-size: var(--large-font-size);
-  position: relative;
+
+  :before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: #03e9f4;
+    animation: blinkCursor .8s steps(3) infinite;
+  }
+
+  @keyframes animation {
+    0%, 75% {
+      opacity: 1;
+    }
+    76%,100% {
+      opacity: 0
+    }
+  }
 
   @media screen and (min-width: 520px) {
     width: 50%;
@@ -58,13 +83,31 @@ export const HomeTitle = styled.h1`
 `
 
 export const HomeTitleName = styled.span`
-  color: #fff;
   text-shadow: 0 0 10px #00b3ff,
-    0 0 20px #00b3ff,
-    /* 0 0 40px #00b3ff, */
-    /* 0 0 80px #00b3ff, */
-    0 0 10px #00b3ff
+  0 0 20px #00b3ff,
+  0 0 40px #00b3ff,
+  0 0 80px #00b3ff,
+  0 0 10px #00b3ff
   ;
+
+  animation:  animete 5s linear;
+
+  @keyframes animete {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+      color: var(--first-background-color);
+      text-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 100% {
+      color: #fff;
+      text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 10px #00b3ff
+      ;
+    }
+  }
+
 `
 
 export const HomeContactLink = styled( motion.a )`

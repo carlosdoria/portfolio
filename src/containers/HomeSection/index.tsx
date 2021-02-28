@@ -19,10 +19,12 @@ const HomeSectoion = () => {
       <S.HomeSection id="home">
         <S.HomeData>
           <S.HomeTitle>
-          Olá, <br />
-          Sou
-            <S.HomeTitleName>  Carlos</S.HomeTitleName> <br />
-          Desenvolvedor Full Stack
+            <S.HomeTitleText>
+              Olá, <br />
+              Sou
+              <S.HomeTitleName>  Carlos</S.HomeTitleName> <br />
+              Desenvolvedor Full Stack
+            </S.HomeTitleText>
           </S.HomeTitle>
           <div>
             <S.HomeContactLink
