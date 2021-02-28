@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:w": "jest --watch",
     "generate": "yarn plop --plopfile ./generators/plopfile.js"
   },
