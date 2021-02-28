@@ -18,14 +18,12 @@ const HomeSectoion = () => {
     <Fade>
       <S.HomeSection id="home">
         <S.HomeData>
-          <S.HomeTitle>
-            <S.HomeTitleText>
+          <S.HomeTitleText>
               Olá, <br />
               Sou
-              <S.HomeTitleName>  Carlos</S.HomeTitleName> <br />
+            <S.HomeTitleName>  Carlos</S.HomeTitleName> <br />
               Desenvolvedor Full Stack
-            </S.HomeTitleText>
-          </S.HomeTitle>
+          </S.HomeTitleText>
           <div>
             <S.HomeContactLink
               href="#contact"

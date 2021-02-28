@@ -35,10 +35,6 @@ export const HomeData = styled( motion.div )`
   }
 `
 
-export const HomeTitle = styled.div`
-  position: relative;
-`
-
 export const HomeTitleText = styled.h1`
   position: relative;
 
@@ -46,26 +42,6 @@ export const HomeTitleText = styled.h1`
   margin-bottom: var(--mb-5);
 
   font-size: var(--large-font-size);
-
-  :before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 2px;
-    background: #03e9f4;
-    animation: blinkCursor .8s steps(3) infinite;
-  }
-
-  @keyframes animation {
-    0%, 75% {
-      opacity: 1;
-    }
-    76%,100% {
-      opacity: 0
-    }
-  }
 
   @media screen and (min-width: 520px) {
     width: 50%;
@@ -86,7 +62,6 @@ export const HomeTitleName = styled.span`
   text-shadow: 0 0 10px #00b3ff,
   0 0 20px #00b3ff,
   0 0 40px #00b3ff,
-  0 0 80px #00b3ff,
   0 0 10px #00b3ff
   ;
 
@@ -99,7 +74,8 @@ export const HomeTitleName = styled.span`
     }
     18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 100% {
       color: #fff;
-      text-shadow: 0 0 10px #00b3ff,
+      text-shadow:
+        0 0 10px #00b3ff,
         0 0 20px #00b3ff,
         0 0 40px #00b3ff,
         0 0 80px #00b3ff,
@@ -111,27 +87,76 @@ export const HomeTitleName = styled.span`
 `
 
 export const HomeContactLink = styled( motion.a )`
-  padding: 0.75rem 2.5rem;
+  position: relative;
+
+  padding: .9rem 1.8rem;
 
   display: inline-block;
 
   font-size: 1.4rem;
   font-weight: var(--font-semi);
+  letter-spacing: 3px;
 
   color: #fff;
-  background-color: var(--first-color);
-
-  border-radius: 0.5rem;
+  background-color: var(--first-background-color);
+  border-radius: .2rem;
 
   transition: .5s;
+  overflow: hidden;
 
   :hover {
-    color: var(--first-color);
-    background-color: #fff;
+    /* color: #00b3ff; */
+    box-shadow: 0 0 12px #00b3ff;
 
-    /* border: 1px solid var(--first-color); */
-
+    transition-delay: .45s;
   }
+
+  :before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 12px;
+    width: 12px;
+    color: red;
+
+    border-top: 2px solid var(--first-color);
+    border-left: 2px solid var(--first-color);
+    border-color: #00b3ff;
+
+    transition: .5s;
+    transition-delay: .4s;
+  }
+
+  :hover:before {
+      height: 100%;
+      width: 100%;
+      transition-delay: 0s;
+    }
+
+  :after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    height: 12px;
+    width: 12px;
+
+    border-bottom: 2px solid var(--first-color);
+    border-right: 2px solid var(--first-color);
+    border-color: #00b3ff;
+
+    transition: .5s;
+    transition-delay: .4s;
+  }
+
+  :hover:after {
+      height: 100%;
+      width: 100%;
+      transition-delay: 0s;
+    }
 
   @media screen and (max-width: 425px) and (max-height: 490px) {
     width: 60%;
