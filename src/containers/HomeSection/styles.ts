@@ -98,7 +98,7 @@ export const HomeContactLink = styled( motion.a )`
   letter-spacing: 3px;
 
   color: #fff;
-  background-color: var(--first-background-color);
+  background-color: none;
   border-radius: .2rem;
 
   transition: .5s;
