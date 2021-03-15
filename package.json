@@ -14,7 +14,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
-    "framer-motion": "^3.10.3",
+    "framer-motion": "^3.10.4",
     "next": "10.0.8",
     "prismic-javascript": "^3.0.2",
     "react": "17.0.1",
