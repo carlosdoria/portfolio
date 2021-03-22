@@ -17,9 +17,9 @@
     "framer-motion": "^3.10.5",
     "next": "10.0.9",
     "prismic-javascript": "^3.0.2",
-    "react": "17.0.1",
+    "react": "17.0.2",
     "react-awesome-reveal": "^3.7.1",
-    "react-dom": "17.0.1",
+    "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-toastify": "^7.0.3",
     "styled-components": "^5.2.1"
