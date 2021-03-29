@@ -15,7 +15,7 @@
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "framer-motion": "^3.10.5",
-    "next": "10.0.9",
+    "next": "10.1.1",
     "prismic-javascript": "^3.0.2",
     "react": "17.0.2",
     "react-awesome-reveal": "^3.7.1",
