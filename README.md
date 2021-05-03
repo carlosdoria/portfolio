@@ -36,9 +36,9 @@ The project was developed with the following technologies and tools:
 - [NextJS](https://nextjs.org/);
 - [TypeScript](https://www.typescriptlang.org/);
 - [Styled Components](https://styled-components.com/);
-- [Prismic](https://prismic.io/);
+<!--- [Prismic](https://prismic.io/);
 - [Jest](https://jestjs.io/);
-- [React Testing Library](https://testing-library.com/);
+- [React Testing Library](https://testing-library.com/);-->
 
 <br>
 
