@@ -7,7 +7,7 @@ import {
   FaWhatsapp,
 } from 'react-icons/fa'
 
-const Footer = () => {
+export const Footer = () => {
   const YEAR = new Date()
 
   return (
@@ -44,5 +44,3 @@ const Footer = () => {
     </S.Footer>
   )
 }
-
-export default Footer

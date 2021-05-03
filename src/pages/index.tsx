@@ -32,7 +32,7 @@ const Home = () => {
         <SkillsSection />
 
         {/* === SECTION WORKS === */}
-        <WorksSection />
+        {/* <WorksSection /> */}
 
         {/* === SECTION CONTACT === */}
         <ContactSection />

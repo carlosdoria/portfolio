@@ -4,7 +4,7 @@ import { FiMenu } from 'react-icons/fi'
 
 import * as S from './styles'
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   const [ enableMenu, setEnableMenu ] = useState( false )
 
   return (
@@ -66,4 +66,3 @@ const Navbar: React.FC = () => {
   )
 }
 
-export default Navbar
