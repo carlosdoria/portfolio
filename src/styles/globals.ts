@@ -14,6 +14,14 @@ const GlobalStyles = createGlobalStyle`
     --second-color: #fff;
     --footer-first-color: #fff;
     --footer-second-color: #3f70f3;
+
+    --bb_8-bg: #F5FAFC;
+    --bb_8-base: #EBF2FA;
+    --bb_8-base-tint: #A7D0E0;
+    --bb_8-stroke: #244356;
+    --bb_8-orange: #FDC23E;
+    --bb_8-blue: #449BAA;
+    --bb_8-red: #FF7761;
   }
 
   /* VARIEBLE FONTS AND TYPES */
