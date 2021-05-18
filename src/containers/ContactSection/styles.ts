@@ -117,7 +117,7 @@ export const InputButton = styled.input`
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
 
-  color: #fff;
+  color: #000;
   background-color: var(--first-color);
 
   border: none;
