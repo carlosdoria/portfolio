@@ -48,9 +48,7 @@ const SectionContainer = styled.div`
   }
 `
 
-export const ContactContainer = styled( SectionContainer )`
-  /* row-gap: 2rem;
-justify-items: center; */
+export const ContactContainer = styled(SectionContainer)`
   @media screen and (min-width: 768px) {
     justify-items: center;
   }
@@ -70,7 +68,6 @@ export const InputText = styled.input`
   padding: 1rem;
 
   font-size: var(--normal-font-size);
-  /* font-weight: var(--font-semi); */
 
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
@@ -85,7 +82,6 @@ export const InputEmail = styled.input`
   padding: 1rem;
 
   font-size: var(--normal-font-size);
-  /* font-weight: var(--font-semi); */
 
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
@@ -100,7 +96,7 @@ export const TextArea = styled.textarea`
   padding: 1rem;
 
   font-size: var(--normal-font-size);
-  /* font-weight: var(--font-semi); */
+  color: #000;
 
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
