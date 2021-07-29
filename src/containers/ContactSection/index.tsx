@@ -12,9 +12,9 @@ export default function ContactSection () {
     message: ''
   })
 
-  const handleClick = (event: React.FormEvent) => {
+  async function handleClick (event: React.FormEvent) {
     event.preventDefault()
-    ApiEmail.post('/email', email)
+    await ApiEmail.post('/email', email)
     clearFields()
     return (
       toast.info('Email enviado com sucesso', {

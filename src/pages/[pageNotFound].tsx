@@ -4,14 +4,13 @@ import { useRouter } from 'next/router'
 import * as S from 'styles/pageNotFound.styles'
 
 const PageNotFound = () => {
-
   const router = useRouter()
 
-  useEffect( () => {
-    setTimeout( () => {
-      router.push( '/' )
-    }, 2000 )
-  } )
+  useEffect(() => {
+    setTimeout(() => {
+      router.push('/')
+    }, 2000)
+  })
 
   return (
     <S.Container>
