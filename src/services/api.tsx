@@ -5,7 +5,7 @@ const ApiGithub = axios.create({
 })
 
 const ApiEmail = axios.create({
-  baseURL: 'https://carlosdoria-portifolio.vercel.app/api',
+  baseURL: '/api',
 })
 
 export { ApiGithub, ApiEmail }
