@@ -4,20 +4,20 @@ import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'
 import { Fade } from 'react-awesome-reveal'
 
-const ContactSection = () => {
+export default function ContactSection () {
 
-  const [ email, setEmail ] = useState( {
-    'name': '',
-    'email': '',
-    'message': ''
-  } )
+  const [ email, setEmail ] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
 
-  const handleClick = ( event: React.FormEvent ) => {
+  const handleClick = (event: React.FormEvent) => {
     event.preventDefault()
-    ApiEmail.post( '/send', email )
+    ApiEmail.post('/email', email)
     clearFields()
     return (
-      toast.info( 'Email enviado com sucesso', {
+      toast.info('Email enviado com sucesso', {
         position: 'bottom-right',
         autoClose: 5000,
         hideProgressBar: false,
@@ -26,33 +26,31 @@ const ContactSection = () => {
         draggable: true,
         progress: undefined,
         transition: Flip
-      } )
+      })
     )
   }
 
-  const handleChange = ( name: string, value: string ) => {
-
-    setEmail( {
+  const handleChange = (name: string, value: string) => {
+    setEmail({
       ...email,
       [ name ]: value
-    } )
+    })
   }
 
   const clearFields = () => {
-    setEmail( {
+    setEmail({
       'name': '',
       'email': '',
       'message': ''
-    } )
+    })
   }
 
   return (
     <S.ContactSection id="contact">
       <Fade>
         <S.SectionTitle>Contato</S.SectionTitle>
-        {/* <button onClick={() => test()}>asd</button> */}
         <S.ContactContainer>
-          <S.Form onSubmit={e => handleClick( e )}>
+          <S.Form onSubmit={e => handleClick(e)}>
             <S.InputText
               type="text"
               value={email.name}
@@ -90,7 +88,4 @@ const ContactSection = () => {
       </Fade>
     </S.ContactSection>
   )
-
 }
-
-export default ContactSection

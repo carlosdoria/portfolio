@@ -2,7 +2,7 @@ import Works from 'containers/WorksSection/Works'
 import * as S from './styles'
 import { Fade } from 'react-awesome-reveal'
 
-const WorksSection = () => {
+export default function WorksSection () {
 
   return (
     <S.WorksSection id="works">
@@ -13,5 +13,3 @@ const WorksSection = () => {
     </S.WorksSection>
   )
 }
-
-export default WorksSection

@@ -9,7 +9,7 @@ import * as S from './styles'
 import { Fade } from 'react-awesome-reveal'
 import CupCoffee from 'components/CupCoffee'
 
-const HomeSectoion = () => {
+export default function HomeSectoion () {
 
   const WHILE_HOVER = {
     scale: [ 1, 1.6, 1.4 ], transition: { duration: .5 }
@@ -91,5 +91,3 @@ const HomeSectoion = () => {
     </Fade>
   )
 }
-
-export default HomeSectoion
