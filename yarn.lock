@@ -1335,10 +1335,10 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.1.tgz#18845205e86ff0038517aab7a18a62a6b9f71275"
   integrity sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
 
-"@types/scrollreveal@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@types/scrollreveal/-/scrollreveal-0.0.6.tgz#e2e6a5e48dce3aa3d5c0bdf13280a7406e79c833"
-  integrity sha512-nFy6J3SJMBidLJcRkNACXb4dQqYCkzNC+eaNS0z4VSmRgEwVT003tm3d1fw3uwlj/esGrj6PvNlxj3W2UTu1WQ==
+"@types/scrollreveal@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@types/scrollreveal/-/scrollreveal-0.0.7.tgz#cca18ca13093fc0c9b5ba6defed7374e6189196a"
+  integrity sha512-Bv/cBFpJE+WTUOViqT7y29n7Vpp+KAGF/UUx4DZx7JwAfHarBl/xGytum1+xMZBRjANcHHfDM9+7LQGilEj2gQ==
 
 "@types/styled-components@^5.1.10":
   version "5.1.10"
