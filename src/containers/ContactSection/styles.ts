@@ -48,7 +48,7 @@ const SectionContainer = styled.div`
   }
 `
 
-export const ContactContainer = styled(SectionContainer)`
+export const ContactContainer = styled( SectionContainer )`
   @media screen and (min-width: 768px) {
     justify-items: center;
   }

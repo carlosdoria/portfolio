@@ -8,6 +8,7 @@ export const HomeSection = styled( motion.section )`
 
   max-width: 1024px;
   width: calc(100% - 2rem);
+  padding-top: var(--header-height);
 
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);

@@ -1,23 +1,31 @@
 import { createGlobalStyle } from 'styled-components'
+import { size } from './breakpoints'
 
 const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
   :root {
     --header-height: 3rem;
     --font-semi: 600;
-  }
+
+    /* BREAKING POINTS */
+    --mobileS: ${size.mobileS};
+    --mobileM: ${size.mobileM};
+    --mobileL: ${size.mobileL};
+    --tabletS: ${size.tabletS};
+    --tabletM: ${size.tabletM};
+    --tabletL: ${size.tabletL};
+    --desktopS: ${size.desktopS};
+    --desktopM: ${size.desktopM};
 
   /* VARIEBLE COLORS */
-  :root {
     --first-background-color: #050410;
     --first-color: #3f70f3;
     --second-color: #fff;
     --footer-first-color: #fff;
     --footer-second-color: #3f70f3;
-  }
+
 
   /* VARIEBLE FONTS AND TYPES */
-  :root {
     --extraLarge-font-size: 2.8rem;
     --large-font-size: 2rem;
     --medium-font-size: 1.8rem;
@@ -35,18 +43,14 @@ const GlobalStyles = createGlobalStyle`
     @media screen and (min-width: 768px) {
       --large-font-size: 3.3rem;
     }
-  }
 
-  :root {
     --mb-1: 0.5rem;
     --mb-2: 1rem;
     --mb-3: 1.5rem;
     --mb-4: 2rem;
     --mb-5: 2.5rem;
     --mb-6: 3rem;
-  }
 
-  :root {
     --z-back: -10;
     --z-normal: 1;
     --z-tooltip: 10;
@@ -79,7 +83,6 @@ const GlobalStyles = createGlobalStyle`
 
   section {
     padding-top: 3rem;
-    padding-bottom: 2rem;
 
     :nth-child(1) {
     padding: 0;
@@ -100,8 +103,6 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     display: block;
   }
-
-
 `
 
 export default GlobalStyles

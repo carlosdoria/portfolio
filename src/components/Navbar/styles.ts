@@ -6,34 +6,20 @@ interface INavMenu {
 }
 
 export const Header = styled( motion.header )`
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+
+  width: 100%;
+  height: var(--header-height);
+
   background-color: var(--first-background-color);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 
   @media screen and (min-width: 768px) {
     font-size: 1.3rem;
   }
-`
-
-export const Nav = styled.nav`
-  max-width: 1024px;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
-  width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: var(--font-semi);
-
   @media screen and (min-width: 768px) {
     height: calc(var(--header-height) + 1rem);
   }
@@ -41,6 +27,28 @@ export const Nav = styled.nav`
   @media screen and (min-width: 1024px) {
     height: calc(var(--header-height) + 2rem);
 
+    margin-left: auto;
+    margin-right: auto;
+  }
+`
+
+export const Nav = styled.nav`
+  height: 100%;
+  max-width: 1024px;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
+
+  @media screen and (min-width: 1024px) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -77,7 +85,7 @@ export const NavMenu = styled.div<INavMenu>`
     width: 80%;
     height: 100%;
 
-    padding: 2rem;
+    padding: 1rem;
 
     background-color: var(--second-color);
 
@@ -108,7 +116,7 @@ export const NavContainer = styled.li`
 export const NavLink = styled.a`
   position: relative;
 
-  color: #fff;
+  color: #000;
   cursor: pointer;
 
   transition: .5s;

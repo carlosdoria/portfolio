@@ -7,7 +7,7 @@ import {
 
 import * as S from './styles'
 import { Fade } from 'react-awesome-reveal'
-import CupCoffee from 'components/CupCoffee'
+// import CupCoffee from 'components/CupCoffee'
 
 export default function HomeSectoion () {
 
@@ -80,13 +80,13 @@ export default function HomeSectoion () {
           </S.Icon>
         </S.HomeDivSocialMedias>
 
-        <S.HomeDivImage>
-          {/* <S.HomeImage
+        {/* <S.HomeDivImage> */}
+        {/* <S.HomeImage
             src="https://github.com/carlosdoria.png"
             alt="foto de perfil"
           /> */}
-          <CupCoffee/>
-        </S.HomeDivImage>
+        {/* <CupCoffee/> */}
+        {/* </S.HomeDivImage> */}
       </S.HomeSection>
     </Fade>
   )
