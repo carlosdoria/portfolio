@@ -4,7 +4,7 @@ import { FiMenu } from 'react-icons/fi'
 
 import * as S from './styles'
 
-export const Navbar: React.FC = () => {
+export const Header: React.FC = () => {
   const [ enableMenu, setEnableMenu ] = useState( false )
 
   return (
@@ -24,42 +24,40 @@ export const Navbar: React.FC = () => {
           </Link>
         </div>
 
-        <S.NavMenu activeMenu={enableMenu}>
-          <S.NavList>
-            <S.NavContainer>
-              <S.NavLink
-                href="#home"
-                onClick={e => {
-                  setEnableMenu( false ), console.log( e )
-                }}>
+        <S.NavList activeMenu={enableMenu}>
+          <S.NavContainer>
+            <S.NavLink
+              href="#home"
+              onClick={e => {
+                setEnableMenu( false ), console.log( e )
+              }}>
                 Home
-              </S.NavLink>
-            </S.NavContainer>
-            <S.NavContainer>
-              <S.NavLink href="#about" onClick={() => setEnableMenu( false )}>
+            </S.NavLink>
+          </S.NavContainer>
+          <S.NavContainer>
+            <S.NavLink href="#about" onClick={() => setEnableMenu( false )}>
                 Sobre
-              </S.NavLink>
-            </S.NavContainer>
-            <S.NavContainer>
+            </S.NavLink>
+          </S.NavContainer>
+          {/* <S.NavContainer>
               <S.NavLink href="#skills" onClick={() => setEnableMenu( false )}>
                 Skills
               </S.NavLink>
-            </S.NavContainer>
-            <S.NavContainer>
+            </S.NavContainer> */}
+          {/* <S.NavContainer>
               <S.NavLink href="#works" onClick={() => setEnableMenu( false )}>
                 Trabalhos
               </S.NavLink>
-            </S.NavContainer>
-            <S.NavContainer>
-              <S.NavLink href="#contact" onClick={() => setEnableMenu( false )}>
+            </S.NavContainer> */}
+          <S.NavContainer>
+            <S.NavLink href="#contact" onClick={() => setEnableMenu( false )}>
                 Contato
-              </S.NavLink>
-            </S.NavContainer>
-          </S.NavList>
-        </S.NavMenu>
+            </S.NavLink>
+          </S.NavContainer>
+        </S.NavList>
 
-        <S.IconMenu>
-          <FiMenu onClick={() => setEnableMenu( !enableMenu )} />
+        <S.IconMenu onClick={() => setEnableMenu( !enableMenu )} >
+          <FiMenu/>
         </S.IconMenu>
       </S.Nav>
     </S.Header>

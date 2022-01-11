@@ -6,7 +6,7 @@ import {
   ContactSection,
 } from '../containers'
 
-import { Navbar, Footer } from '../components'
+import { Header, Footer } from '../components'
 
 import * as S from '../styles/home.styles'
 
@@ -19,26 +19,26 @@ import * as S from '../styles/home.styles'
 const Home = () => {
   return (
     <>
-      <Navbar/>
+      <Header/>
 
       <S.Main>
         {/* === SECTION HOME === */}
         <HomeSectoion />
 
         {/* === SECTION ABOUT === */}
-        <AboutSection />
+        {/* <AboutSection /> */}
 
         {/* === SECTION SKILLS === */}
-        <SkillsSection />
+        {/* <SkillsSection /> */}
 
         {/* === SECTION WORKS === */}
-        <WorksSection />
+        {/* <WorksSection /> */}
 
         {/* === SECTION CONTACT === */}
-        <ContactSection />
+        {/* <ContactSection /> */}
 
         {/* === SECTION FOOTER === */}
-        <Footer />
+        {/* <Footer /> */}
       </S.Main>
     </>
   )

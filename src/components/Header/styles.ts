@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { device } from '../../styles/breakpoints'
 
 interface INavMenu {
   activeMenu: boolean;
@@ -7,8 +8,8 @@ interface INavMenu {
 
 export const Header = styled( motion.header )`
   position: fixed;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   z-index: var(--z-fixed);
 
   width: 100%;
@@ -26,32 +27,20 @@ export const Header = styled( motion.header )`
 
   @media screen and (min-width: 1024px) {
     height: calc(var(--header-height) + 2rem);
-
-    margin-left: auto;
-    margin-right: auto;
   }
 `
 
 export const Nav = styled.nav`
   height: 100%;
-  max-width: 1024px;
+  width: 100%;
+  max-width: ${device.desktopS};
 
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
-  width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
+  margin: 0 auto;
+  padding: 0 16px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: var(--font-semi);
-
-  @media screen and (min-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
 `
 
 export const Logo = styled.a`
@@ -76,41 +65,39 @@ export const Logo = styled.a`
   }
 `
 
-export const NavMenu = styled.div<INavMenu>`
-  @media screen and (max-width: 767px) {
-    position: fixed;
-    top: var(--header-height);
-    right: ${props => ( props.activeMenu ? 0 : '-100%' )};
+export const NavList = styled.ul<INavMenu>`
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
 
-    width: 80%;
-    height: 100%;
+    @media screen and (${device.tabletM}) {
+      position: fixed;
+      top: var(--header-height);
+      /* right: ${props => ( props.activeMenu ? 0 : '-100%' )}; */
+      right: 0;
 
-    padding: 1rem;
+      width: 80%;
+      height: 100%;
+      padding: 1rem;
 
-    background-color: var(--second-color);
+      flex-direction: column;
 
     transition: 0.5s;
   }
 `
 
-export const NavList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
+// export const NavList = styled.ul`
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
 
-  @media screen and (min-width: 767px) {
-    display: flex;
-    padding-top: 0;
-  }
-`
+//   @media screen and (min-width: 767px) {
+//     display: flex;
+//     padding-top: 0;
+//   }
+// `
 
 export const NavContainer = styled.li`
-  margin-bottom: var(--mb-4);
-
-  @media screen and (min-width: 768px) {
-    margin-left: var(--mb-6);
-    margin-bottom: 0;
-  }
 `
 
 export const NavLink = styled.a`
