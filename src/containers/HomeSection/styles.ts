@@ -1,31 +1,20 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { device } from 'styles/breakpoints'
 
 export const HomeSection = styled( motion.section )`
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
 
-  row-gap: 1rem;
+  /* row-gap: 1rem; */
 
-  max-width: 1024px;
-  width: calc(100% - 2rem);
-  padding-top: var(--header-height);
+  max-width: ${device.desktopM};
+  /* padding-top: var(--header-height); */
 
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
+  margin: 0 16px;
 
   display: grid;
   grid-template-columns: 100%;
   grid-column-gap: 2rem;
-
-  @media screen and (min-width: 768px) {
-    height: 100vh;
-  }
-
-  @media screen and (min-width: 1024px) {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
 `
 
 export const HomeData = styled( motion.div )`
@@ -38,9 +27,6 @@ export const HomeData = styled( motion.div )`
 
 export const HomeTitleText = styled.h1`
   position: relative;
-
-  margin-top: var(--header-height);
-  margin-bottom: var(--mb-5);
 
   font-size: var(--large-font-size);
 

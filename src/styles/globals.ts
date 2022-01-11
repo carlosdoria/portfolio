@@ -4,7 +4,7 @@ import { size } from './breakpoints'
 const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
   :root {
-    --header-height: 3rem;
+    --header-height: 3.5rem;
     --font-semi: 600;
 
     /* BREAKING POINTS */
@@ -44,14 +44,6 @@ const GlobalStyles = createGlobalStyle`
       --large-font-size: 3.3rem;
     }
 
-    --mb-1: 0.5rem;
-    --mb-2: 1rem;
-    --mb-3: 1.5rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
-
-    --z-back: -10;
     --z-normal: 1;
     --z-tooltip: 10;
     --z-fixed: 100;
@@ -82,16 +74,19 @@ const GlobalStyles = createGlobalStyle`
   }
 
   section {
-    padding-top: 3rem;
-
-    :nth-child(1) {
-    padding: 0;
+    :not(:first-child){
+      padding-top: 3rem;
+    }
   }
 
     @media screen and (min-width: 768px) {
       padding-top: 5rem;
       padding-bottom: 3rem;
     }
+  }
+
+  ol, ul {
+    list-style: none;
   }
 
   a {
