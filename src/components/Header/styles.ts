@@ -8,8 +8,6 @@ interface INavMenu {
 
 export const Header = styled( motion.header )`
   position: fixed;
-  /* top: 0;
-  left: 0; */
   z-index: var(--z-fixed);
 
   width: 100%;
@@ -20,13 +18,6 @@ export const Header = styled( motion.header )`
 
   @media screen and (min-width: 768px) {
     font-size: 1.3rem;
-  }
-  @media screen and (min-width: 768px) {
-    height: calc(var(--header-height) + 1rem);
-  }
-
-  @media screen and (min-width: 1024px) {
-    height: calc(var(--header-height) + 2rem);
   }
 `
 

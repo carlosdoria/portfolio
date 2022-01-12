@@ -4,8 +4,7 @@ import { size } from './breakpoints'
 const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
   :root {
-    --header-height: 3.5rem;
-    --font-semi: 600;
+    --header-height: 5rem;
 
     /* BREAKING POINTS */
     --mobileS: ${size.mobileS};
@@ -64,13 +63,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body, textarea {
-    font-size: var(--normal-font-size);
     font-family: Arial, Helvetica, sans-serif;
     color: var(--second-color);
-
-    @media screen and (max-height: 650px) {
-      margin-top: var(--header-height);
-    }
   }
 
   section {

@@ -3,26 +3,23 @@ import { motion } from 'framer-motion'
 import { device } from 'styles/breakpoints'
 
 export const HomeSection = styled( motion.section )`
-  height: calc(100vh - var(--header-height));
-
   /* row-gap: 1rem; */
 
   max-width: ${device.desktopM};
+  min-height: calc(100vh - var(--header-height));
+
   /* padding-top: var(--header-height); */
 
-  margin: 0 16px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
+  background: blue;
 `
 
 export const HomeData = styled( motion.div )`
-  align-self: center;
-
-  @media screen and (min-width: 768px) {
-    align-self: flex-end;
-  }
+  margin-top: 16px;
 `
 
 export const HomeTitleText = styled.h1`
@@ -76,6 +73,7 @@ export const HomeTitleName = styled.span`
 export const HomeContactLink = styled( motion.a )`
   position: relative;
 
+  margin-top: 8px;
   padding: .9rem 1.8rem;
 
   display: inline-block;
@@ -160,25 +158,12 @@ export const HomeDivSocialMedias = styled( motion.div )`
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 425px) and (max-height: 490px) {
-    width: 60%;
-
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding-top: 0;
-    padding-bottom: 2.5rem;
-    flex-direction: row;
-    align-self: flex-end;
-  }
 `
 
 export const Icon = styled( motion.a )`
   width: max-content;
 
-  margin-bottom: var(--mb-2);
+  margin-bottom: 8px;
 
   font-size: 2rem;
   color: var(--second-color);
