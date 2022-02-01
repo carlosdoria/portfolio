@@ -4,7 +4,7 @@ import { size } from './breakpoints'
 const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
   :root {
-    --header-height: 5rem;
+    --header-height: 3.5rem;
 
     /* BREAKING POINTS */
     --mobileS: ${size.mobileS};
@@ -17,8 +17,8 @@ const GlobalStyles = createGlobalStyle`
     --desktopM: ${size.desktopM};
 
   /* VARIEBLE COLORS */
-    --first-background-color: #050410;
-    --first-color: #3f70f3;
+    --first-background-color: ${props => props.theme.colors.background};
+    --first-color: ${props => props.theme.colors.primary} ;
     --second-color: #fff;
     --footer-first-color: #fff;
     --footer-second-color: #3f70f3;
@@ -28,7 +28,6 @@ const GlobalStyles = createGlobalStyle`
     --extraLarge-font-size: 2.8rem;
     --large-font-size: 2rem;
     --medium-font-size: 1.8rem;
-    --h2-font-size: 1.8rem;
     --normal-font-size: 1rem;
 
     @media screen and (min-width: 600px) {
@@ -43,6 +42,7 @@ const GlobalStyles = createGlobalStyle`
       --large-font-size: 3.3rem;
     }
 
+    --z-back: -10;
     --z-normal: 1;
     --z-tooltip: 10;
     --z-fixed: 100;
@@ -58,29 +58,25 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
 
     background-color: var(--first-background-color);
-    cursor: initial;
-    scroll-behavior: smooth;
   }
 
   body, textarea {
+    font-size: var(--normal-font-size);
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--second-color);
+    color: var(--first-color);
   }
 
   section {
-    :not(:first-child){
-      padding-top: 3rem;
-    }
+    padding-top: 3rem;
+
+    :nth-child(1) {
+    padding: 0;
   }
 
     @media screen and (min-width: 768px) {
       padding-top: 5rem;
       padding-bottom: 3rem;
     }
-  }
-
-  ol, ul {
-    list-style: none;
   }
 
   a {

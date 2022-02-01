@@ -3,7 +3,7 @@ import * as S from './styles'
 const CupCoffee = () => {
   return (
     <S.Container>
-      <S.Plate></S.Plate>
+      {/* <S.Plate></S.Plate> */}
       <S.Cup>
         <S.Top>
           <S.Vapour>
@@ -33,7 +33,7 @@ const CupCoffee = () => {
           </S.Circle>
         </S.Top>
 
-        <S.Handle></S.Handle>
+        {/* <S.Handle></S.Handle> */}
       </S.Cup>
     </S.Container>
   )

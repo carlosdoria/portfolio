@@ -1,64 +1,40 @@
-import { useState } from 'react'
 import Link from 'next/link'
-import { FiMenu } from 'react-icons/fi'
+import { useContext } from 'react'
+import { FiSun, FiMoon } from 'react-icons/fi'
+import { ThemeContext } from 'styled-components'
 
 import * as S from './styles'
 
-export const Header: React.FC = () => {
-  const [ enableMenu, setEnableMenu ] = useState( false )
+interface HeaderProps {
+  toggleTheme?: () => void
+}
+
+export const Header = ( { toggleTheme }: HeaderProps ) => {
+  const { title } = useContext( ThemeContext )
 
   return (
     <S.Header
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: .3, duration: .5 } }}
-      // transition={{
-      //   type: 'spring',
-      //   stiffness: 260,
-      //   damping: 20
-      // }}
+      animate={{
+        opacity: 1,
+        transition: {
+          delay: .3, duration: .5
+        }
+      }}
     >
       <S.Nav>
-        <div>
-          <Link href="#home">
-            <S.Logo>Carlos Dória</S.Logo>
-          </Link>
-        </div>
+        <Link href="#home">
+          <S.Logo>Carlos Dória</S.Logo>
+        </Link>
 
-        <S.NavList activeMenu={enableMenu}>
-          <S.NavContainer>
-            <S.NavLink
-              href="#home"
-              onClick={e => {
-                setEnableMenu( false ), console.log( e )
-              }}>
-                Home
-            </S.NavLink>
-          </S.NavContainer>
-          <S.NavContainer>
-            <S.NavLink href="#about" onClick={() => setEnableMenu( false )}>
-                Sobre
-            </S.NavLink>
-          </S.NavContainer>
-          {/* <S.NavContainer>
-              <S.NavLink href="#skills" onClick={() => setEnableMenu( false )}>
-                Skills
-              </S.NavLink>
-            </S.NavContainer> */}
-          {/* <S.NavContainer>
-              <S.NavLink href="#works" onClick={() => setEnableMenu( false )}>
-                Trabalhos
-              </S.NavLink>
-            </S.NavContainer> */}
-          <S.NavContainer>
-            <S.NavLink href="#contact" onClick={() => setEnableMenu( false )}>
-                Contato
-            </S.NavLink>
-          </S.NavContainer>
-        </S.NavList>
+        <S.Button onClick={toggleTheme}>
+          {title === 'light' ?
+            <FiSun color='black' size={24} />
+            :
+            <FiMoon color='white' size={24} />
+          }
+        </S.Button>
 
-        <S.IconMenu onClick={() => setEnableMenu( !enableMenu )} >
-          <FiMenu/>
-        </S.IconMenu>
       </S.Nav>
     </S.Header>
   )
