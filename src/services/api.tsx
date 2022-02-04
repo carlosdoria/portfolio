@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-const ApiGithub = axios.create({
+const ApiGithub = axios.create( {
   baseURL: 'https://api.github.com/users/carlosdoria',
-})
+} )
 
-const ApiEmail = axios.create({
+const ApiEmail = axios.create( {
   baseURL: '/api',
-})
+} )
 
 export { ApiGithub, ApiEmail }

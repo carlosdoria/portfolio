@@ -11,7 +11,7 @@ interface ISkill {
 
 export default function SkillsSection () {
 
-  const [ skills, ] = useState<ISkill[]>([
+  const [ skills, ] = useState<ISkill[]>( [
     {
       name: 'React',
       percentage: '70%',
@@ -48,7 +48,7 @@ export default function SkillsSection () {
       link:
         'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png',
     },
-  ])
+  ] )
 
   return (
     <S.SkillsSection id="skills">
@@ -60,14 +60,14 @@ export default function SkillsSection () {
             <S.SkillsText>
             Atualmente focado em ReactJS e NodeJS.
             </S.SkillsText>
-            {skills.map((skill, index) => (
+            {skills.map( ( skill, index ) => (
               <Skills
                 key={index}
                 name={skill.name}
                 percentage={skill.percentage}
                 link={skill.link}
               />
-            ))}
+            ) )}
           </div>
           <S.SkillImage
             src="https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg"

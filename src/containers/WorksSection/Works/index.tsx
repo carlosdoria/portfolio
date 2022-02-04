@@ -8,7 +8,7 @@ interface IWorks {
 
 const Works = () => {
 
-  const [ works, ] = useState<IWorks[]>([
+  const [ works, ] = useState<IWorks[]>( [
     {
       imageLink:
         'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',
@@ -24,11 +24,11 @@ const Works = () => {
         'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg',
       imageDescription: 'imagem com dois computadores',
     },
-  ])
+  ] )
 
   return (
     <S.WorksContainer>
-      {works.map((work, index) => (
+      {works.map( ( work, index ) => (
         <S.Container
           key={index}
         >
@@ -38,7 +38,7 @@ const Works = () => {
           <S.Span></S.Span>
           <S.WorkImage src={work.imageLink} alt={work.imageDescription} />
         </S.Container>
-      ))}
+      ) )}
     </S.WorksContainer>
   )
 }

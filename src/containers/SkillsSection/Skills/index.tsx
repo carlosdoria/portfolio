@@ -7,7 +7,7 @@ interface ISkill {
   link: string;
 }
 
-const Skills = ({ name, percentage, link }: ISkill) => {
+const Skills = ( { name, percentage, link }: ISkill ) => {
   return (
     <Slide duration={1000}>
       <S.Container>

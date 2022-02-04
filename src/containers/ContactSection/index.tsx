@@ -6,18 +6,18 @@ import { Fade } from 'react-awesome-reveal'
 
 export default function ContactSection () {
 
-  const [ email, setEmail ] = useState({
+  const [ email, setEmail ] = useState( {
     name: '',
     email: '',
     message: ''
-  })
+  } )
 
-  async function handleClick (event: React.FormEvent) {
+  async function handleClick ( event: React.FormEvent ) {
     event.preventDefault()
-    await ApiEmail.post('/email', email)
+    await ApiEmail.post( '/email', email )
     clearFields()
     return (
-      toast.info('Email enviado com sucesso', {
+      toast.info( 'Email enviado com sucesso', {
         position: 'bottom-right',
         autoClose: 5000,
         hideProgressBar: false,
@@ -26,23 +26,23 @@ export default function ContactSection () {
         draggable: true,
         progress: undefined,
         transition: Flip
-      })
+      } )
     )
   }
 
-  const handleChange = (name: string, value: string) => {
-    setEmail({
+  const handleChange = ( name: string, value: string ) => {
+    setEmail( {
       ...email,
       [ name ]: value
-    })
+    } )
   }
 
   const clearFields = () => {
-    setEmail({
+    setEmail( {
       'name': '',
       'email': '',
       'message': ''
-    })
+    } )
   }
 
   return (
@@ -50,7 +50,7 @@ export default function ContactSection () {
       <Fade>
         <S.SectionTitle>Contato</S.SectionTitle>
         <S.ContactContainer>
-          <S.Form onSubmit={e => handleClick(e)}>
+          <S.Form onSubmit={e => handleClick( e )}>
             <S.InputText
               type="text"
               value={email.name}
