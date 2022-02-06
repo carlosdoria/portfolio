@@ -5,7 +5,7 @@ export const light = {
     primary: '#000',
     secondary: '',
 
-    background: '',
+    background: '#F2F2F2',
     text: ''
   }
 }
