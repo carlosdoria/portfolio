@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const SectionTitle = styled.h2`
   position: relative;
-  font-size: var(--h2-font-size);
   color: var(--first-color);
   margin-top: var(--mb-3);
   margin-bottom: var(--mb-4);

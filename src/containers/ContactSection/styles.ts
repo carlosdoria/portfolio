@@ -6,7 +6,6 @@ export const ContactSection = styled.section`
 
 export const SectionTitle = styled.h2`
   position: relative;
-  font-size: var(--h2-font-size);
   color: var(--first-color);
   margin-top: var(--mb-3);
   margin-bottom: var(--mb-4);
@@ -67,7 +66,6 @@ export const InputText = styled.input`
 
   padding: 1rem;
 
-  font-size: var(--normal-font-size);
 
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
@@ -81,7 +79,6 @@ export const InputEmail = styled.input`
 
   padding: 1rem;
 
-  font-size: var(--normal-font-size);
 
   border: 1.5px solid var(--second-color);
   border-radius: 0.5rem;
@@ -95,7 +92,6 @@ export const TextArea = styled.textarea`
 
   padding: 1rem;
 
-  font-size: var(--normal-font-size);
   color: #000;
 
   border: 1.5px solid var(--second-color);
@@ -110,7 +106,6 @@ export const InputButton = styled.input`
 
   display: block;
 
-  font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
 
   color: #000;

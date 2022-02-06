@@ -25,9 +25,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  /* @media screen and (${device.desktopM}) {
-    padding: 0;
-  } */
+
 `
 
 export const Logo = styled.a`
@@ -38,8 +36,6 @@ export const Logo = styled.a`
   text-shadow:
     0 0 10px #00b3ff,
     0 0 20px #00b3ff,
-    /* 0 0 30px #00b3ff,
-    0 0 60px #00b3ff, */
     0 0 10px #00b3ff
   ;
 

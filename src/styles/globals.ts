@@ -17,30 +17,13 @@ const GlobalStyles = createGlobalStyle`
     --desktopM: ${size.desktopM};
 
   /* VARIEBLE COLORS */
-    --first-background-color: ${props => props.theme.colors.background};
+    --background-color: ${props => props.theme.colors.background};
     --first-color: ${props => props.theme.colors.primary} ;
     --second-color: #fff;
     --footer-first-color: #fff;
     --footer-second-color: #3f70f3;
 
-
   /* VARIEBLE FONTS AND TYPES */
-    --extraLarge-font-size: 2.8rem;
-    --large-font-size: 2rem;
-    --medium-font-size: 1.8rem;
-    --normal-font-size: 1rem;
-
-    @media screen and (min-width: 600px) {
-      --extraLarge-font-size: 4rem;
-      --large-font-size: 2.8rem;
-      --medium-font-size: 2.8rem;
-      --h2-font-size: 2.4rem;
-      --normal-font-size: 1.1rem;
-    }
-
-    @media screen and (min-width: 768px) {
-      --large-font-size: 3.3rem;
-    }
 
     --z-back: -10;
     --z-normal: 1;
@@ -57,16 +40,15 @@ const GlobalStyles = createGlobalStyle`
   html, body, #__next {
     height: 100vh;
 
-    background-color: var(--first-background-color);
+    background-color: var(--background-color);
   }
 
   body, textarea {
-    font-size: var(--normal-font-size);
     font-family: Arial, Helvetica, sans-serif;
     color: var(--first-color);
   }
 
-  section {
+  /* section {
     padding-top: 3rem;
 
     :nth-child(1) {
@@ -77,10 +59,18 @@ const GlobalStyles = createGlobalStyle`
       padding-top: 5rem;
       padding-bottom: 3rem;
     }
+  } */
+
+  button {
+    color: var(--first-color);
+
+    background: none;
+    border: none;
   }
 
   a {
     text-decoration: none;
+    color: var(--first-color);
   }
 
   img {

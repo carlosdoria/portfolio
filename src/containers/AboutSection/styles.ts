@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 
 export const SectionTitle = styled( motion.h2 )`
   position: relative;
-  font-size: var(--h2-font-size);
   color: var(--first-color);
   margin-top: var(--mb-3);
   margin-bottom: var(--mb-4);
