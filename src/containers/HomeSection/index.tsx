@@ -1,61 +1,68 @@
-import CupCoffee from 'components/CupCoffee'
 import Link from 'next/link'
 import { FaGithubAlt, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { GiCoffeeCup } from 'react-icons/gi'
+// import CV from '../../../public/'
+
 import * as S from './styles'
 
 export default function HomeSectoion () {
 
+  const ICONS_PROPS = {
+    size: 25
+  }
+
   return (
     <S.HomeSection id="home">
-      <div>
-        <p>Olá, me chamou</p>
+      <S.PresentationWrapper>
+        <p>Olá, sou</p>
         <h1>Carlos Dória</h1>
         <h2>Desenvolvedor FullStack</h2>
-      </div>
+      </S.PresentationWrapper>
 
-      <div>
-        <button>Download CV</button>
-        <button>Sobre mim</button>
-      </div>
+      <S.ButtonWrapper>
+        <a download=''>Baixar CV</a>
+        <Link href='/'>Sobre mim</Link>
+      </S.ButtonWrapper>
 
-      <div style={{
-        display: 'flex',
-        alignItems: 'end'
-      }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column'
-          }}
-        >
+      <S.OuthersWrapper>
+        <S.SocialWrapper>
           <Link
             href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
             // target="_blank"
           >
-            <FaLinkedin />
+            <a>
+              <FaLinkedin {...ICONS_PROPS} />
+            </a>
           </Link>
           <Link
             href="https://github.com/carlosdoria"
             // target="_blank"
           >
-            <FaGithubAlt />
+            <a>
+              <FaGithubAlt {...ICONS_PROPS} />
+            </a>
           </Link>
           <Link
             href="https://www.instagram.com/carlosc.doria/"
             // target="_blank"
           >
-            <FaInstagram />
+            <a>
+              <FaInstagram {...ICONS_PROPS} />
+            </a>
           </Link>
           <Link
             href="https://api.whatsapp.com/send?phone=5582988970954"
             // target="_blank"
           >
-            <FaWhatsapp />
+            <a>
+              <FaWhatsapp {...ICONS_PROPS} />
+            </a>
           </Link>
-        </div>
+        </S.SocialWrapper>
         {/* <CupCoffee /> */}
-        <div>a</div>
-      </div>
+        <GiCoffeeCup size={150} />
+        {/* <div>a</div> */}
+      </S.OuthersWrapper>
     </S.HomeSection>
   )
 }
