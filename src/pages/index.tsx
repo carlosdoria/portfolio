@@ -8,6 +8,10 @@ const Home = () => {
   return (
     <S.Main>
       <HomeSectoion />
+
+      <S.Test>
+asd
+      </S.Test>
     </S.Main>
   )
 }
