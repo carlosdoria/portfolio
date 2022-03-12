@@ -8,7 +8,7 @@ import * as S from './styles'
 export default function HomeSectoion () {
 
   const ICONS_PROPS = {
-    size: 25
+    size: 35
   }
 
   return (
@@ -19,13 +19,44 @@ export default function HomeSectoion () {
         <h2>Desenvolvedor FullStack</h2>
       </S.PresentationWrapper>
 
-      <S.ButtonWrapper>
+      {/* <S.ButtonWrapper>
         <a download=''>Baixar CV</a>
+        <Link href='/'>Contate me</Link>
         <Link href='/'>Sobre mim</Link>
-      </S.ButtonWrapper>
+      </S.ButtonWrapper> */}
+
+      <S.SocialWrapper>
+        <a
+          href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
+          target="_blank"
+        >
+          <FaLinkedin {...ICONS_PROPS} />
+        </a>
+
+        <a
+            href="https://github.com/carlosdoria"
+            target="_blank"
+        >
+          <FaGithubAlt {...ICONS_PROPS} />
+        </a>
+
+        <a
+          href="https://www.instagram.com/carlosc.doria/"
+          target="_blank"
+        >
+          <FaInstagram {...ICONS_PROPS} />
+        </a>
+
+        <a
+          href="https://api.whatsapp.com/send?phone=5582988970954"
+          target="_blank"
+        >
+          <FaWhatsapp {...ICONS_PROPS} />
+        </a>
+      </S.SocialWrapper>
 
       <S.OuthersWrapper>
-        <S.SocialWrapper>
+        {/* <S.SocialWrapper>
           <Link
             href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
             // target="_blank"
@@ -58,9 +89,9 @@ export default function HomeSectoion () {
               <FaWhatsapp {...ICONS_PROPS} />
             </a>
           </Link>
-        </S.SocialWrapper>
+        </S.SocialWrapper> */}
         {/* <CupCoffee /> */}
-        <GiCoffeeCup size={150} />
+        <GiCoffeeCup size={200}/>
         {/* <div>a</div> */}
       </S.OuthersWrapper>
     </S.HomeSection>
