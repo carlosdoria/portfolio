@@ -1,4 +1,5 @@
 import {
+  ContactSection,
   HomeSectoion,
 } from '../containers'
 
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <S.Main>
       <HomeSectoion />
+      <ContactSection />
     </S.Main>
   )
 }

@@ -1,73 +1,56 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { device, size } from 'styles/breakpoints'
 
 export const ContactSection = styled.section`
   min-height: 100vh;
 `
 
 export const SectionTitle = styled.h2`
-  position: relative;
-  color: var(--first-color);
-  margin-top: var(--mb-3);
-  margin-bottom: var(--mb-4);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  font-size: 1.5rem;
   text-align: center;
 
-  :after {
-    position: absolute;
-    content: '';
-    width: 64px;
-    height: 0.18rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 2.4rem;
-    background-color: var(--first-color);
-  }
-  @media screen and (min-width: 600px) {
-    margin-bottom: var(--mb-6);
+  @media screen and (${device.tabletM}) {
+    margin-bottom: 2rem;
 
-    :after {
-      width: 100px;
-      top: 3.2rem;
-    }
+
+    font-size: 2rem;
   }
+
+  @media screen and (${device.desktopS}) {
+
+
+    font-size: 2rem;
+  }
+
 `
 
-const SectionContainer = styled.div`
-  max-width: 1024px;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
-  width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
+export const ContactContainer = styled( motion.section )`
+  max-width: ${size.desktopM};
+  min-height: calc(100vh - var(--header-height));
+  margin: 0 auto;
+  padding: 0 16px;
 
-  @media screen and (min-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
-
-export const ContactContainer = styled( SectionContainer )`
-  @media screen and (min-width: 768px) {
-    justify-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const Form = styled.form`
-  @media screen and (min-width: 768px) {
-    width: 560px;
-  }
+  max-width: ${size.tabletS};
 `
 
 export const InputText = styled.input`
   width: 100%;
 
-  margin-bottom: var(--mb-4);
+  margin-bottom: 1rem;
 
   padding: 1rem;
 
-
-  border: 1.5px solid var(--second-color);
+  border: none;
   border-radius: 0.5rem;
   outline: none;
 `
@@ -75,12 +58,11 @@ export const InputText = styled.input`
 export const InputEmail = styled.input`
   width: 100%;
 
-  margin-bottom: var(--mb-4);
+  margin-bottom: 1rem;
 
   padding: 1rem;
 
-
-  border: 1.5px solid var(--second-color);
+  border: none;
   border-radius: 0.5rem;
   outline: none;
 `
@@ -88,28 +70,30 @@ export const InputEmail = styled.input`
 export const TextArea = styled.textarea`
   width: 100%;
 
-  margin-bottom: var(--mb-4);
+  margin-bottom: 1rem;
 
   padding: 1rem;
 
   color: #000;
 
-  border: 1.5px solid var(--second-color);
+  border: none;
   border-radius: 0.5rem;
   outline: none;
 `
 
 export const InputButton = styled.input`
-  margin-left: auto;
+  width: 100%;
+  margin: auto;
 
   padding: 0.75rem 2.5rem;
 
   display: block;
 
-  font-weight: var(--font-semi);
-
+  font-size: 1.25rem;
+  letter-spacing: 2px;
   color: #000;
-  background-color: var(--first-color);
+
+  background: #fff;
 
   border: none;
   border-radius: 0.5rem;
@@ -119,12 +103,12 @@ export const InputButton = styled.input`
 
   transition: .5s;
 
-  :hover {
+  /* :hover {
     color: var(--first-color);
     background-color: #fff;
 
     border: 1px solid var(--first-color);
 
     box-shadow: 0 10px 36px rgba(1, 0, 0, 0.4);
-  }
+  } */
 `

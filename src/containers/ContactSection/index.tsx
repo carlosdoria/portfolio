@@ -82,6 +82,7 @@ export default function ContactSection () {
                 e.currentTarget.value
               )}
             />
+
             <S.InputButton type="submit" value="Enviar" />
           </S.Form>
         </S.ContactContainer>
