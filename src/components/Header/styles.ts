@@ -9,7 +9,7 @@ export const Header = styled( motion.header )`
   height: var(--header-height);
   width: 100%;
 
-  background-color: var(--first-background-color);
+  background: var(--background-color);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 `
 
@@ -24,8 +24,6 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-
 `
 
 export const Logo = styled.a`
@@ -46,6 +44,7 @@ export const Logo = styled.a`
   }
 `
 export const Button = styled.button`
-  background: transparent;
   border: none;
+
+  cursor: pointer;
 `
