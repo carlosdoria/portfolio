@@ -5,7 +5,7 @@ import GlobalStyles from 'styles/globals'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 import { setCookie, parseCookies } from 'nookies'
 
-import { Header } from 'components'
+import { Footer, Header } from 'components'
 import { dark } from 'styles/themes/dark'
 import { light } from 'styles/themes/light'
 
@@ -34,6 +34,7 @@ function MyApp ( { Component, pageProps }: AppProps ) {
         toggleTheme={toggleTheme}
       />
       <Component {...pageProps} />
+      <Footer />
     </ThemeProvider>
   )
 }

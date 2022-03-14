@@ -40,6 +40,7 @@ export const Footer = () => {
         </S.Icon>
 
       </S.FooterSocialMedias>
+
       {'\u00A9'} {YEAR.getFullYear()}, copyright all rights reserved
     </S.Footer>
   )
