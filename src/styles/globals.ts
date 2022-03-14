@@ -20,8 +20,6 @@ const GlobalStyles = createGlobalStyle`
     --background-color: ${props => props.theme.colors.background};
     --first-color: ${props => props.theme.colors.primary} ;
     --second-color: #fff;
-    --footer-first-color: #fff;
-    --footer-second-color: #3f70f3;
 
   /* VARIEBLE FONTS AND TYPES */
 
