@@ -2,8 +2,14 @@ import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { device, size } from 'styles/breakpoints'
 
-export const ContactSection = styled.section`
-  min-height: 100vh;
+const borderRadios = `
+  border-radius: 0.25rem;
+`
+
+export const ContactSection = styled( motion.section )`
+  max-width: ${size.desktopM};
+  margin: 0 auto 3rem;
+  padding: 0 16px;
 `
 
 export const SectionTitle = styled.h2`
@@ -16,74 +22,48 @@ export const SectionTitle = styled.h2`
   @media screen and (${device.tabletM}) {
     margin-bottom: 2rem;
 
-
     font-size: 2rem;
   }
 
   @media screen and (${device.desktopS}) {
-
-
     font-size: 2rem;
   }
-
-`
-
-export const ContactContainer = styled( motion.section )`
-  max-width: ${size.desktopM};
-  min-height: calc(100vh - var(--header-height));
-  margin: 0 auto;
-  padding: 0 16px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `
 
 export const Form = styled.form`
   max-width: ${size.tabletS};
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
 `
 
-export const InputText = styled.input`
+export const Input = styled.input`
   width: 100%;
-
-  margin-bottom: 1rem;
 
   padding: 1rem;
 
   border: none;
-  border-radius: 0.5rem;
-  outline: none;
-`
-
-export const InputEmail = styled.input`
-  width: 100%;
-
-  margin-bottom: 1rem;
-
-  padding: 1rem;
-
-  border: none;
-  border-radius: 0.5rem;
+  ${borderRadios}
   outline: none;
 `
 
 export const TextArea = styled.textarea`
   width: 100%;
 
-  margin-bottom: 1rem;
-
   padding: 1rem;
 
   color: #000;
 
   border: none;
-  border-radius: 0.5rem;
+  ${borderRadios}
   outline: none;
+  resize: none;
 `
 
 export const InputButton = styled.input`
   width: 100%;
-  margin: auto;
 
   padding: 0.75rem 2.5rem;
 
@@ -96,7 +76,7 @@ export const InputButton = styled.input`
   background: #fff;
 
   border: none;
-  border-radius: 0.5rem;
+  ${borderRadios}
   outline: none;
 
   cursor: pointer;
