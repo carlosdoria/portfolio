@@ -23,7 +23,7 @@ export const Header = ( { toggleTheme }: HeaderProps ) => {
       }}
     >
       <S.Nav>
-        <Link href="#home">
+        <Link href="/">
           <S.Logo>Carlos Dória</S.Logo>
         </Link>
 
