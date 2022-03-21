@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { FaGithubAlt, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { GiCoffeeCup } from 'react-icons/gi'
 // import CV from '../../../public/'
@@ -29,13 +28,15 @@ export default function HomeSectoion () {
         <a
           href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
           target="_blank"
+          rel="noreferrer"
         >
           <FaLinkedin {...ICONS_PROPS} />
         </a>
 
         <a
-            href="https://github.com/carlosdoria"
-            target="_blank"
+          href="https://github.com/carlosdoria"
+          target="_blank"
+          rel="noreferrer"
         >
           <FaGithubAlt {...ICONS_PROPS} />
         </a>
@@ -43,6 +44,7 @@ export default function HomeSectoion () {
         <a
           href="https://www.instagram.com/carlosc.doria/"
           target="_blank"
+          rel="noreferrer"
         >
           <FaInstagram {...ICONS_PROPS} />
         </a>
@@ -50,6 +52,7 @@ export default function HomeSectoion () {
         <a
           href="https://api.whatsapp.com/send?phone=5582988970954"
           target="_blank"
+          rel="noreferrer"
         >
           <FaWhatsapp {...ICONS_PROPS} />
         </a>
