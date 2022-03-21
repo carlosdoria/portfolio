@@ -10,6 +10,10 @@ export default function HomeSectoion () {
     size: 35
   }
 
+  const WHILE_HOVER = {
+    scale: [ 1, 1.4, 1.2 ], transition: { duration: .5 }
+  }
+
   return (
     <S.HomeSection id="home">
       <S.PresentationWrapper>
@@ -25,37 +29,41 @@ export default function HomeSectoion () {
       </S.ButtonWrapper> */}
 
       <S.SocialWrapper>
-        <a
+        <S.Icon
+          whileHover={WHILE_HOVER}
           href="https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/"
           target="_blank"
           rel="noreferrer"
         >
           <FaLinkedin {...ICONS_PROPS} />
-        </a>
+        </S.Icon>
 
-        <a
+        <S.Icon
+          whileHover={WHILE_HOVER}
           href="https://github.com/carlosdoria"
           target="_blank"
           rel="noreferrer"
         >
           <FaGithubAlt {...ICONS_PROPS} />
-        </a>
+        </S.Icon>
 
-        <a
+        <S.Icon
+          whileHover={WHILE_HOVER}
           href="https://www.instagram.com/carlosc.doria/"
           target="_blank"
           rel="noreferrer"
         >
           <FaInstagram {...ICONS_PROPS} />
-        </a>
+        </S.Icon>
 
-        <a
+        <S.Icon
+          whileHover={WHILE_HOVER}
           href="https://api.whatsapp.com/send?phone=5582988970954"
           target="_blank"
           rel="noreferrer"
         >
           <FaWhatsapp {...ICONS_PROPS} />
-        </a>
+        </S.Icon>
       </S.SocialWrapper>
 
       <S.OuthersWrapper>

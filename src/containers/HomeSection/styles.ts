@@ -129,3 +129,6 @@ export const SocialWrapper = styled.div`
     column-gap: 2rem;
   }
 `
+
+export const Icon = styled( motion.a )`
+`
