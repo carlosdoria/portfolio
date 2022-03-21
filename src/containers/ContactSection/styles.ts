@@ -43,7 +43,7 @@ export const Field = styled.div`
   input, textarea {
     width: 100%;
     margin-top: .5rem;
-    padding: .5rem;
+    padding: .75rem;
 
     font-size: .875rem;
 
