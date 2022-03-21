@@ -50,38 +50,48 @@ export default function ContactSection () {
       <Fade>
         <S.SectionTitle>Contato</S.SectionTitle>
         <S.Form onSubmit={e => handlSubmit( e )}>
-          <S.Input
-            type="text"
-            value={email.name}
-            placeholder="Nome"
-            required
+          <S.Field>
+            <label htmlFor="">Nome</label>
+            <input
+              type="text"
+              value={email.name}
+              placeholder="Nome"
+              required
+              onChange={e => handleInputChange(
+                'name',
+                e.currentTarget.value
+              )}
+            />
+          </S.Field>
 
-            onChange={e => handleInputChange(
-              'name',
-              e.currentTarget.value
-            )}
-          />
-          <S.Input
-            type="email"
-            value={email.email}
-            placeholder="Email"
-            required
-            onChange={e => handleInputChange(
-              'email',
-              e.currentTarget.value
-            )}
-          />
-          <S.TextArea
-            value={email.message}
-            cols={0}
-            rows={10}
-            placeholder="Digite sua mensagem"
-            required
-            onChange={e => handleInputChange(
-              'message',
-              e.currentTarget.value
-            )}
-          />
+          <S.Field>
+            <label htmlFor="">Email</label>
+            <input
+              type="email"
+              value={email.email}
+              placeholder="Email"
+              required
+              onChange={e => handleInputChange(
+                'email',
+                e.currentTarget.value
+              )}
+            />
+          </S.Field>
+
+          <S.Field>
+            <label htmlFor="">Mensagem</label>
+            <textarea
+              value={email.message}
+              cols={0}
+              rows={10}
+              placeholder="Digite sua mensagem"
+              required
+              onChange={e => handleInputChange(
+                'message',
+                e.currentTarget.value
+              )}
+            />
+          </S.Field>
 
           <S.InputButton type="submit" value="Enviar" />
         </S.Form>

@@ -13,20 +13,15 @@ export const ContactSection = styled( motion.section )`
 `
 
 export const SectionTitle = styled.h2`
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem;
 
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
 
   @media screen and (${device.tabletM}) {
     margin-bottom: 2rem;
 
-    font-size: 2rem;
-  }
-
-  @media screen and (${device.desktopS}) {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 `
 
@@ -36,38 +31,38 @@ export const Form = styled.form`
 
   display: flex;
   flex-direction: column;
-  row-gap: .5rem;
+  row-gap: 1.5rem;
 `
 
-export const Input = styled.input`
-  width: 100%;
+export const Field = styled.div`
+  label {
+    margin-left: .25rem;
+    font-weight: bold;
+  }
 
-  padding: 1rem;
+  input, textarea {
+    width: 100%;
+    margin-top: .5rem;
+    padding: .5rem;
 
-  border: none;
-  ${borderRadios}
-  outline: none;
-`
+    font-size: .875rem;
 
-export const TextArea = styled.textarea`
-  width: 100%;
+    border: none;
+    ${borderRadios}
+    outline: none;
+  }
 
-  padding: 1rem;
+  textarea {
+    color: #000;
 
-  color: #000;
-
-  border: none;
-  ${borderRadios}
-  outline: none;
-  resize: none;
+    resize: none;
+  }
 `
 
 export const InputButton = styled.input`
   width: 100%;
 
   padding: 0.75rem 2.5rem;
-
-  display: block;
 
   font-size: 1.25rem;
   letter-spacing: 2px;
