@@ -78,6 +78,12 @@ export const InputButton = styled.input`
 
   transition: .5s;
 
+  @media screen and (${device.mobileL}) {
+    max-width: 200px;
+    align-self: end;
+  }
+
+
   /* :hover {
     color: var(--first-color);
     background-color: #fff;
