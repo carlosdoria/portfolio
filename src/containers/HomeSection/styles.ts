@@ -117,8 +117,6 @@ export const SocialWrapper = styled.div`
   column-gap: 1rem;
 
   @media screen and (${device.tabletM}) {
-    margin-bottom: 5rem;
-
     column-gap: 1.5rem;
 
     svg {
