@@ -85,7 +85,7 @@ export const InputButton = styled.input`
 
 
   /* :hover {
-    color: var(--first-color);
+    color: ${props => props.theme.colors.primary};
     background-color: #fff;
 
     border: 1px solid var(--first-color);

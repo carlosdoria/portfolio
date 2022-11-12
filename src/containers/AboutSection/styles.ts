@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export const SectionTitle = styled( motion.h2 )`
   position: relative;
-  color: var(--first-color);
+  color: ${props => props.theme.colors.primary};
   margin-top: var(--mb-3);
   margin-bottom: var(--mb-4);
   text-align: center;
@@ -17,7 +17,7 @@ export const SectionTitle = styled( motion.h2 )`
     right: 0;
     margin: auto;
     top: 2.4rem;
-    background-color: var(--first-color);
+    background-color: ${props => props.theme.colors.primary};
   }
   @media screen and (min-width: 600px) {
     margin-bottom: var(--mb-6);

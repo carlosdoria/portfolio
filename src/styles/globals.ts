@@ -16,11 +16,6 @@ const GlobalStyles = createGlobalStyle`
     --desktopS: ${size.desktopS};
     --desktopM: ${size.desktopM};
 
-  /* VARIEBLE COLORS */
-    --background-color: ${props => props.theme.colors.background};
-    --first-color: ${props => props.theme.colors.primary} ;
-    --second-color: #fff;
-
   /* VARIEBLE FONTS AND TYPES */
 
     --z-back: -10;
@@ -36,15 +31,19 @@ const GlobalStyles = createGlobalStyle`
     -webkit-appearance: none;
   }
 
+  html {
+    font-size: 62.5%;
+  }
+
   html, body, #__next {
     height: 100vh;
 
-    background-color: var(--background-color);
+    background-color:  ${props => props.theme.colors.background};
   }
 
   body, textarea {
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--first-color);
+    color: ${props => props.theme.colors.primary};
   }
 
   /* section {
@@ -61,7 +60,7 @@ const GlobalStyles = createGlobalStyle`
   } */
 
   button {
-    color: var(--first-color);
+    color: ${props => props.theme.colors.primary};
 
     background: none;
     border: none;
@@ -69,7 +68,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--first-color);
+    color: ${props => props.theme.colors.primary};
   }
 
   img {

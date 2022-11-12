@@ -20,5 +20,4 @@ export const FooterSocialMedias = styled.div`
 
 export const Icon = styled( motion.a )`
   font-size: 1.8rem;
-  color: var(first-color);
 `

@@ -9,7 +9,7 @@ export const Header = styled( motion.header )`
   height: var(--header-height);
   width: 100%;
 
-  background: var(--background-color);
+  background: ${props => props.theme.colors.background};
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 `
 
@@ -29,7 +29,7 @@ export const Nav = styled.nav`
 export const Logo = styled.a`
   font-size: 1.4rem;
   font-weight: bold;
-  color: var(--second-color);
+  color: ${props => props.theme.colors.primary};
 
   text-shadow:
     0 0 10px #00b3ff,
@@ -39,8 +39,8 @@ export const Logo = styled.a`
 
   cursor: pointer;
 
-  @media screen and (min-width: 1024px) {
-    font-size: 1.7rem;
+  @media screen and (${device.desktopS}) {
+    font-size: 1.8rem;
   }
 `
 export const Button = styled.button`

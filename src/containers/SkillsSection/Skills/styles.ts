@@ -31,7 +31,7 @@ export const SkillIcon = styled.img`
 
   margin-right: var(--mb-2);
 
-  color: var(--first-color);
+  color: ${props => props.theme.colors.primary};
 `
 
 export const SkillName = styled.span``
@@ -42,11 +42,10 @@ export const SkillBar = styled.div<IPercentage>`
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: var(--z-back);
 
   height: 0.25rem;
   width: ${props => props.percentage};
 
-  background-color: var(--first-color);
+  background-color: ${props => props.theme.colors.primary};
   border-radius: 0.5rem;
 `
