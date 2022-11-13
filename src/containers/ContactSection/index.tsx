@@ -4,96 +4,91 @@ import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'
 import { Fade } from 'react-awesome-reveal'
 
-export default function ContactSection () {
-
-  const [ email, setEmail ] = useState( {
+export default function ContactSection() {
+  const [email, setEmail] = useState({
     name: '',
     email: '',
     message: ''
-  } )
+  })
 
-  async function handlSubmit ( event: React.FormEvent ) {
+  async function handlSubmit(event: React.FormEvent) {
     event.preventDefault()
-    await ApiEmail.post( '/email', email )
+    await ApiEmail.post('/email', email)
     clearFields()
-    return (
-      toast.info( 'Email enviado com sucesso', {
-        position: 'bottom-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        transition: Flip
-      } )
-    )
+    return toast.info('Email enviado com sucesso', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      transition: Flip
+    })
   }
 
-  const handleInputChange = ( name: string, value: string ) => {
-    setEmail( {
+  const handleInputChange = (name: string, value: string) => {
+    setEmail({
       ...email,
-      [ name ]: value
-    } )
+      [name]: value
+    })
   }
 
   const clearFields = () => {
-    setEmail( {
-      'name': '',
-      'email': '',
-      'message': ''
-    } )
+    setEmail({
+      name: '',
+      email: '',
+      message: ''
+    })
   }
 
   return (
-    <S.ContactSection id="contact">
+    <S.ContactSection id='contact'>
       <Fade>
         <S.SectionTitle>Contato</S.SectionTitle>
-        <S.Form onSubmit={e => handlSubmit( e )}>
+        <S.Form onSubmit={(e) => handlSubmit(e)}>
           <S.Field>
-            <label htmlFor="">Nome</label>
+            <label htmlFor='name'>Nome*</label>
             <input
-              type="text"
+              id='name'
+              type='text'
               value={email.name}
-              placeholder="Nome"
+              placeholder='Digite seu nome'
               required
-              onChange={e => handleInputChange(
-                'name',
-                e.currentTarget.value
-              )}
+              onChange={(e) => handleInputChange('name', e.currentTarget.value)}
             />
           </S.Field>
 
           <S.Field>
-            <label htmlFor="">Email</label>
+            <label htmlFor='email'>Email *</label>
             <input
-              type="email"
+              id='email'
+              type='email'
               value={email.email}
-              placeholder="Email"
+              placeholder='Digite seu email'
               required
-              onChange={e => handleInputChange(
-                'email',
-                e.currentTarget.value
-              )}
+              onChange={(e) =>
+                handleInputChange('email', e.currentTarget.value)
+              }
             />
           </S.Field>
 
           <S.Field>
-            <label htmlFor="">Mensagem</label>
+            <label htmlFor='message'>Mensagem *</label>
             <textarea
+              id='message'
               value={email.message}
               cols={0}
               rows={10}
-              placeholder="Digite sua mensagem"
+              placeholder='Digite sua mensagem'
               required
-              onChange={e => handleInputChange(
-                'message',
-                e.currentTarget.value
-              )}
+              onChange={(e) =>
+                handleInputChange('message', e.currentTarget.value)
+              }
             />
           </S.Field>
 
-          <S.InputButton type="submit" value="Enviar" />
+          <S.InputButton type='submit' value='Enviar' />
         </S.Form>
       </Fade>
     </S.ContactSection>

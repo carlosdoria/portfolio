@@ -1,14 +1,9 @@
 import 'styled-components'
 
-declare module 'styled-components' {
-  export interface DefaultTheme {
-    title: string
+import { dark } from 'styles/themes/dark'
 
-    colors: {
-      primary: string
-      secondary: string
-      background: string
-      text: string
-    }
-  }
+type Theme = typeof dark
+
+declare module 'styled-components' {
+  export interface DefaultTheme extends Theme {}
 }

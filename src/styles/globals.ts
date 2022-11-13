@@ -4,7 +4,7 @@ import { size } from './breakpoints'
 const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
   :root {
-    --header-height: 3.5rem;
+    --header-height: 6rem;
 
     /* BREAKING POINTS */
     --mobileS: ${size.mobileS};
@@ -38,12 +38,12 @@ const GlobalStyles = createGlobalStyle`
   html, body, #__next {
     height: 100vh;
 
-    background-color:  ${props => props.theme.colors.background};
+    background-color:  ${(props) => props.theme.colors.background};
   }
 
   body, textarea {
     font-family: Arial, Helvetica, sans-serif;
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
   }
 
   /* section {
@@ -60,7 +60,7 @@ const GlobalStyles = createGlobalStyle`
   } */
 
   button {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
 
     background: none;
     border: none;
@@ -68,7 +68,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
   }
 
   img {

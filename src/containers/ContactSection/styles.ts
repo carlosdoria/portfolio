@@ -6,22 +6,22 @@ const borderRadios = `
   border-radius: 0.25rem;
 `
 
-export const ContactSection = styled( motion.section )`
+export const ContactSection = styled(motion.section)`
   max-width: ${size.desktopM};
   margin: 0 auto 3rem;
   padding: 0 16px;
 `
 
 export const SectionTitle = styled.h2`
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 2.4rem;
 
-  font-size: 2rem;
+  font-size: 3.2rem;
   text-align: center;
 
   @media screen and (${device.tabletM}) {
-    margin-bottom: 2rem;
+    margin-bottom: 3.2rem;
 
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 `
 
@@ -31,23 +31,25 @@ export const Form = styled.form`
 
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 2.4rem;
 `
 
 export const Field = styled.div`
   label {
-    margin-left: .25rem;
+    margin-left: 0.25rem;
+    font-size: 1.6rem;
     font-weight: bold;
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
-    margin-top: .5rem;
-    padding: .75rem;
+    margin-top: 0.8rem;
+    padding: 1.2rem;
 
-    font-size: .875rem;
+    font-size: 1.6rem;
 
-    border: none;
+    border: ${({ theme }) => `1px solid ${theme.colors.gray}`};
     ${borderRadios}
     outline: none;
   }
@@ -62,30 +64,30 @@ export const Field = styled.div`
 export const InputButton = styled.input`
   width: 100%;
 
-  padding: 0.75rem 2.5rem;
+  padding: 0.8rem 0;
 
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   letter-spacing: 2px;
   color: #000;
 
   background: #fff;
 
-  border: none;
+  border: ${({ theme }) => `1px solid ${theme.colors.gray}`};
   ${borderRadios}
   outline: none;
 
   cursor: pointer;
 
-  transition: .5s;
+  transition: 0.5s;
 
   @media screen and (${device.mobileL}) {
     max-width: 200px;
     align-self: end;
   }
 
-
   /* :hover {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     background-color: #fff;
 
     border: 1px solid var(--first-color);
