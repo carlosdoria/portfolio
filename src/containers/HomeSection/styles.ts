@@ -12,7 +12,7 @@ export const HomeSection = styled(motion.section)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 32px;
 
   @media screen and (${device.tabletS}) {
     flex-direction: row;
@@ -21,20 +21,22 @@ export const HomeSection = styled(motion.section)`
 `
 
 export const PresentationWrapper = styled.div`
-  margin: 0 auto 2.4rem;
+  margin: 0 auto 3.2rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-content: flex-start;
   align-items: center;
-  row-gap: 0.4rem;
+  row-gap: 0.8rem;
 
   letter-spacing: 4px;
 
   @media screen and (${device.tabletS}) {
     flex: 1;
-    margin: 0 0 3.2rem;
+
+    margin: 0 0 4rem;
+
     align-items: flex-start;
   }
 
@@ -46,7 +48,7 @@ export const PresentationWrapper = styled.div`
   }
 
   p {
-    font-size: 2rem;
+    font-size: 2.4rem;
 
     @media screen and (${device.tabletS}) {
       font-size: 2.8rem;
@@ -58,7 +60,7 @@ export const PresentationWrapper = styled.div`
   }
 
   h1 {
-    font-size: 3.2rem;
+    font-size: 4rem;
 
     @media screen and (${device.tabletS}) {
       font-size: 4.8rem;

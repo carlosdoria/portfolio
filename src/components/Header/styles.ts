@@ -31,7 +31,10 @@ export const Logo = styled.a`
   font-weight: bold;
   color: ${(props) => props.theme.colors.primary};
 
-  text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 10px #00b3ff;
+  text-shadow: ${({ theme }) =>
+    theme.title === 'dark'
+      ? '0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 10px #00b3ff'
+      : ''};
 
   cursor: pointer;
 

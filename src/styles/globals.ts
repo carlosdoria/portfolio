@@ -6,18 +6,6 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --header-height: 6rem;
 
-    /* BREAKING POINTS */
-    --mobileS: ${size.mobileS};
-    --mobileM: ${size.mobileM};
-    --mobileL: ${size.mobileL};
-    --tabletS: ${size.tabletS};
-    --tabletM: ${size.tabletM};
-    --tabletL: ${size.tabletL};
-    --desktopS: ${size.desktopS};
-    --desktopM: ${size.desktopM};
-
-  /* VARIEBLE FONTS AND TYPES */
-
     --z-back: -10;
     --z-normal: 1;
     --z-tooltip: 10;
