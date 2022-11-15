@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import * as S from './styles'
 import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'
-import { Fade } from 'react-awesome-reveal'
+import { Section, SectionTitle } from 'components'
 
 export default function ContactSection() {
   const [email, setEmail] = useState({
@@ -43,9 +43,9 @@ export default function ContactSection() {
   }
 
   return (
-    <S.ContactSection id='contact'>
-      <Fade>
-        <S.SectionTitle>Contato</S.SectionTitle>
+    <Section id='contact'>
+      <SectionTitle title='Contato' />
+      <S.Content>
         <S.Form onSubmit={(e) => handlSubmit(e)}>
           <S.Field>
             <label htmlFor='name'>Nome*</label>
@@ -90,7 +90,7 @@ export default function ContactSection() {
 
           <S.InputButton type='submit' value='Enviar' />
         </S.Form>
-      </Fade>
-    </S.ContactSection>
+      </S.Content>
+    </Section>
   )
 }

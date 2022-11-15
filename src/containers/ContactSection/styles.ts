@@ -3,32 +3,16 @@ import styled from 'styled-components'
 import { device, size } from 'styles/breakpoints'
 
 const borderRadios = `
-  border-radius: 0.25rem;
+  border-radius: 4px;
 `
 
-export const ContactSection = styled(motion.section)`
-  max-width: ${size.desktopM};
-  margin: 0 auto 3rem;
+export const Content = styled.div`
+  max-width: ${size.tabletS};
+  margin: 0 auto;
   padding: 0 16px;
 `
 
-export const SectionTitle = styled.h2`
-  margin: 2rem 0 2.4rem;
-
-  font-size: 3.2rem;
-  text-align: center;
-
-  @media screen and (${device.tabletM}) {
-    margin-bottom: 3.2rem;
-
-    font-size: 4rem;
-  }
-`
-
 export const Form = styled.form`
-  max-width: ${size.tabletS};
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   row-gap: 2.4rem;
@@ -64,7 +48,7 @@ export const Field = styled.div`
 export const InputButton = styled.input`
   width: 100%;
 
-  padding: 0.8rem 0;
+  padding: 1.2rem 0;
 
   font-size: 1.6rem;
   font-weight: bold;

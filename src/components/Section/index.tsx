@@ -1,20 +1,17 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 
 import * as S from './styles'
 
 interface SectionProps {
-  title: string
-  children: ReactElement
+  id: string
+  children: React.ReactNode
 }
 
-export const Section = ( { title, children }: SectionProps ) => {
+export const Section = ({ id, children }: SectionProps) => {
   return (
-    <>
-      <S.Title>{title}</S.Title>
-
-      <S.Wrapper>
-        {children}
-      </S.Wrapper>
-    </>
+    <S.Wrapper id={id}>
+      <Fade>{children}</Fade>
+    </S.Wrapper>
   )
 }
