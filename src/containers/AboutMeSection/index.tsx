@@ -3,7 +3,7 @@ import { SectionTitle } from 'components/SectionTitle'
 import { Fade } from 'react-awesome-reveal'
 import * as S from './styles'
 
-const AboutMeSection = () => {
+export const AboutMeSection = () => {
   return (
     <Section id='aboutMe'>
       <SectionTitle title='Sobre mim' />
@@ -32,5 +32,3 @@ const AboutMeSection = () => {
     </Section>
   )
 }
-
-export default AboutMeSection

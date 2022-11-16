@@ -4,7 +4,7 @@ import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'
 import { Section, SectionTitle } from 'components'
 
-export default function ContactSection() {
+export const ContactSection = () => {
   const [email, setEmail] = useState({
     name: '',
     email: '',
@@ -45,6 +45,7 @@ export default function ContactSection() {
   return (
     <Section id='contact'>
       <SectionTitle title='Contato' />
+
       <S.Content>
         <S.Form onSubmit={(e) => handlSubmit(e)}>
           <S.Field>

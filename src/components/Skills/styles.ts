@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 
 interface IPercentage {
-  percentage: string;
+  percentage: string
 }
 
-export const Container = styled.div`
+export const Container = styled.li`
   position: relative;
-
-  margin-bottom: var(--mb-4);
-  padding: 0.5rem 1rem;
 
   display: flex;
   justify-content: space-between;
@@ -18,20 +15,22 @@ export const Container = styled.div`
 
   border-radius: 0.5rem;
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+
+  font-size: 1.4rem;
 `
 
 export const DivName = styled.div`
   display: flex;
   align-items: center;
+
+  margin-bottom: 8px;
 `
 
 export const SkillIcon = styled.img`
   height: 2rem;
   width: 2rem;
 
-  margin-right: var(--mb-2);
-
-  color: ${props => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.primary};
 `
 
 export const SkillName = styled.span``
@@ -44,8 +43,8 @@ export const SkillBar = styled.div<IPercentage>`
   bottom: 0;
 
   height: 0.25rem;
-  width: ${props => props.percentage};
+  width: ${(props) => props.percentage};
 
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.primary};
   border-radius: 0.5rem;
 `

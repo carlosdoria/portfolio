@@ -3,8 +3,14 @@ import { size } from './breakpoints'
 
 const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
+  @import '@radix-ui/colors/blackA.css';
+@import '@radix-ui/colors/mauve.css';
+@import '@radix-ui/colors/violet.css';
+
   :root {
+
     --header-height: 6rem;
+
 
     --z-back: -10;
     --z-normal: 1;
@@ -17,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     -webkit-appearance: none;
+    letter-spacing: 2px;
   }
 
   html {
@@ -34,18 +41,12 @@ const GlobalStyles = createGlobalStyle`
     color: ${(props) => props.theme.colors.primary};
   }
 
-  /* section {
-    padding-top: 3rem;
-
-    :nth-child(1) {
-    padding: 0;
-  }
-
-    @media screen and (min-width: 768px) {
-      padding-top: 5rem;
-      padding-bottom: 3rem;
+  section {
+    padding-bottom: 8rem;
+    :not(:first-child) {
+      padding-top: 8rem;
     }
-  } */
+  }
 
   button {
     color: ${(props) => props.theme.colors.primary};

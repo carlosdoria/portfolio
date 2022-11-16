@@ -5,7 +5,7 @@ import { size } from 'styles/breakpoints'
 export const Footer = styled.footer`
   max-width: ${size.desktopM};
   margin: 0 auto;
-  padding: 8rem 0 4rem;
+  padding: 6rem 0 4rem;
 
   text-align: center;
 

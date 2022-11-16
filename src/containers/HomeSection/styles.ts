@@ -61,9 +61,11 @@ export const PresentationWrapper = styled.div`
 
   h1 {
     font-size: 4rem;
+    text-align: center;
 
     @media screen and (${device.tabletS}) {
       font-size: 4.8rem;
+      text-align: start;
     }
 
     @media screen and (${device.desktopS}) {

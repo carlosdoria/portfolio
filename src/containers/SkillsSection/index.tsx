@@ -1,80 +1,208 @@
 import React, { useState } from 'react'
-import Skills from 'containers/SkillsSection/Skills'
+import * as Accordion from '@radix-ui/react-accordion'
+import { IoIosArrowDown } from 'react-icons/io'
+
 import * as S from './styles'
-import { Fade } from 'react-awesome-reveal'
+import {
+  IconBootstrap,
+  IconNextJs,
+  IconStyledComponents,
+  IconTailwindCss,
+  IconTypeScript,
+  Section,
+  SectionTitle,
+  IconStorybook,
+  IconReact,
+  IconNodeJs,
+  IconExpress,
+  IconSwagger,
+  IconOracle,
+  IconPostgre,
+  IconMongoDB,
+  IconHeroku,
+  IconVercel,
+  IconNetlify,
+  IconJest,
+  IconPython
+} from 'components'
 
 interface ISkill {
-  name: string;
-  percentage: string;
-  link: string;
+  name: string
+  percentage: string
+  link: string
 }
 
-export default function SkillsSection () {
-
-  const [ skills, ] = useState<ISkill[]>( [
+export const SkillsSection = () => {
+  const skillsFront = [
     {
       name: 'React',
-      percentage: '70%',
-      link:
-        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png',
+      svg: <IconReact />
     },
     {
-      name: 'NodeJS',
-      percentage: '60%',
-      link:
-        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png',
+      name: 'TypeScript',
+      svg: <IconTypeScript />
     },
     {
-      name: 'Typescript',
-      percentage: '50%',
-      link:
-        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png',
+      name: 'Next JS',
+      svg: <IconNextJs />
     },
     {
-      name: 'HTML5',
-      percentage: '85%',
-      link:
-        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png',
-    },
-    {
-      name: 'CSS',
-      percentage: '65%',
-      link:
-        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png',
+      name: 'Storybook',
+      svg: <IconStorybook />
     },
     {
       name: 'Bootstrap',
-      percentage: '55%',
-      link:
-        'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png',
+      svg: <IconBootstrap />
     },
-  ] )
+
+    {
+      name: 'Styled Components',
+      svg: <IconStyledComponents />
+    },
+    {
+      name: 'Tailwind CSS',
+      svg: <IconTailwindCss />
+    }
+  ]
+
+  const skillsBack = [
+    {
+      name: 'Node JS',
+      svg: <IconNodeJs />
+    },
+    {
+      name: 'TypeScript',
+      svg: <IconTypeScript />
+    },
+    {
+      name: 'Express',
+      svg: <IconExpress />
+    },
+    {
+      name: 'Swagger',
+      svg: <IconSwagger />
+    },
+    {
+      name: 'Postgre SQL',
+      svg: <IconPostgre />
+    },
+    {
+      name: 'Oracle',
+      svg: <IconOracle />
+    },
+    {
+      name: 'Mongo DB',
+      svg: <IconMongoDB />
+    }
+  ]
+
+  const skillsStudying = [
+    {
+      name: 'React Native',
+      svg: <IconReact />
+    },
+    {
+      name: 'Jest',
+      svg: <IconJest />
+    },
+    {
+      name: 'Python',
+      svg: <IconPython />
+    }
+  ]
 
   return (
-    <S.SkillsSection id="skills">
-      <Fade>
-        <S.SectionTitle>Minhas skills</S.SectionTitle>
-        <S.SkillsContainer>
-          <div>
-            <S.SkillsSubtitle>Profissional Skills</S.SkillsSubtitle>
-            <S.SkillsText>
-            Atualmente focado em ReactJS e NodeJS.
-            </S.SkillsText>
-            {skills.map( ( skill, index ) => (
-              <Skills
-                key={index}
-                name={skill.name}
-                percentage={skill.percentage}
-                link={skill.link}
-              />
-            ) )}
-          </div>
-          <S.SkillImage
-            src="https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg"
-            alt="imagem com dois computadores"
-          />
-        </S.SkillsContainer>
-      </Fade>
-    </S.SkillsSection>
+    <Section id='skills'>
+      <SectionTitle title='Skills e ferramentas' />
+
+      <S.Content>
+        <Accordion.Root
+          className='AccordionRoot'
+          type='single'
+          defaultValue='frontend'
+          collapsible
+        >
+          <Accordion.Item className='AccordionItem' value='frontend'>
+            <Accordion.Header className='AccordionHeader'>
+              <Accordion.Trigger>
+                <S.SkillsSubtitle>
+                  Front-end
+                  <IoIosArrowDown />
+                </S.SkillsSubtitle>
+              </Accordion.Trigger>
+            </Accordion.Header>
+
+            <Accordion.Content className='AccordionContent'>
+              <S.SkillsWrapper>
+                {skillsFront.map((skill, index) => (
+                  <S.Skill key={skill.name}>
+                    {skill.svg}
+                    {skill.name}
+                  </S.Skill>
+                ))}
+              </S.SkillsWrapper>
+            </Accordion.Content>
+          </Accordion.Item>
+        </Accordion.Root>
+
+        <Accordion.Root
+          className='AccordionRoot'
+          type='single'
+          defaultValue='backend'
+          collapsible
+        >
+          <Accordion.Item className='AccordionItem' value='backend'>
+            <Accordion.Header className='AccordionHeader'>
+              <Accordion.Trigger>
+                <S.SkillsSubtitle>
+                  Back-end
+                  <IoIosArrowDown />
+                </S.SkillsSubtitle>
+              </Accordion.Trigger>
+            </Accordion.Header>
+
+            <Accordion.Content className='AccordionContent'>
+              <S.SkillsWrapper>
+                {skillsBack.map((skill, index) => (
+                  <S.Skill key={skill.name}>
+                    {skill.svg}
+                    {skill.name}
+                  </S.Skill>
+                ))}
+              </S.SkillsWrapper>
+            </Accordion.Content>
+          </Accordion.Item>
+        </Accordion.Root>
+
+        <Accordion.Root
+          className='AccordionRoot'
+          type='single'
+          defaultValue='studying'
+          collapsible
+        >
+          <Accordion.Item className='AccordionItem' value='studying'>
+            <Accordion.Header className='AccordionHeader'>
+              <Accordion.Trigger>
+                <S.SkillsSubtitle>
+                  Estudando
+                  <IoIosArrowDown />
+                </S.SkillsSubtitle>
+              </Accordion.Trigger>
+            </Accordion.Header>
+
+            <Accordion.Content className='AccordionContent'>
+              <S.SkillsWrapper>
+                {skillsStudying.map((skill, index) => (
+                  <S.Skill key={skill.name}>
+                    {skill.svg}
+                    {skill.name}
+                  </S.Skill>
+                ))}
+              </S.SkillsWrapper>
+            </Accordion.Content>
+          </Accordion.Item>
+        </Accordion.Root>
+      </S.Content>
+    </Section>
   )
 }

@@ -9,7 +9,7 @@ import { GiCoffeeCup } from 'react-icons/gi'
 
 import * as S from './styles'
 
-export default function HomeSectoion() {
+export const HomeSectoion = () => {
   const ICONS_PROPS = {
     size: 35
   }
@@ -69,6 +69,7 @@ export default function HomeSectoion() {
 
       <S.OuthersWrapper>
         <GiCoffeeCup size={200} />
+        {/* <img src='/img/coffee.gif' /> */}
       </S.OuthersWrapper>
     </S.HomeSection>
   )
