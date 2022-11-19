@@ -1,50 +1,30 @@
 import styled from 'styled-components'
+import { device } from 'styles/breakpoints'
 
-interface IPercentage {
-  percentage: string
+interface SkillProps {
+  color: string
 }
 
-export const Container = styled.li`
-  position: relative;
-
+export const Skill = styled.li<SkillProps>`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 12px;
 
-  font-weight: var(--font-semi);
+  font-size: 1.6rem;
+  text-align: center;
 
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  @media screen and (${device.tabletS}) {
+    font-size: 1.8rem;
+  }
 
-  font-size: 1.4rem;
-`
-
-export const DivName = styled.div`
-  display: flex;
-  align-items: center;
-
-  margin-bottom: 8px;
-`
-
-export const SkillIcon = styled.img`
-  height: 2rem;
-  width: 2rem;
-
-  color: ${(props) => props.theme.colors.primary};
-`
-
-export const SkillName = styled.span``
-
-export const SkillPercentage = styled.span``
-
-export const SkillBar = styled.div<IPercentage>`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  height: 0.25rem;
-  width: ${(props) => props.percentage};
-
-  background-color: ${(props) => props.theme.colors.primary};
-  border-radius: 0.5rem;
+  svg {
+    width: 32px;
+    color: ${({ theme, color }) =>
+      theme.title === 'dark' && color === '#000000'
+        ? theme.colors.primary
+        : color};
+    fill: currentColor;
+  }
 `

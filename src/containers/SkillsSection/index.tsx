@@ -25,6 +25,7 @@ import {
   IconJest,
   IconPython
 } from 'components'
+import { Skill } from 'components/Skills/styles'
 
 interface ISkill {
   name: string
@@ -152,10 +153,10 @@ export const SkillsSection = () => {
             <Accordion.Content className='AccordionContent'>
               <S.SkillsWrapper>
                 {skillsFront.map((skill, index) => (
-                  <S.Skill color={skill.color} key={skill.name}>
+                  <Skill color={skill.color} key={skill.name}>
                     {skill.svg}
                     {skill.name}
-                  </S.Skill>
+                  </Skill>
                 ))}
               </S.SkillsWrapper>
             </Accordion.Content>
@@ -181,10 +182,10 @@ export const SkillsSection = () => {
             <Accordion.Content className='AccordionContent'>
               <S.SkillsWrapper>
                 {skillsBack.map((skill, index) => (
-                  <S.Skill color={skill.color} key={skill.name}>
+                  <Skill color={skill.color} key={skill.name}>
                     {skill.svg}
                     {skill.name}
-                  </S.Skill>
+                  </Skill>
                 ))}
               </S.SkillsWrapper>
             </Accordion.Content>
@@ -210,10 +211,10 @@ export const SkillsSection = () => {
             <Accordion.Content className='AccordionContent'>
               <S.SkillsWrapper>
                 {skillsStudying.map((skill, index) => (
-                  <S.Skill color={skill.color} key={skill.name}>
+                  <Skill color={skill.color} key={skill.name}>
                     {skill.svg}
                     {skill.name}
-                  </S.Skill>
+                  </Skill>
                 ))}
               </S.SkillsWrapper>
             </Accordion.Content>
