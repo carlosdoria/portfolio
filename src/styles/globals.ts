@@ -3,9 +3,6 @@ import { size } from './breakpoints'
 
 const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
-  @import '@radix-ui/colors/blackA.css';
-@import '@radix-ui/colors/mauve.css';
-@import '@radix-ui/colors/violet.css';
 
   :root {
 
