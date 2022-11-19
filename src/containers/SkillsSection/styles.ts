@@ -97,8 +97,11 @@ export const SkillsWrapper = styled.ul`
   height: 60px; */
   }
 `
+interface SkillProps {
+  color: string
+}
 
-export const Skill = styled.li`
+export const Skill = styled.li<SkillProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +117,10 @@ export const Skill = styled.li`
 
   svg {
     width: 32px;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme, color }) =>
+      theme.title === 'dark' && color === '#000000'
+        ? theme.colors.primary
+        : color};
     fill: currentColor;
   }
 `

@@ -36,31 +36,38 @@ export const SkillsSection = () => {
   const skillsFront = [
     {
       name: 'React',
+      color: '#61DAFB',
       svg: <IconReact />
     },
     {
       name: 'TypeScript',
+      color: '#3178C6',
       svg: <IconTypeScript />
     },
     {
       name: 'Next JS',
+      color: '##000000',
       svg: <IconNextJs />
     },
     {
       name: 'Storybook',
+      color: '#FF4785',
       svg: <IconStorybook />
     },
     {
       name: 'Bootstrap',
+      color: '#7952B3',
       svg: <IconBootstrap />
     },
 
     {
       name: 'Styled Components',
+      color: '#DB7093',
       svg: <IconStyledComponents />
     },
     {
       name: 'Tailwind CSS',
+      color: '#06B6D4',
       svg: <IconTailwindCss />
     }
   ]
@@ -68,30 +75,37 @@ export const SkillsSection = () => {
   const skillsBack = [
     {
       name: 'Node JS',
+      color: '#339933',
       svg: <IconNodeJs />
     },
     {
       name: 'TypeScript',
+      color: '#3178C6',
       svg: <IconTypeScript />
     },
     {
       name: 'Express',
+      color: '#000000',
       svg: <IconExpress />
     },
     {
       name: 'Swagger',
+      color: '#85EA2D',
       svg: <IconSwagger />
     },
     {
       name: 'Postgre SQL',
+      color: '#4169E1',
       svg: <IconPostgre />
     },
     {
       name: 'Oracle',
+      color: '#F80000',
       svg: <IconOracle />
     },
     {
       name: 'Mongo DB',
+      color: '#47A248',
       svg: <IconMongoDB />
     }
   ]
@@ -99,14 +113,17 @@ export const SkillsSection = () => {
   const skillsStudying = [
     {
       name: 'React Native',
+      color: '#61DAFB',
       svg: <IconReact />
     },
     {
       name: 'Jest',
+      color: '#C21325',
       svg: <IconJest />
     },
     {
       name: 'Python',
+      color: '#3776AB',
       svg: <IconPython />
     }
   ]
@@ -135,7 +152,7 @@ export const SkillsSection = () => {
             <Accordion.Content className='AccordionContent'>
               <S.SkillsWrapper>
                 {skillsFront.map((skill, index) => (
-                  <S.Skill key={skill.name}>
+                  <S.Skill color={skill.color} key={skill.name}>
                     {skill.svg}
                     {skill.name}
                   </S.Skill>
@@ -164,7 +181,7 @@ export const SkillsSection = () => {
             <Accordion.Content className='AccordionContent'>
               <S.SkillsWrapper>
                 {skillsBack.map((skill, index) => (
-                  <S.Skill key={skill.name}>
+                  <S.Skill color={skill.color} key={skill.name}>
                     {skill.svg}
                     {skill.name}
                   </S.Skill>
@@ -193,7 +210,7 @@ export const SkillsSection = () => {
             <Accordion.Content className='AccordionContent'>
               <S.SkillsWrapper>
                 {skillsStudying.map((skill, index) => (
-                  <S.Skill key={skill.name}>
+                  <S.Skill color={skill.color} key={skill.name}>
                     {skill.svg}
                     {skill.name}
                   </S.Skill>
