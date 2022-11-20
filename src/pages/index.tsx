@@ -1,8 +1,9 @@
 import {
-  ContactSection,
   HomeSectoion,
   AboutMeSection,
-  SkillsSection
+  SkillsSection,
+  ProjectsSection,
+  ContactSection
 } from '../containers'
 
 import * as S from '../styles/home.styles'
@@ -13,6 +14,7 @@ const Home = () => {
       <HomeSectoion />
       <AboutMeSection />
       <SkillsSection />
+      <ProjectsSection />
       <ContactSection />
     </S.Main>
   )
