@@ -4,7 +4,7 @@ import { device, size } from 'styles/breakpoints'
 
 export const HomeSection = styled(motion.section)`
   max-width: ${size.desktopM};
-  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - 6rem);
   margin: 0 auto;
   padding: 0 16px;
 

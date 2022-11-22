@@ -9,8 +9,8 @@ interface HeaderProps {
   toggleTheme?: () => void
 }
 
-export const Header = ( { toggleTheme }: HeaderProps ) => {
-  const { title } = useContext( ThemeContext )
+export const Header = ({ toggleTheme }: HeaderProps) => {
+  const { title } = useContext(ThemeContext)
 
   return (
     <S.Header
@@ -18,25 +18,24 @@ export const Header = ( { toggleTheme }: HeaderProps ) => {
       animate={{
         opacity: 1,
         transition: {
-          delay: .3, duration: .5
+          delay: 0.3,
+          duration: 0.5
         }
       }}
     >
       <S.Nav>
-        <Link href="/">
+        <Link href='/'>
           <S.Logo>Carlos Dória</S.Logo>
         </Link>
 
         <S.Button onClick={toggleTheme}>
-          {title === 'light' ?
+          {title === 'light' ? (
             <FiSun color='black' size={24} />
-            :
+          ) : (
             <FiMoon color='white' size={24} />
-          }
+          )}
         </S.Button>
-
       </S.Nav>
     </S.Header>
   )
 }
-

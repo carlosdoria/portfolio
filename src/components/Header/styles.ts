@@ -6,7 +6,7 @@ export const Header = styled(motion.header)`
   position: fixed;
   z-index: var(--z-fixed);
 
-  height: var(--header-height);
+  height: 6rem;
   width: 100%;
 
   background: ${(props) => props.theme.colors.background};

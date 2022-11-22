@@ -78,8 +78,6 @@ export const SkillsWrapper = styled.ul`
   grid-template-columns: repeat(1, 1fr);
   gap: 48px;
 
-  list-style-type: none;
-
   @media screen and (${device.mobileM}) {
     grid-template-columns: repeat(2, 1fr);
   }

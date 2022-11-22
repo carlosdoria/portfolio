@@ -4,6 +4,8 @@ export const light = {
   colors: {
     primary: '#0e0f26',
     secondary: '#746cfe',
+    // secondary: '#ae8cfa',
+    // secondary: '#7241ff',
 
     white: '#FAFAFA',
     black: '#030517',

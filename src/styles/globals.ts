@@ -5,10 +5,6 @@ const GlobalStyles = createGlobalStyle`
   /* VARIABLE CSS */
 
   :root {
-
-    --header-height: 6rem;
-
-
     --z-back: -10;
     --z-normal: 1;
     --z-tooltip: 10;
@@ -19,12 +15,15 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
     -webkit-appearance: none;
     letter-spacing: 2px;
   }
 
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   html, body, #__next {
