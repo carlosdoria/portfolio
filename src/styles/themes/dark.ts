@@ -3,9 +3,9 @@ export const dark = {
 
   colors: {
     primary: '#fefcff',
-    secondary: '#746cfe',
+    // secondary: '#746cfe',
     // secondary: '#ae8cfa',
-    // secondary: '#7241ff',
+    secondary: '#7241ff',
 
     white: '#FAFAFA',
     black: '#030517',
