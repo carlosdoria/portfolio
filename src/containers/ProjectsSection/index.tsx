@@ -8,7 +8,7 @@ export const ProjectsSection = () => {
     {
       title: 'Social Links',
       description: 'Gerenciados de links digitais',
-      imageUrl: 'https://via.placeholder.com/350x250',
+      imageUrl: 'cryptocurrency-wallet.png',
       githubUrl: 'https://github.com/carlosdoria/social-links',
       demoUrl: 'https://carlosdoria-social-links.vercel.app/',
       technologies: []
@@ -16,7 +16,7 @@ export const ProjectsSection = () => {
     {
       title: 'Digital Menu',
       description: 'Cardápio digital',
-      imageUrl: 'https://via.placeholder.com/350x250',
+      imageUrl: 'digital-menu.png',
       githubUrl: 'https://github.com/carlosdoria/digital-menu',
       demoUrl: 'https://digital-menu-cd.vercel.app/',
       technologies: []
@@ -24,9 +24,9 @@ export const ProjectsSection = () => {
     {
       title: 'Crypto Wallet',
       description: 'Carteira de cripto moedas',
-      imageUrl: 'https://via.placeholder.com/350x250',
+      imageUrl: 'social-links.png',
       githubUrl: 'https://github.com/carlosdoria/cryptocurrency-wallet',
-      demoUrl: 'cryptocurrency-wallet.vercel.app',
+      demoUrl: 'https://cryptocurrency-wallet.vercel.app',
       technologies: []
     }
   ]

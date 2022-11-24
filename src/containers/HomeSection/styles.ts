@@ -2,11 +2,13 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { device, size } from 'styles/breakpoints'
 
-export const HomeSection = styled(motion.section)`
+export const HomeSection = styled(motion.section)``
+
+export const Content = styled.div`
   max-width: ${size.desktopM};
-  min-height: calc(100vh - 6rem);
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 6rem 16px 0;
 
   display: flex;
   flex-direction: column;

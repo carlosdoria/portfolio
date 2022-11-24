@@ -7,15 +7,25 @@ export const Project = styled(motion.div)`
   overflow: hidden;
   background: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.lightGray};
+  img {
+    min-height: 150px;
+    max-height: 200px;
+  }
 
   h4 {
-    font-size: 2.4rem;
     margin-bottom: 0.5rem;
+
+    font-size: 2.4rem;
+    line-height: 3.2rem;
   }
 
   p {
-    font-size: 1.6rem;
     margin-bottom: 1.6rem;
+
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    color: ${({ theme }) => theme.colors.lightGray};
   }
 `
 
@@ -31,8 +41,9 @@ export const Footer = styled.div`
     padding: 0.8rem;
 
     font-size: 1.4rem;
+    color: ${({ theme }) => theme.colors.lightGray};
 
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.lightGray};
     border-radius: 4px;
   }
 `

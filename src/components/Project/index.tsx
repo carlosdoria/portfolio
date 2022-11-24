@@ -16,7 +16,7 @@ interface ProjectProps {
 export const Project = ({ data }: ProjectProps) => {
   return (
     <S.Project>
-      <img key={data.title} src={data.imageUrl} alt={data.title} />
+      <img key={data.title} src={`/img/${data.imageUrl}`} alt={data.title} />
       <S.Content>
         <h4>{data.title}</h4>
         <p>{data.description}</p>
