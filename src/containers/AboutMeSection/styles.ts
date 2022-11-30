@@ -28,7 +28,9 @@ export const AboutDivImage = styled.div`
   img {
     width: 200px;
 
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
+    border-radius: 56% 44% 58% 42% / 31% 72% 28% 69%;
+    border-radius: 56% 44% 25% 75% / 77% 52% 48% 23%;
 
     @media screen and (${device.tabletM}) {
       width: 300px;

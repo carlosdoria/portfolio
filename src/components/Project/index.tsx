@@ -1,4 +1,4 @@
-import { Section, SectionTitle } from 'components'
+import { FiExternalLink } from 'react-icons/fi'
 
 import * as S from './styles'
 
@@ -24,9 +24,12 @@ export const Project = ({ data }: ProjectProps) => {
         <S.Footer>
           <a href={data.githubUrl} target='_blank' rel='noopener noreferrer'>
             Github
+            <FiExternalLink />
           </a>
+
           <a href={data.demoUrl} target='_blank' rel='noopener noreferrer'>
             Demonstração
+            <FiExternalLink />
           </a>
         </S.Footer>
       </S.Content>

@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import * as S from './styles'
 import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'
 import { Section, SectionTitle } from 'components'
 
 export const ContactSection = () => {
-  const [email, setEmail] = useState({
+  const [newEmail, setNewEmail] = useState({
     name: '',
     email: '',
     message: ''
@@ -13,8 +13,10 @@ export const ContactSection = () => {
 
   async function handlSubmit(event: React.FormEvent) {
     event.preventDefault()
-    await ApiEmail.post('/email', email)
+    await ApiEmail.post('/email', newEmail)
+
     clearFields()
+
     return toast.info('Email enviado com sucesso', {
       position: 'bottom-right',
       autoClose: 5000,
@@ -28,14 +30,14 @@ export const ContactSection = () => {
   }
 
   const handleInputChange = (name: string, value: string) => {
-    setEmail({
-      ...email,
+    setNewEmail({
+      ...newEmail,
       [name]: value
     })
   }
 
   const clearFields = () => {
-    setEmail({
+    setNewEmail({
       name: '',
       email: '',
       message: ''
@@ -49,11 +51,11 @@ export const ContactSection = () => {
       <S.Content>
         <S.Form onSubmit={(e) => handlSubmit(e)}>
           <S.Field>
-            <label htmlFor='name'>Nome*</label>
+            <label htmlFor='name'>Nome *</label>
             <input
               id='name'
               type='text'
-              value={email.name}
+              value={newEmail.name}
               placeholder='Digite seu nome'
               required
               onChange={(e) => handleInputChange('name', e.currentTarget.value)}
@@ -65,7 +67,7 @@ export const ContactSection = () => {
             <input
               id='email'
               type='email'
-              value={email.email}
+              value={newEmail.email}
               placeholder='Digite seu email'
               required
               onChange={(e) =>
@@ -78,7 +80,7 @@ export const ContactSection = () => {
             <label htmlFor='message'>Mensagem *</label>
             <textarea
               id='message'
-              value={email.message}
+              value={newEmail.message}
               cols={0}
               rows={10}
               placeholder='Digite sua mensagem'

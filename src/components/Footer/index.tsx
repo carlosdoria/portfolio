@@ -11,7 +11,7 @@ export const Footer = () => {
   const YEAR = new Date()
 
   const WHILE_HOVER = {
-    scale: [1, 1.4, 1.2],
+    scale: [1, 1.3, 1.2],
     transition: { duration: 0.5 }
   }
 

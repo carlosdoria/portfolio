@@ -36,6 +36,7 @@ export const Field = styled.div`
     border: ${({ theme }) => `1px solid ${theme.colors.gray}`};
     ${borderRadios}
     outline: none;
+    background: ${({ theme }) => theme.colors.white};
   }
 
   textarea {
@@ -55,7 +56,7 @@ export const InputButton = styled.input`
   letter-spacing: 2px;
   color: #000;
 
-  background: #fff;
+  background: ${({ theme }) => theme.colors.white};
 
   border: ${({ theme }) => `1px solid ${theme.colors.gray}`};
   ${borderRadios}

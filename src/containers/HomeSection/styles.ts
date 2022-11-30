@@ -62,8 +62,22 @@ export const PresentationWrapper = styled.div`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.4rem;
     text-align: center;
+
+    /* background: linear-gradient(180deg, #02fbff, #746cfe);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+    text-shadow: ${({ theme }) =>
+      theme.title === 'dark'
+        ? `0 0 10px ${theme.colors.secondary}, 0 0 20px ${theme.colors.secondary}, 0 0 10px ${theme.colors.secondary}`
+        : ''};
+
+    @media screen and (${device.mobileS}) {
+      font-size: 4rem;
+    }
 
     @media screen and (${device.tabletS}) {
       font-size: 4.8rem;

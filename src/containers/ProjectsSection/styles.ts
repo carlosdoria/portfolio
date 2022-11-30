@@ -10,5 +10,5 @@ export const Content = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4.8rem;
+  gap: 4.4rem;
 `

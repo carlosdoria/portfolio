@@ -18,7 +18,6 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     list-style: none;
     -webkit-appearance: none;
-    letter-spacing: 2px;
   }
 
   html {
@@ -28,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100vh;
-
+    font-family:  Roboto, sans-serif;
     background-color:  ${(props) => props.theme.colors.background};
   }
 
