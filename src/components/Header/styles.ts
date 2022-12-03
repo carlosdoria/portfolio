@@ -33,7 +33,7 @@ export const Logo = styled.a`
 
   text-shadow: ${({ theme }) =>
     theme.title === 'dark'
-      ? `0 0 10px ${theme.colors.secondary}, 0 0 20px ${theme.colors.secondary}, 0 0 10px ${theme.colors.secondary}`
+      ? `0 0 10px ${theme.colors.lightBlue}, 0 0 20px ${theme.colors.lightBlue}, 0 0 10px ${theme.colors.lightBlue}`
       : ''};
 
   /* background: linear-gradient(180deg, #02fbff, #746cfe);

@@ -72,7 +72,7 @@ export const PresentationWrapper = styled.div`
 
     text-shadow: ${({ theme }) =>
       theme.title === 'dark'
-        ? `0 0 10px ${theme.colors.secondary}, 0 0 20px ${theme.colors.secondary}, 0 0 10px ${theme.colors.secondary}`
+        ? `0 0 10px ${theme.colors.lightBlue}, 0 0 20px ${theme.colors.lightBlue}, 0 0 10px ${theme.colors.lightBlue}`
         : ''};
 
     @media screen and (${device.mobileS}) {
@@ -94,12 +94,12 @@ export const PresentationWrapper = styled.div`
     text-align: center;
 
     @media screen and (${device.tabletS}) {
-      font-size: 2.8rem;
+      font-size: 3.2rem;
       text-align: start;
     }
 
     @media screen and (${device.desktopS}) {
-      font-size: 3.2rem;
+      font-size: 4rem;
     }
   }
 `

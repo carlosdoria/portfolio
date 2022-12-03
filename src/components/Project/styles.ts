@@ -1,18 +1,19 @@
 import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { size } from 'styles/breakpoints'
 
 export const Project = styled(motion.div)`
-  padding: 1.6rem;
+  padding: 2.4rem;
 
   overflow: hidden;
 
   color: ${({ theme }) => theme.colors.primary};
 
-  /* border: 1px solid ${({ theme }) => theme.colors.primary}; */
-  border-radius: 1.4rem;
-  background: ${({ theme }) => theme.colors.secondary};
-  /* background: #629be8; */
+  border-radius: 3.2rem;
+
+  -webkit-box-shadow: 0px 0px 12px rgba(98, 98, 98, 0.3);
+  -moz-box-shadow: 0px 0px 12px rgba(98, 98, 98, 0.3);
+  box-shadow: 0px 0px 12px rgba(98, 98, 98, 0.3);
 
   img {
     min-height: 150px;
@@ -20,7 +21,7 @@ export const Project = styled(motion.div)`
 
     margin-bottom: 1.2rem;
 
-    border-radius: 1rem;
+    border-radius: 1.2rem;
   }
 
   h4 {
@@ -38,9 +39,7 @@ export const Project = styled(motion.div)`
   }
 `
 
-export const Content = styled.div`
-  /* padding: 1.2rem 1.2rem 2.4rem; */
-`
+export const Content = styled.div``
 
 export const Footer = styled.div`
   display: flex;
@@ -51,7 +50,6 @@ export const Footer = styled.div`
 
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
 
     font-size: 1.4rem;
 

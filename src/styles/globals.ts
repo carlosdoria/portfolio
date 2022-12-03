@@ -33,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
 
   body, textarea {
     font-family: Arial, Helvetica, sans-serif;
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
   }
 
   section {
@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
 
     background: none;
     border: none;
@@ -52,7 +52,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
   }
 
   img {

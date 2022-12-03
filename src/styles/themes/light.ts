@@ -18,6 +18,6 @@ export const light = {
     darkGray: '#2E2F42',
 
     background: '#b2d3ff',
-    text: ''
+    text: '#050410'
   }
 }

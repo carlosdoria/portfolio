@@ -28,6 +28,6 @@ export const dark = {
     background: '#050410',
     // background: '#191919',
     // background: '#181d1e',
-    text: ''
+    text: '#FFFFFF'
   }
 }
