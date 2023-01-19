@@ -1,242 +1,152 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { device, size } from 'styles/breakpoints'
 
-export const HomeSection = styled( motion.section )`
-  height: 100vh;
+export const HomeSection = styled(motion.section)``
 
-  row-gap: 1rem;
+export const Content = styled.div`
+  max-width: ${size.desktopM};
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 6rem 16px 0;
 
-  max-width: 1024px;
-  width: calc(100% - 2rem);
-
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
-
-  @media screen and (min-width: 768px) {
-    height: 100vh;
-  }
-
-  @media screen and (min-width: 1024px) {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
-
-export const HomeData = styled( motion.div )`
-  align-self: center;
-
-  @media screen and (min-width: 768px) {
-    align-self: flex-end;
-  }
-`
-
-export const HomeTitleText = styled.h1`
-  position: relative;
-
-  margin-top: var(--header-height);
-  margin-bottom: var(--mb-5);
-
-  font-size: var(--large-font-size);
-
-  @media screen and (min-width: 520px) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 1020px) and (min-height: 500px) {
-    margin-top: 0;
-
-    width: 100%;
-  }
-
-  @media screen and (min-width: 925px) and (min-height: 875px) {
-    width: 100%;
-  }
-`
-
-export const HomeTitleName = styled.span`
-  text-shadow: 0 0 10px #00b3ff,
-  0 0 20px #00b3ff,
-  0 0 40px #00b3ff,
-  0 0 10px #00b3ff
-  ;
-
-  animation:  animete 5s linear;
-
-  @keyframes animete {
-    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
-      color: var(--first-background-color);
-      text-shadow: none;
-    }
-    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 100% {
-      color: #fff;
-      text-shadow:
-        0 0 10px #00b3ff,
-        0 0 20px #00b3ff,
-        0 0 40px #00b3ff,
-        0 0 80px #00b3ff,
-        0 0 10px #00b3ff
-      ;
-    }
-  }
-
-`
-
-export const HomeContactLink = styled( motion.a )`
-  position: relative;
-
-  padding: .9rem 1.8rem;
-
-  display: inline-block;
-
-  font-size: 1.4rem;
-  font-weight: var(--font-semi);
-  letter-spacing: 3px;
-
-  color: #fff;
-  background-color: none;
-  border-radius: .2rem;
-
-  transition: .5s;
-  overflow: hidden;
-
-  :hover {
-    /* color: #00b3ff; */
-    box-shadow: 0 0 12px #00b3ff;
-
-    transition-delay: .45s;
-  }
-
-  :before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    height: 12px;
-    width: 12px;
-    color: red;
-
-    border-top: 2px solid var(--first-color);
-    border-left: 2px solid var(--first-color);
-    border-color: #00b3ff;
-
-    transition: .5s;
-    transition-delay: .4s;
-  }
-
-  :hover:before {
-      height: 100%;
-      width: 100%;
-      transition-delay: 0s;
-    }
-
-  :after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    height: 12px;
-    width: 12px;
-
-    border-bottom: 2px solid var(--first-color);
-    border-right: 2px solid var(--first-color);
-    border-color: #00b3ff;
-
-    transition: .5s;
-    transition-delay: .4s;
-  }
-
-  :hover:after {
-      height: 100%;
-      width: 100%;
-      transition-delay: 0s;
-    }
-
-  @media screen and (max-width: 425px) and (max-height: 490px) {
-    width: 60%;
-
-    text-align: center;
-  }
-
-  @media screen and (min-width: 1024px) {
-    font-size: 2.2rem;
-  }
-`
-
-export const HomeDivSocialMedias = styled( motion.div )`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 
-  @media screen and (max-width: 425px) and (max-height: 490px) {
-    width: 60%;
-
+  @media screen and (${device.tabletS}) {
     flex-direction: row;
     justify-content: space-between;
   }
-
-  @media screen and (min-width: 768px) {
-    padding-top: 0;
-    padding-bottom: 2.5rem;
-    flex-direction: row;
-    align-self: flex-end;
-  }
 `
 
-export const Icon = styled( motion.a )`
-  width: max-content;
-
-  margin-bottom: var(--mb-2);
-
-  font-size: 2rem;
-  color: var(--second-color);
-
-  :hover {
-    color: var(--first-color);
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 0;
-    margin-right: var(--mb-4);
-    font-size: 2.4rem;
-  }
-`
-
-export const HomeDivImage = styled( motion.div )`
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  width: 60%;
+export const PresentationWrapper = styled.div`
+  margin: 0 auto 3.2rem;
 
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 0.8rem;
 
-  @media screen and (max-width: 425px) and (max-height: 490px) {
-    visibility: hidden;
+  letter-spacing: 4px;
+
+  @media screen and (${device.tabletS}) {
+    flex: 1;
+
+    margin: 0 0 4rem;
+
+    align-items: flex-start;
   }
 
-  @media screen and (min-height: 575px) {
-    width: 70%;
-    max-width: 320px;
+  @media screen and (${device.tabletM}) {
+    margin: 0 auto 4rem;
   }
 
-  @media screen and (min-width: 768px) and (min-height: 650px) {
-    bottom: 7%;
-
-    max-width: 420px;
+  @media screen and (${device.desktopS}) {
   }
 
-  @media screen and (min-width: 1045px) and (min-height: 800px) {
-    max-width: none;
+  p {
+    font-size: 2.4rem;
+
+    @media screen and (${device.tabletS}) {
+      font-size: 2.8rem;
+    }
+
+    @media screen and (${device.desktopS}) {
+      font-size: 3.2rem;
+    }
+  }
+
+  h1 {
+    font-size: 3.4rem;
+    text-align: center;
+
+    /* background: linear-gradient(180deg, #02fbff, #746cfe);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+    text-shadow: ${({ theme }) =>
+      theme.title === 'dark'
+        ? `0 0 10px ${theme.colors.lightBlue}, 0 0 20px ${theme.colors.lightBlue}, 0 0 10px ${theme.colors.lightBlue}`
+        : ''};
+
+    @media screen and (${device.mobileS}) {
+      font-size: 4rem;
+    }
+
+    @media screen and (${device.tabletS}) {
+      font-size: 4.8rem;
+      text-align: start;
+    }
+
+    @media screen and (${device.desktopS}) {
+      font-size: 6rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    text-align: center;
+
+    @media screen and (${device.tabletS}) {
+      font-size: 3.2rem;
+      text-align: start;
+    }
+
+    @media screen and (${device.desktopS}) {
+      font-size: 4rem;
+    }
   }
 `
 
-export const HomeImage = styled.img`
-  border-radius: 19.3rem 7.5rem 9.3rem 5.6rem;
+export const OuthersWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (${device.tabletS}) {
+    justify-content: flex-end;
+  }
+
+  svg {
+    @media screen and (${device.tabletM}) {
+      height: 300px;
+      width: 300px;
+    }
+
+    @media screen and (${device.desktopS}) {
+      height: 350px;
+      width: 350px;
+    }
+  }
 `
+
+export const SocialWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 2.4rem;
+  column-gap: 2.4rem;
+
+  @media screen and (${device.tabletS}) {
+    justify-content: flex-start;
+  }
+
+  @media screen and (${device.tabletM}) {
+    svg {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  @media screen and (${device.desktopS}) {
+    column-gap: 2rem;
+  }
+`
+
+export const Icon = styled(motion.a)``

@@ -1,13 +1,13 @@
-import HomeSectoion from './HomeSection'
-import AboutSection from './AboutSection'
-import SkillsSection from './SkillsSection'
-import WorksSection from './WorksSection'
-import ContactSection from './ContactSection'
+import { HomeSectoion } from './HomeSection'
+import { AboutMeSection } from './AboutMeSection'
+import { SkillsSection } from './SkillsSection'
+import { ProjectsSection } from './ProjectsSection'
+import { ContactSection } from './ContactSection'
 
 export {
   HomeSectoion,
-  AboutSection,
+  AboutMeSection,
   SkillsSection,
-  WorksSection,
-  ContactSection,
+  ProjectsSection,
+  ContactSection
 }

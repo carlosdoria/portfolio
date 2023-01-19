@@ -1,135 +1,82 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { device, size } from 'styles/breakpoints'
 
-export const ContactSection = styled.section`
-  min-height: 100vh;
+const borderRadios = `
+  border-radius: 4px;
 `
 
-export const SectionTitle = styled.h2`
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-3);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-
-  :after {
-    position: absolute;
-    content: '';
-    width: 64px;
-    height: 0.18rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 2.4rem;
-    background-color: var(--first-color);
-  }
-  @media screen and (min-width: 600px) {
-    margin-bottom: var(--mb-6);
-
-    :after {
-      width: 100px;
-      top: 3.2rem;
-    }
-  }
-`
-
-const SectionContainer = styled.div`
-  max-width: 1024px;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
-  width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-
-  @media screen and (min-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
-
-export const ContactContainer = styled(SectionContainer)`
-  @media screen and (min-width: 768px) {
-    justify-items: center;
-  }
+export const Content = styled.div`
+  max-width: ${size.tabletS};
+  margin: 0 auto;
+  padding: 0 16px;
 `
 
 export const Form = styled.form`
-  @media screen and (min-width: 768px) {
-    width: 560px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+`
+
+export const Field = styled.div`
+  label {
+    margin-left: 0.25rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin-top: 0.8rem;
+    padding: 1.2rem;
+
+    font-size: 1.6rem;
+
+    border: ${({ theme }) => `1px solid ${theme.colors.gray}`};
+    ${borderRadios}
+    outline: none;
+    background: ${({ theme }) => theme.colors.white};
+  }
+
+  textarea {
+    color: #000;
+
+    resize: none;
   }
 `
 
-export const InputText = styled.input`
-  width: 100%;
-
-  margin-bottom: var(--mb-4);
-
-  padding: 1rem;
-
-  font-size: var(--normal-font-size);
-
-  border: 1.5px solid var(--second-color);
-  border-radius: 0.5rem;
-  outline: none;
-`
-
-export const InputEmail = styled.input`
-  width: 100%;
-
-  margin-bottom: var(--mb-4);
-
-  padding: 1rem;
-
-  font-size: var(--normal-font-size);
-
-  border: 1.5px solid var(--second-color);
-  border-radius: 0.5rem;
-  outline: none;
-`
-
-export const TextArea = styled.textarea`
-  width: 100%;
-
-  margin-bottom: var(--mb-4);
-
-  padding: 1rem;
-
-  font-size: var(--normal-font-size);
-  color: #000;
-
-  border: 1.5px solid var(--second-color);
-  border-radius: 0.5rem;
-  outline: none;
-`
-
 export const InputButton = styled.input`
-  margin-left: auto;
+  width: 100%;
 
-  padding: 0.75rem 2.5rem;
+  padding: 1.2rem 0;
 
-  display: block;
-
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
   color: #000;
-  background-color: var(--first-color);
 
-  border: none;
-  border-radius: 0.5rem;
+  background: ${({ theme }) => theme.colors.white};
+
+  border: ${({ theme }) => `1px solid ${theme.colors.gray}`};
+  ${borderRadios}
   outline: none;
 
   cursor: pointer;
 
-  transition: .5s;
+  transition: 0.5s;
 
-  :hover {
-    color: var(--first-color);
+  @media screen and (${device.mobileL}) {
+    max-width: 200px;
+    align-self: end;
+  }
+
+  /* :hover {
+    color: ${(props) => props.theme.colors.primary};
     background-color: #fff;
 
     border: 1px solid var(--first-color);
 
     box-shadow: 0 10px 36px rgba(1, 0, 0, 0.4);
-  }
+  } */
 `

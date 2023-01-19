@@ -1,91 +1,99 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import * as S from './styles'
 import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'
-import { Fade } from 'react-awesome-reveal'
+import { Section, SectionTitle } from 'components'
 
-export default function ContactSection () {
-
-  const [ email, setEmail ] = useState({
+export const ContactSection = () => {
+  const [newEmail, setNewEmail] = useState({
     name: '',
     email: '',
     message: ''
   })
 
-  async function handleClick (event: React.FormEvent) {
+  async function handlSubmit(event: React.FormEvent) {
     event.preventDefault()
-    await ApiEmail.post('/email', email)
+    await ApiEmail.post('/email', newEmail)
+
     clearFields()
-    return (
-      toast.info('Email enviado com sucesso', {
-        position: 'bottom-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        transition: Flip
-      })
-    )
+
+    return toast.info('Email enviado com sucesso', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      transition: Flip
+    })
   }
 
-  const handleChange = (name: string, value: string) => {
-    setEmail({
-      ...email,
-      [ name ]: value
+  const handleInputChange = (name: string, value: string) => {
+    setNewEmail({
+      ...newEmail,
+      [name]: value
     })
   }
 
   const clearFields = () => {
-    setEmail({
-      'name': '',
-      'email': '',
-      'message': ''
+    setNewEmail({
+      name: '',
+      email: '',
+      message: ''
     })
   }
 
   return (
-    <S.ContactSection id="contact">
-      <Fade>
-        <S.SectionTitle>Contato</S.SectionTitle>
-        <S.ContactContainer>
-          <S.Form onSubmit={e => handleClick(e)}>
-            <S.InputText
-              type="text"
-              value={email.name}
-              placeholder="Nome"
-              onChange={e => handleChange(
-                'name',
-                e.currentTarget.value
-              )}
+    <Section id='contact'>
+      <SectionTitle title='Contato' />
+
+      <S.Content>
+        <S.Form onSubmit={(e) => handlSubmit(e)}>
+          <S.Field>
+            <label htmlFor='name'>Nome *</label>
+            <input
+              id='name'
+              type='text'
+              value={newEmail.name}
+              placeholder='Digite seu nome'
               required
+              onChange={(e) => handleInputChange('name', e.currentTarget.value)}
             />
-            <S.InputEmail
-              type="email"
-              value={email.email}
-              placeholder="Email"
+          </S.Field>
+
+          <S.Field>
+            <label htmlFor='email'>Email *</label>
+            <input
+              id='email'
+              type='email'
+              value={newEmail.email}
+              placeholder='Digite seu email'
               required
-              onChange={e => handleChange(
-                'email',
-                e.currentTarget.value
-              )}
+              onChange={(e) =>
+                handleInputChange('email', e.currentTarget.value)
+              }
             />
-            <S.TextArea
-              value={email.message}
+          </S.Field>
+
+          <S.Field>
+            <label htmlFor='message'>Mensagem *</label>
+            <textarea
+              id='message'
+              value={newEmail.message}
               cols={0}
               rows={10}
-              placeholder="Digite sua mensagem"
+              placeholder='Digite sua mensagem'
               required
-              onChange={e => handleChange(
-                'message',
-                e.currentTarget.value
-              )}
+              onChange={(e) =>
+                handleInputChange('message', e.currentTarget.value)
+              }
             />
-            <S.InputButton type="submit" value="Enviar" />
-          </S.Form>
-        </S.ContactContainer>
-      </Fade>
-    </S.ContactSection>
+          </S.Field>
+
+          <S.InputButton type='submit' value='Enviar' />
+        </S.Form>
+      </S.Content>
+    </Section>
   )
 }

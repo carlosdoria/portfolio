@@ -1,79 +1,97 @@
 import styled from 'styled-components'
+import { device, size } from 'styles/breakpoints'
 
-const SectionContainer = styled.div`
-  max-width: 1024px;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-column-gap: 2rem;
-  width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
+export const Content = styled.div`
+  max-width: ${size.desktopM};
+  margin: 0 auto;
+  padding: 0 16px;
 
-  @media screen and (min-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
+  .AccordionRoot {
+    margin-bottom: 3.2rem;
   }
-`
 
-export const SkillsSection = styled.section`
-  min-height: 100vh;
-`
-
-export const SectionTitle = styled.h2`
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-3);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-
-  :after {
-    position: absolute;
-    content: '';
-    width: 64px;
-    height: 0.18rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 2.4rem;
-    background-color: var(--first-color);
+  .AccordionHeader button {
+    width: 100%;
   }
-  @media screen and (min-width: 600px) {
-    margin-bottom: var(--mb-6);
 
-    :after {
-      width: 100px;
-      top: 3.2rem;
+  .AccordionContent {
+    overflow: hidden;
+  }
+
+  .AccordionContent[data-state='open'] {
+    animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  .AccordionContent[data-state='closed'] {
+    animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  @keyframes slideDown {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
     }
   }
 `
 
-export const SkillsContainer = styled( SectionContainer )`
-  row-gap: 2rem;
-  text-align: center;
+export const SkillsGroup = styled.div`
+  margin-top: 3.2rem;
+`
 
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+export const SkillsSubtitle = styled.p`
+  padding: 0.8rem;
 
-    text-align: initial;
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+  /* border-radius: 4px; */
+
+  font-size: 2.4rem;
+  font-weight: 600;
+
+  line-height: 2.4rem;
+  cursor: pointer;
+
+  justify-content: space-between;
+
+  @media screen and (${device.tabletM}) {
+    font-size: 3.2rem;
   }
 `
 
-export const SkillsSubtitle = styled.h2`
-  margin-bottom: var(--mb-2);
+export const SkillsWrapper = styled.ul`
+  margin: 48px 0;
 
-  text-align: center;
-`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 48px;
 
-export const SkillsText = styled.p`
-  margin-bottom: var(--mb-2);
+  @media screen and (${device.mobileM}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  text-indent: 3rem;
-  text-align: justify;
-  line-height: 1.6rem;
-`
+  @media screen and (${device.tabletS}) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-export const SkillImage = styled.img`
-  border-radius: 0.5rem;
+  @media screen and (${device.tabletM}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  img {
+    /* width: 250px;
+  height: 60px; */
+  }
 `

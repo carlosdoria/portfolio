@@ -1,36 +1,27 @@
-import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import styled from 'styled-components'
+import { size } from 'styles/breakpoints'
 
 export const Footer = styled.footer`
-  padding: 2rem 0;
+  max-width: ${size.desktopM};
+  margin: 0 auto;
+  padding: 6rem 0 4rem;
 
   text-align: center;
 
-  font-weight: var(--font-semi);
-
-  color: var(--footer-copyright-color);
-  background-color: var(--first-background-color);
+  p {
+    font-size: 1.6rem;
+  }
 `
-
-// export const FooterTitle = styled.p`
-//   margin-bottom: var(--mb-4);
-
-//   /* font-size: 2rem; */
-// `
 
 export const FooterSocialMedias = styled.div`
-  margin-bottom: var(--mb-3);
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: center;
+
+  column-gap: 2.4rem;
 `
 
-export const Icon = styled.a`
-  margin: 0 var(--mb-2);
-
-  font-size: 2rem;
-
-  color: var(--footer-first-color);
-  transition: .4s;
-
-  :hover {
-    color: var(--footer-second-color);
-  }
+export const Icon = styled(motion.a)`
+  font-size: 4rem;
 `

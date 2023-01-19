@@ -6,7 +6,9 @@ type IMist = {
 
 export const Container = styled.div`
   position: relative;
-  left: -150px;
+  height: 600px;
+  display: flex;
+  align-items: end;
 `
 
 export const Cup = styled.div`
