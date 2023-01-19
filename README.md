@@ -1,4 +1,4 @@
-<h1 align='center'><strong>Personal Link Manager</strong></h1>
+<h1 align='center'><strong>My portfolio</strong></h1>
 
 ## Index
 
@@ -9,8 +9,8 @@
 
 <br>
 
-![GitHub](https://img.shields.io/github/license/carlosdoria/social-links)
-![GitHub](https://img.shields.io/github/languages/count/carlosdoria/social-links)
+![GitHub](https://img.shields.io/github/license/carlosdoria/portfolio)
+![GitHub](https://img.shields.io/github/languages/count/carlosdoria/portfolio)
 <br>
 
 <!-- ![Print da Home Page](https://github.com/carlosdoria/clone-pipefy/blob/main/public/images/Home-page.png) -->
@@ -47,13 +47,13 @@ The project was developed with the following technologies and tools:
 In your terminal, clone this repository:
 
 ```
-git clone https://github.com/carlosdoria/social-links.git
+git clone https://github.com/carlosdoria/portfolio.git
 ```
 
 Then enter the directory:
 
 ```
-cd social-links
+cd portfolio
 ```
 
 And run the following command to install the necessary dependencies:
