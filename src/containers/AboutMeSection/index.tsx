@@ -1,6 +1,7 @@
+'use client'
+
 import { Section } from 'components'
 import { SectionTitle } from 'components/SectionTitle'
-import { Fade } from 'react-awesome-reveal'
 import * as S from './styles'
 
 export const AboutMeSection = () => {

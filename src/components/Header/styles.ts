@@ -1,15 +1,14 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { device, size } from '../../styles/breakpoints'
 
-export const Header = styled(motion.header)`
+export const Header = styled.header`
   position: fixed;
   z-index: var(--z-fixed);
 
   height: 6rem;
   width: 100%;
 
-  background: ${(props) => props.theme.colors.background};
+  background: ${({ theme }) => theme.colors.background};
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 `
 
@@ -46,6 +45,7 @@ export const Logo = styled.a`
   @media screen and (${device.desktopS}) {
   }
 `
+
 export const Button = styled.button`
   border: none;
 

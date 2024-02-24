@@ -1,3 +1,5 @@
+'use client'
+
 import { Section } from 'components'
 import {
   FaGithubAlt,
@@ -10,7 +12,7 @@ import { GiCoffeeCup } from 'react-icons/gi'
 
 import * as S from './styles'
 
-export const HomeSectoion = () => {
+export const HomeSection = () => {
   const ICONS_PROPS = {
     size: 35
   }
@@ -68,7 +70,6 @@ export const HomeSectoion = () => {
             </S.Icon>
           </S.SocialWrapper>
         </div>
-
         <S.OuthersWrapper>
           <GiCoffeeCup size={200} />
           {/* <img src='/img/coffee.gif' /> */}

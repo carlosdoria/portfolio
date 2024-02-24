@@ -1,3 +1,5 @@
+'use client'
+
 import { Section, SectionTitle } from 'components'
 import { Project } from 'components/Project'
 

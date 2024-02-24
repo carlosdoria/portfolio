@@ -55,7 +55,7 @@ export const SkillsSubtitle = styled.p`
   display: flex;
   align-items: center;
 
-  border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+  /* border-bottom: 1px solid ${({ theme }) => theme.colors.primary}; */
   /* border-radius: 4px; */
 
   font-size: 2.4rem;

@@ -1,3 +1,5 @@
+'use client'
+
 import { createGlobalStyle } from 'styled-components'
 import { size } from './breakpoints'
 
@@ -28,12 +30,12 @@ const GlobalStyles = createGlobalStyle`
   html, body, #__next {
     height: 100vh;
     font-family:  Roboto, sans-serif;
-    background-color:  ${(props) => props.theme.colors.background};
+    background-color:  ${({ theme }) => theme.colors.background};
   }
 
   body, textarea {
-    font-family: Arial, Helvetica, sans-serif;
-    color: ${(props) => props.theme.colors.text};
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* color: ${(props) => props.theme.colors.text}; */
   }
 
   section {
@@ -44,21 +46,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    color: ${(props) => props.theme.colors.text};
-
+  cursor: pointer;
     background: none;
     border: none;
   }
 
   a {
     text-decoration: none;
-    color: ${(props) => props.theme.colors.text};
-  }
-
-  img {
-    height: auto;
-    max-width: 100%;
-    display: block;
   }
 `
 

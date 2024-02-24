@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import * as Accordion from '@radix-ui/react-accordion'
 import { IoIosArrowDown } from 'react-icons/io'

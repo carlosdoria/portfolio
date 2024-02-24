@@ -1,4 +1,6 @@
-import React, { useMemo, useState } from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import * as S from './styles'
 import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'

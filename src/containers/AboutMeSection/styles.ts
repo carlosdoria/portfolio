@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { device, size } from 'styles/breakpoints'
 
-export const Wrapper = styled(motion.section)`
+export const Wrapper = styled.section`
   min-height: 100vh;
 `
 
-export const Content = styled(motion.div)`
+export const Content = styled.div`
   max-width: ${size.desktopM};
   margin: 0 auto;
   padding: 0 16px;
