@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { useContext } from 'react'
 import { FiSun, FiMoon } from 'react-icons/fi'

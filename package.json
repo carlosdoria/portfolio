@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-next",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,21 +7,21 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate": "yarn plop --plopfile ./generators/plopfile.js"
+    "generate": "npm run plop --plopfile ./generators/plopfile.js"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.0.1",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "framer-motion": "^4.1.17",
-    "next": "10.2.3",
+    "next": "^14.1.0",
     "nodemailer": "^6.6.3",
     "nookies": "^2.5.2",
-    "react": "17.0.2",
+    "react": "^18.2.0",
     "react-awesome-reveal": "^3.8.1",
-    "react-dom": "17.0.2",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
     "react-toastify": "^7.0.4",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -37,6 +37,6 @@
     "eslint": "^7.29.0",
     "plop": "^2.7.4",
     "react-is": "^17.0.2",
-    "typescript": "^4.3.5"
+    "typescript": "^4.9.5"
   }
 }
