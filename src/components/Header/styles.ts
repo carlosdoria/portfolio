@@ -3,7 +3,6 @@ import { device, size } from '../../styles/breakpoints'
 
 export const Header = styled.header`
   position: fixed;
-  z-index: var(--z-fixed);
 
   height: 6rem;
   width: 100%;
@@ -25,7 +24,7 @@ export const Nav = styled.nav`
   align-items: center;
 `
 
-export const Logo = styled.a`
+export const Logo = styled.p`
   font-size: 2.4rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.primary};

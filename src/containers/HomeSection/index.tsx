@@ -8,7 +8,6 @@ import {
   FaWhatsapp
 } from 'react-icons/fa'
 import { GiCoffeeCup } from 'react-icons/gi'
-// import CV from '../../../public/'
 
 import * as S from './styles'
 
@@ -17,24 +16,18 @@ export const HomeSection = () => {
     size: 35
   }
 
-  const WHILE_HOVER = {
-    scale: [1, 1.4, 1.2],
-    transition: { duration: 0.5 }
-  }
-
   return (
     <Section id='home'>
       <S.Content>
         <div>
           <S.PresentationWrapper>
-            <p>Olá, sou</p>
-            <h1>Carlos Dória</h1>
-            <h2>Desenvolvedor FullStack</h2>
+            <S.Text>Seja bem vindo, sou</S.Text>
+            <S.Title>Carlos Dória</S.Title>
+            <S.Subtitle>Desenvolvedor FullStack</S.Subtitle>
           </S.PresentationWrapper>
 
           <S.SocialWrapper>
             <S.Icon
-              whileHover={WHILE_HOVER}
               href='https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/'
               target='_blank'
               rel='noreferrer'
@@ -43,7 +36,6 @@ export const HomeSection = () => {
             </S.Icon>
 
             <S.Icon
-              whileHover={WHILE_HOVER}
               href='https://github.com/carlosdoria'
               target='_blank'
               rel='noreferrer'
@@ -52,7 +44,6 @@ export const HomeSection = () => {
             </S.Icon>
 
             <S.Icon
-              whileHover={WHILE_HOVER}
               href='https://www.instagram.com/carlosc.doria/'
               target='_blank'
               rel='noreferrer'
@@ -61,7 +52,6 @@ export const HomeSection = () => {
             </S.Icon>
 
             <S.Icon
-              whileHover={WHILE_HOVER}
               href='https://api.whatsapp.com/send?phone=5582988970954'
               target='_blank'
               rel='noreferrer'
@@ -70,9 +60,9 @@ export const HomeSection = () => {
             </S.Icon>
           </S.SocialWrapper>
         </div>
+
         <S.OuthersWrapper>
           <GiCoffeeCup size={200} />
-          {/* <img src='/img/coffee.gif' /> */}
         </S.OuthersWrapper>
       </S.Content>
     </Section>

@@ -1,3 +1,4 @@
+'use client'
 import { AboutMeSection } from 'containers/AboutMeSection'
 import { ContactSection } from 'containers/ContactSection'
 import { HomeSection } from 'containers/HomeSection'

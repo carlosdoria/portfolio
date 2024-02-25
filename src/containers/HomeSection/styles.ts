@@ -48,59 +48,60 @@ export const PresentationWrapper = styled.div`
 
   @media screen and (${device.desktopS}) {
   }
+`
 
-  p {
-    font-size: 2.4rem;
+export const Title = styled.h1`
+  font-size: 3.4rem;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.secondary};
 
-    @media screen and (${device.tabletS}) {
-      font-size: 2.8rem;
-    }
-
-    @media screen and (${device.desktopS}) {
-      font-size: 3.2rem;
-    }
-  }
-
-  h1 {
-    font-size: 3.4rem;
-    text-align: center;
-
-    /* background: linear-gradient(180deg, #02fbff, #746cfe);
+  /* background: linear-gradient(180deg, #02fbff, #746cfe);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
 
-    text-shadow: ${({ theme }) =>
-      theme.title === 'dark'
-        ? `0 0 10px ${theme.colors.lightBlue}, 0 0 20px ${theme.colors.lightBlue}, 0 0 10px ${theme.colors.lightBlue}`
-        : ''};
+  text-shadow: ${({ theme }) =>
+    theme.title === 'dark'
+      ? `0 0 10px ${theme.colors.lightBlue}, 0 0 20px ${theme.colors.lightBlue}, 0 0 10px ${theme.colors.lightBlue}`
+      : ''};
 
-    @media screen and (${device.mobileS}) {
-      font-size: 4rem;
-    }
-
-    @media screen and (${device.tabletS}) {
-      font-size: 4.8rem;
-      text-align: start;
-    }
-
-    @media screen and (${device.desktopS}) {
-      font-size: 6rem;
-    }
+  @media screen and (${device.mobileS}) {
+    font-size: 4rem;
   }
 
-  h2 {
-    font-size: 2.4rem;
-    text-align: center;
+  @media screen and (${device.tabletS}) {
+    font-size: 4.8rem;
+    text-align: start;
+  }
 
-    @media screen and (${device.tabletS}) {
-      font-size: 3.2rem;
-      text-align: start;
-    }
+  @media screen and (${device.desktopS}) {
+    font-size: 6rem;
+  }
+`
 
-    @media screen and (${device.desktopS}) {
-      font-size: 4rem;
-    }
+export const Subtitle = styled.h3`
+  font-size: 2.4rem;
+  text-align: center;
+
+  @media screen and (${device.tabletS}) {
+    font-size: 3.2rem;
+    text-align: start;
+  }
+
+  @media screen and (${device.desktopS}) {
+    font-size: 4rem;
+  }
+`
+
+export const Text = styled.p`
+  font-size: 2.4rem;
+
+  @media screen and (${device.tabletS}) {
+    font-size: 2.8rem;
+  }
+
+  @media screen and (${device.desktopS}) {
+    font-size: 3.2rem;
   }
 `
 
@@ -149,4 +150,6 @@ export const SocialWrapper = styled.div`
   }
 `
 
-export const Icon = styled(motion.a)``
+export const Icon = styled.a`
+  color: ${({ theme }) => theme.colors.primary};
+`

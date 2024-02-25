@@ -1,18 +1,6 @@
-'use client'
-
 import { createGlobalStyle } from 'styled-components'
-import { size } from './breakpoints'
 
 const GlobalStyles = createGlobalStyle`
-  /* VARIABLE CSS */
-
-  :root {
-    --z-back: -10;
-    --z-normal: 1;
-    --z-tooltip: 10;
-    --z-fixed: 100;
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -40,13 +28,14 @@ const GlobalStyles = createGlobalStyle`
 
   section {
     padding-bottom: 8rem;
+
     :not(:first-child) {
       padding-top: 8rem;
     }
   }
 
   button {
-  cursor: pointer;
+    cursor: pointer;
     background: none;
     border: none;
   }
