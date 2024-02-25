@@ -1,12 +1,9 @@
 import styled from 'styled-components'
 import { device, size } from 'styles/breakpoints'
 
-export const Wrapper = styled.section`
-  min-height: 100vh;
-`
+export const Wrapper = styled.section``
 
 export const Content = styled.div`
-  max-width: ${size.desktopM};
   margin: 0 auto;
   padding: 0 16px;
 

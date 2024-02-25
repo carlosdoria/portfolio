@@ -1,11 +1,15 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import * as S from './styles'
 
 interface SectionProps {
   id: string
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export const Section = ({ id, children }: SectionProps) => {
-  return <S.Wrapper id={id}>{children}</S.Wrapper>
+  return (
+    <S.Wrapper as='section' id={id}>
+      {children}
+    </S.Wrapper>
+  )
 }

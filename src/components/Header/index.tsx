@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <S.Header>
       <S.Nav>
-        <Link href='/'>
+        <Link href='#home'>
           <S.Logo>Carlos Dória</S.Logo>
         </Link>
       </S.Nav>

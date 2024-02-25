@@ -1,20 +1,16 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
-import { device, size } from 'styles/breakpoints'
-
-export const HomeSection = styled(motion.section)``
+import { device } from 'styles/breakpoints'
+import Link from 'next/link'
 
 export const Content = styled.div`
-  max-width: ${size.desktopM};
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 6rem 16px 0;
+  margin-top: 20rem;
+  padding: 0 16px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 3.2rem;
 
   @media screen and (${device.tabletS}) {
     flex-direction: row;
@@ -30,7 +26,7 @@ export const PresentationWrapper = styled.div`
   justify-content: center;
   justify-content: flex-start;
   align-items: center;
-  row-gap: 0.8rem;
+  row-gap: 1.2rem;
 
   letter-spacing: 4px;
 
@@ -94,7 +90,8 @@ export const Subtitle = styled.h3`
 `
 
 export const Text = styled.p`
-  font-size: 2.4rem;
+  font-size: 1.8rem;
+  text-align: center;
 
   @media screen and (${device.tabletS}) {
     font-size: 2.8rem;
@@ -105,7 +102,34 @@ export const Text = styled.p`
   }
 `
 
-export const OuthersWrapper = styled.div`
+export const LinkWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+
+  @media screen and (${device.desktopM}) {
+    gap: 2.4rem;
+  }
+`
+
+export const CustomLink = styled(Link)`
+  width: 100%;
+
+  padding: 0.8rem 1.4rem;
+
+  text-align: center;
+  font-size: 2.4rem;
+  color: ${({ theme }) => theme.colors.white};
+
+  border-radius: 1rem;
+  background: ${({ theme }) => theme.colors.secondary};
+
+  @media screen and (${device.tabletS}) {
+    width: fit-content;
+  }
+`
+
+export const OthersWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,31 +149,4 @@ export const OuthersWrapper = styled.div`
       width: 350px;
     }
   }
-`
-
-export const SocialWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  row-gap: 2.4rem;
-  column-gap: 2.4rem;
-
-  @media screen and (${device.tabletS}) {
-    justify-content: flex-start;
-  }
-
-  @media screen and (${device.tabletM}) {
-    svg {
-      height: 50px;
-      width: 50px;
-    }
-  }
-
-  @media screen and (${device.desktopS}) {
-    column-gap: 2rem;
-  }
-`
-
-export const Icon = styled.a`
-  color: ${({ theme }) => theme.colors.primary};
 `

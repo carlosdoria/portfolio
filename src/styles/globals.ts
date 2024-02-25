@@ -28,10 +28,6 @@ const GlobalStyles = createGlobalStyle`
 
   section {
     padding-bottom: 8rem;
-
-    :not(:first-child) {
-      padding-top: 8rem;
-    }
   }
 
   button {

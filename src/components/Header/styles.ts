@@ -3,9 +3,11 @@ import { device, size } from '../../styles/breakpoints'
 
 export const Header = styled.header`
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
   height: 6rem;
-  width: 100%;
 
   background: ${({ theme }) => theme.colors.background};
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
@@ -38,15 +40,6 @@ export const Logo = styled.p`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-
-  cursor: pointer;
-
-  @media screen and (${device.desktopS}) {
-  }
-`
-
-export const Button = styled.button`
-  border: none;
 
   cursor: pointer;
 `
