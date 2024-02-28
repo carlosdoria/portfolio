@@ -92,7 +92,7 @@ export const ContactSection = () => {
             />
           </S.Field>
 
-          <S.SubmitButton onClick={() => handleSubmit()}>Enviar</S.SubmitButton>
+          <S.SubmitButton>Enviar</S.SubmitButton>
         </S.Form>
       </S.Content>
     </Section>
