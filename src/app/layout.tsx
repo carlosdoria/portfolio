@@ -8,22 +8,19 @@ import { dark } from 'styles/themes/dark'
 import { light } from 'styles/themes/light'
 import { Header } from 'components'
 import StyledComponentsRegistry from './registry'
+
 export default function RootLayout({
   children
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html>
-      <body>
-        <ThemeProvider theme={light}>
-          <Header />
-          <StyledComponentsRegistry>
-            <GlobalStyles />
-            {children}
-          </StyledComponentsRegistry>
-        </ThemeProvider>
-      </body>
-    </html>
+    <StyledComponentsRegistry>
+      <ThemeProvider theme={light}>
+        <GlobalStyles />
+        <Header />
+        {children}
+      </ThemeProvider>
+    </StyledComponentsRegistry>
   )
 }

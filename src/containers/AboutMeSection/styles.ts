@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { device, size } from 'styles/breakpoints'
+import { device } from 'styles/breakpoints'
 
 export const Wrapper = styled.section``
 
@@ -38,7 +38,7 @@ export const TextWrapper = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 2rem;
 
   p {
     font-size: 1.8rem;
@@ -46,8 +46,5 @@ export const TextWrapper = styled.div`
 
     text-indent: 2.4rem;
     text-align: justify;
-
-    @media screen and (${device.tabletM}) {
-    }
   }
 `

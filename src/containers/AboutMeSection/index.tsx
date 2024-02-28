@@ -16,12 +16,10 @@ export const AboutMeSection = () => {
 
         <S.TextWrapper>
           <p>
-            Desenvolvedor Full-stack, graduado em direito e atualmente cursando
-            Engenharia de Software. Fiz minha transição de carreira por amar
-            tecnologia e ser apaixonado por resolver problemas através da
-            programação, atualmente focado no desenvolvimento de aplicações web
-            utilizando a stack JavaScript ( ReactJS, NextJS, React Native e
-            NodeJS ).
+            Desenvolvedor Full-stack, graduado em direito. Apaixonado por
+            tecnologia e resolver problemas através da programação, atualmente
+            focado no desenvolvimento de aplicações web utilizando a stack
+            JavaScript ( ReactJS e NextJS ).
           </p>
           <p>
             Criador de conteúdo no Youtube, onde faço lives em pair programming

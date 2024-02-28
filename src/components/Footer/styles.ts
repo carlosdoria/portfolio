@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { size } from 'styles/breakpoints'
 
@@ -22,6 +21,6 @@ export const FooterSocialMedias = styled.div`
   column-gap: 2.4rem;
 `
 
-export const Icon = styled(motion.a)`
+export const Icon = styled.a`
   font-size: 4rem;
 `

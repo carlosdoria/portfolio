@@ -18,8 +18,8 @@ export const HomeSection = () => {
           </S.PresentationWrapper>
 
           <S.LinkWrapper>
-            <S.CustomLink href=''>Minhas Skills</S.CustomLink>
-            <S.CustomLink href=''>Meus projetos</S.CustomLink>
+            <S.CustomLink href='#skills'>Minhas Skills</S.CustomLink>
+            <S.CustomLink href='#'>Meus projetos</S.CustomLink>
           </S.LinkWrapper>
         </div>
 

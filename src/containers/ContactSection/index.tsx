@@ -13,8 +13,7 @@ export const ContactSection = () => {
     message: ''
   })
 
-  async function handlSubmit(event: React.FormEvent) {
-    event.preventDefault()
+  async function handleSubmit() {
     await ApiEmail.post('/email', newEmail)
 
     clearFields()
@@ -51,7 +50,7 @@ export const ContactSection = () => {
       <SectionTitle title='Contato' />
 
       <S.Content>
-        <S.Form onSubmit={(e) => handlSubmit(e)}>
+        <S.Form>
           <S.Field>
             <label htmlFor='name'>Nome *</label>
             <input
@@ -93,7 +92,7 @@ export const ContactSection = () => {
             />
           </S.Field>
 
-          <S.InputButton type='submit' value='Enviar' />
+          <S.SubmitButton onClick={() => handleSubmit()}>Enviar</S.SubmitButton>
         </S.Form>
       </S.Content>
     </Section>

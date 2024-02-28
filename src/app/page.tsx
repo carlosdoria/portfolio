@@ -1,18 +1,17 @@
-'use client'
-import { AboutMeSection } from 'containers/AboutMeSection'
-import { ContactSection } from 'containers/ContactSection'
 import { HomeSection } from 'containers/HomeSection'
-import { ProjectsSection } from 'containers/ProjectsSection'
+import { AboutMeSection } from 'containers/AboutMeSection'
 import { SkillsSection } from 'containers/SkillsSection'
+import { ContactSection } from 'containers/ContactSection'
+import { ProjectsSection } from 'containers/ProjectsSection'
 
 const Home = () => {
   return (
     <main>
       <HomeSection />
       <AboutMeSection />
-      {/* <SkillsSection />
-      <ProjectsSection />
-      <ContactSection /> */}
+      <SkillsSection />
+      {/* <ProjectsSection /> */}
+      {/* <ContactSection /> */}
     </main>
   )
 }

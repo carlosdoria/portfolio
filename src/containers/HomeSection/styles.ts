@@ -107,18 +107,18 @@ export const LinkWrapper = styled.div`
   flex-wrap: wrap;
   gap: 1.4rem;
 
-  @media screen and (${device.desktopM}) {
-    gap: 2.4rem;
+  @media screen and (${device.tabletM}) {
+    gap: 1.8rem;
   }
 `
 
 export const CustomLink = styled(Link)`
   width: 100%;
 
-  padding: 0.8rem 1.4rem;
+  padding: 1.2rem 1.6rem;
 
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   color: ${({ theme }) => theme.colors.white};
 
   border-radius: 1rem;

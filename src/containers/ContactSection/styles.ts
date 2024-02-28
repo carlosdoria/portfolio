@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { device, size } from 'styles/breakpoints'
 
@@ -46,7 +45,7 @@ export const Field = styled.div`
   }
 `
 
-export const InputButton = styled.input`
+export const SubmitButton = styled.button`
   width: 100%;
 
   padding: 1.2rem 0;

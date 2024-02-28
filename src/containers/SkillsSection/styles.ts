@@ -1,14 +1,13 @@
 import styled from 'styled-components'
-import { device, size } from 'styles/breakpoints'
+import { size } from 'styles/breakpoints'
 
 export const Content = styled.div`
   max-width: ${size.desktopM};
   margin: 0 auto;
   padding: 0 16px;
-
-  .AccordionRoot {
-    margin-bottom: 3.2rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 
   .AccordionHeader button {
     width: 100%;
@@ -24,6 +23,14 @@ export const Content = styled.div`
 
   .AccordionContent[data-state='closed'] {
     animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  .AccordionIcon {
+    transition: transform 400ms;
+  }
+
+  .AccordionTrigger[data-state='open'] .AccordionIcon {
+    transform: rotate(180deg);
   }
 
   @keyframes slideDown {
@@ -42,56 +49,5 @@ export const Content = styled.div`
     to {
       height: 0;
     }
-  }
-`
-
-export const SkillsGroup = styled.div`
-  margin-top: 3.2rem;
-`
-
-export const SkillsSubtitle = styled.p`
-  padding: 0.8rem;
-
-  display: flex;
-  align-items: center;
-
-  /* border-bottom: 1px solid ${({ theme }) => theme.colors.primary}; */
-  /* border-radius: 4px; */
-
-  font-size: 2.4rem;
-  font-weight: 600;
-
-  line-height: 2.4rem;
-  cursor: pointer;
-
-  justify-content: space-between;
-
-  @media screen and (${device.tabletM}) {
-    font-size: 3.2rem;
-  }
-`
-
-export const SkillsWrapper = styled.ul`
-  margin: 48px 0;
-
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 48px;
-
-  @media screen and (${device.mobileM}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media screen and (${device.tabletS}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media screen and (${device.tabletM}) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  img {
-    /* width: 250px;
-  height: 60px; */
   }
 `

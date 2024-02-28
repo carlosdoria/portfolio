@@ -1,8 +1,6 @@
-import { motion } from 'framer-motion'
-import styled, { css } from 'styled-components'
-import { size } from 'styles/breakpoints'
+import styled from 'styled-components'
 
-export const Project = styled(motion.div)`
+export const Project = styled.div`
   padding: 2.4rem;
 
   overflow: hidden;
