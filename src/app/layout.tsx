@@ -12,12 +12,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <StyledComponentsRegistry>
-      <ThemeProvider theme={light}>
-        <GlobalStyles />
-        <Header />
-        {children}
-      </ThemeProvider>
-    </StyledComponentsRegistry>
+    <html>
+      <body>
+        <StyledComponentsRegistry>
+          <ThemeProvider theme={light}>
+            <GlobalStyles />
+            <Header />
+            {children}
+          </ThemeProvider>
+        </StyledComponentsRegistry>
+      </body>
+    </html>
   )
 }
