@@ -7,10 +7,10 @@ export const Footer = styled.footer`
   padding: 6rem 0 4rem;
 
   text-align: center;
+`
 
-  p {
-    font-size: 1.6rem;
-  }
+export const CopyRightText = styled.p`
+  font-size: 1.6rem;
 `
 
 export const FooterSocialMedias = styled.div`
@@ -23,4 +23,5 @@ export const FooterSocialMedias = styled.div`
 
 export const Icon = styled.a`
   font-size: 4rem;
+  color: ${({ theme }) => theme.colors.secondary};
 `

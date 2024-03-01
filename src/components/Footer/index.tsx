@@ -20,12 +20,15 @@ export const Footer = () => {
         >
           <FaLinkedin />
         </S.Icon>
+
         <S.Icon href='https://github.com/carlosdoria' target='_blank'>
           <FaGithubAlt />
         </S.Icon>
+
         <S.Icon href='https://www.instagram.com/carlosc.doria/' target='_blank'>
           <FaInstagram />
         </S.Icon>
+
         <S.Icon
           href='https://api.whatsapp.com/send?phone=5582988970954'
           target='_blank'
@@ -34,9 +37,9 @@ export const Footer = () => {
         </S.Icon>
       </S.FooterSocialMedias>
 
-      <p>
+      <S.CopyRightText>
         {'\u00A9'} {YEAR.getFullYear()}, copyright all rights reserved
-      </p>
+      </S.CopyRightText>
     </S.Footer>
   )
 }
