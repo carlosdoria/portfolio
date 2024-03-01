@@ -9,7 +9,6 @@ import { SKILLS_BACK, SKILLS_FRONT, SKILLS_STUDYING } from './constants'
 
 export interface ISkill {
   name: string
-  color: string
   svg: JSX.Element
 }
 

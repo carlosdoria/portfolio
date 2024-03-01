@@ -3,6 +3,7 @@
 import { Section } from 'components'
 import { SectionTitle } from 'components/SectionTitle'
 import * as S from './styles'
+import Image from 'next/image'
 
 export const AboutMeSection = () => {
   return (
@@ -11,7 +12,12 @@ export const AboutMeSection = () => {
 
       <S.Content>
         <S.AboutDivImage>
-          <img src='https://github.com/carlosdoria.png' alt='Foto de perfil' />
+          <Image
+            src='https://github.com/carlosdoria.png'
+            alt='Foto de perfil'
+            width={300}
+            height={300}
+          />
         </S.AboutDivImage>
 
         <S.TextWrapper>

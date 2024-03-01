@@ -11,8 +11,8 @@ interface AccordionProps {
 
 export function Accordion({ title, list }: AccordionProps) {
   return (
-    <RadixAccordion.Root type='single' defaultValue='frontend' collapsible>
-      <RadixAccordion.Item value='frontend'>
+    <RadixAccordion.Root type='single' defaultValue={title} collapsible>
+      <RadixAccordion.Item value={title}>
         <RadixAccordion.Header className='AccordionHeader'>
           <RadixAccordion.Trigger className='AccordionTrigger'>
             <S.SkillTitle>

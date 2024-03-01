@@ -22,15 +22,8 @@ export const AboutDivImage = styled.div`
   justify-content: center;
 
   img {
-    width: 200px;
-
-    /* border-radius: 0.5rem; */
-    border-radius: 56% 44% 58% 42% / 31% 72% 28% 69%;
+    border-radius: 46% 34% 48% 32% / 21% 62% 18% 59%;
     border-radius: 56% 44% 25% 75% / 77% 52% 48% 23%;
-
-    @media screen and (${device.tabletM}) {
-      width: 300px;
-    }
   }
 `
 
@@ -44,7 +37,6 @@ export const TextWrapper = styled.div`
     font-size: 1.8rem;
     line-height: 2.8rem;
 
-    text-indent: 2.4rem;
     text-align: justify;
   }
 `
