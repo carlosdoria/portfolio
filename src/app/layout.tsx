@@ -3,8 +3,9 @@
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from 'styles/globals'
 import { light } from 'styles/themes/light'
-import { Header } from 'components'
 import StyledComponentsRegistry from '../lib/registry'
+import { Header } from 'components/Header'
+import { Footer } from 'components/Footer'
 
 export default function RootLayout({
   children
@@ -19,6 +20,7 @@ export default function RootLayout({
             <GlobalStyles />
             <Header />
             {children}
+            <Footer />
           </ThemeProvider>
         </StyledComponentsRegistry>
       </body>

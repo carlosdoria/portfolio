@@ -10,11 +10,6 @@ import {
 export const Footer = () => {
   const YEAR = new Date()
 
-  const WHILE_HOVER = {
-    scale: [1, 1.3, 1.2],
-    transition: { duration: 0.5 }
-  }
-
   return (
     <S.Footer>
       {/* <S.FooterTitle>Carlos</S.FooterTitle> */}
@@ -22,28 +17,18 @@ export const Footer = () => {
         <S.Icon
           href='https://www.linkedin.com/in/carlos-d%C3%B3ria-877122199/'
           target='_blank'
-          whileHover={WHILE_HOVER}
         >
           <FaLinkedin />
         </S.Icon>
-        <S.Icon
-          href='https://github.com/carlosdoria'
-          target='_blank'
-          whileHover={WHILE_HOVER}
-        >
+        <S.Icon href='https://github.com/carlosdoria' target='_blank'>
           <FaGithubAlt />
         </S.Icon>
-        <S.Icon
-          href='https://www.instagram.com/carlosc.doria/'
-          target='_blank'
-          whileHover={WHILE_HOVER}
-        >
+        <S.Icon href='https://www.instagram.com/carlosc.doria/' target='_blank'>
           <FaInstagram />
         </S.Icon>
         <S.Icon
           href='https://api.whatsapp.com/send?phone=5582988970954'
           target='_blank'
-          whileHover={WHILE_HOVER}
         >
           <FaWhatsapp />
         </S.Icon>

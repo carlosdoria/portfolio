@@ -1,7 +1,0 @@
-export * from './Header'
-export * from './Section'
-export * from './Footer'
-export * from './CupCoffee'
-export * from './SectionTitle'
-export * from './Skills'
-export * from './Icons'

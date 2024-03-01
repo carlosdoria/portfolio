@@ -1,9 +1,10 @@
 'use client'
 
-import { Section, SectionTitle } from 'components'
 import { Project } from 'components/Project'
 
 import * as S from './styles'
+import { Section } from 'components/Section'
+import { SectionTitle } from 'components/SectionTitle'
 
 export const ProjectsSection = () => {
   const projects = [

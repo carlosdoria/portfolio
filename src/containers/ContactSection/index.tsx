@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 import * as S from './styles'
 import { ApiEmail } from '../../services/api'
 import { toast, Flip } from 'react-toastify'
-import { Section, SectionTitle } from 'components'
+import { Section } from 'components/Section'
+import { SectionTitle } from 'components/SectionTitle'
 
 export const ContactSection = () => {
   const [newEmail, setNewEmail] = useState({

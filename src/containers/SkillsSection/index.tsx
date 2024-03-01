@@ -1,11 +1,12 @@
 'use client'
 
 import { Accordion } from './components/Accordion'
-import { Section, SectionTitle } from 'components'
 
 import * as S from './styles'
 
 import { SKILLS_BACK, SKILLS_FRONT, SKILLS_STUDYING } from './constants'
+import { Section } from 'components/Section'
+import { SectionTitle } from 'components/SectionTitle'
 
 export interface ISkill {
   name: string

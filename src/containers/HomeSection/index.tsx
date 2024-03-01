@@ -1,10 +1,9 @@
 'use client'
 
-import { Section } from 'components'
-
 import { GiCoffeeCup } from 'react-icons/gi'
 
 import * as S from './styles'
+import { Section } from 'components/Section'
 
 export const HomeSection = () => {
   return (

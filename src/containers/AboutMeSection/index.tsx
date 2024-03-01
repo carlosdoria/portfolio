@@ -1,9 +1,9 @@
 'use client'
 
-import { Section } from 'components'
 import { SectionTitle } from 'components/SectionTitle'
 import * as S from './styles'
 import Image from 'next/image'
+import { Section } from 'components/Section'
 
 export const AboutMeSection = () => {
   return (

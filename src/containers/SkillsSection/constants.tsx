@@ -14,7 +14,7 @@ import {
   IconMongoDB,
   IconJest,
   IconPython
-} from 'components'
+} from 'components/Icons'
 
 export const SKILLS_FRONT = [
   {

@@ -1,8 +1,8 @@
 import * as RadixAccordion from '@radix-ui/react-accordion'
-import { Skill } from 'components'
 import { IoIosArrowDown } from 'react-icons/io'
 import * as S from './styles'
 import { ISkill } from 'containers/SkillsSection'
+import { Skill } from '../Skill'
 
 interface AccordionProps {
   list: Array<ISkill>
