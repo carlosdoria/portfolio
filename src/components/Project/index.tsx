@@ -1,6 +1,7 @@
 import { FiExternalLink } from 'react-icons/fi'
 
 import * as S from './styles'
+import Image from 'next/image'
 
 interface ProjectProps {
   data: {
@@ -16,10 +17,16 @@ interface ProjectProps {
 export const Project = ({ data }: ProjectProps) => {
   return (
     <S.Project>
-      <img key={data.title} src={`/img/${data.imageUrl}`} alt={data.title} />
+      <Image
+        key={data.title}
+        src={`/img/${data.imageUrl}`}
+        alt={data.title}
+        width={300}
+        height={200}
+      />
       <S.Content>
-        <h4>{data.title}</h4>
-        <p>{data.description}</p>
+        <S.Title>{data.title}</S.Title>
+        <S.Subtitle>{data.description}</S.Subtitle>
 
         <S.Footer>
           <a href={data.githubUrl} target='_blank' rel='noopener noreferrer'>

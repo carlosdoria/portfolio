@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 export const Project = styled.div`
-  padding: 2.4rem;
+  /* padding: 1.6rem; */
 
   overflow: hidden;
 
   color: ${({ theme }) => theme.colors.primary};
 
-  border-radius: 3.2rem;
+  border-radius: 1.6rem;
 
   -webkit-box-shadow: 0px 0px 12px rgba(98, 98, 98, 0.3);
   -moz-box-shadow: 0px 0px 12px rgba(98, 98, 98, 0.3);
@@ -17,27 +17,30 @@ export const Project = styled.div`
     min-height: 150px;
     max-height: 200px;
 
-    margin-bottom: 1.2rem;
-
-    border-radius: 1.2rem;
-  }
-
-  h4 {
-    margin-bottom: 0.5rem;
-
-    font-size: 2.4rem;
-    line-height: 3.2rem;
+    border-radius: 1.2rem 1.2rem 0 0;
   }
 
   p {
-    margin-bottom: 1.6rem;
-
-    font-size: 1.6rem;
-    line-height: 2.4rem;
   }
 `
 
-export const Content = styled.div``
+export const Title = styled.h4`
+  margin-bottom: 0.5rem;
+
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+`
+
+export const Subtitle = styled.p`
+  margin-bottom: 1.6rem;
+
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+`
+
+export const Content = styled.div`
+  padding: 1.6rem;
+`
 
 export const Footer = styled.div`
   display: flex;
@@ -50,6 +53,7 @@ export const Footer = styled.div`
     flex-direction: row;
 
     font-size: 1.4rem;
+    color: ${({ theme }) => theme.colors.primary};
 
     border: 1px solid ${({ theme }) => theme.colors.primary};
     border-radius: 16px;

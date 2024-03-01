@@ -19,7 +19,7 @@ export const HomeSection = () => {
 
           <S.LinkWrapper>
             <S.CustomLink href='#skills'>Minhas Skills</S.CustomLink>
-            <S.CustomLink href='#'>Meus projetos</S.CustomLink>
+            <S.CustomLink href='#projects'>Meus projetos</S.CustomLink>
           </S.LinkWrapper>
         </div>
 
