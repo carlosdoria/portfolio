@@ -25,7 +25,7 @@ export const Project = styled.div`
 `
 
 export const Title = styled.h4`
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 
   font-size: 2.4rem;
   line-height: 3.2rem;

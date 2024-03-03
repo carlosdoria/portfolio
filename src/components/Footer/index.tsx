@@ -38,7 +38,7 @@ export const Footer = () => {
       </S.FooterSocialMedias>
 
       <S.CopyRightText>
-        {'\u00A9'} {YEAR.getFullYear()}, copyright all rights reserved
+        Carlos Dória {'\u00A9'} {YEAR.getFullYear()}
       </S.CopyRightText>
     </S.Footer>
   )
