@@ -22,8 +22,7 @@ export const AboutDivImage = styled.div`
   justify-content: center;
 
   img {
-    border-radius: 46% 34% 48% 32% / 21% 62% 18% 59%;
-    border-radius: 56% 44% 25% 75% / 77% 52% 48% 23%;
+    border-radius: 50% 50% 50% 50% / 30% 27% 73% 70%;
   }
 `
 

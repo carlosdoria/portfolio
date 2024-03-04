@@ -29,7 +29,7 @@ export const Nav = styled.nav`
 export const Logo = styled.p`
   font-size: 2.4rem;
   font-weight: bold;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
 
   text-shadow: ${({ theme }) =>
     theme.title === 'dark'

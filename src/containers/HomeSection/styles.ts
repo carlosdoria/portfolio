@@ -123,6 +123,9 @@ export const CustomLink = styled(Link)`
 
   border-radius: 1rem;
   background: ${({ theme }) => theme.colors.secondary};
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 
   @media screen and (${device.tabletS}) {
     width: fit-content;

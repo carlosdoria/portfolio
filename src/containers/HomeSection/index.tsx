@@ -3,6 +3,8 @@
 import { GiCoffeeCup } from 'react-icons/gi'
 
 import * as S from './styles'
+import { MdArrowOutward } from 'react-icons/md'
+
 import { Section } from 'components/Section'
 
 export const HomeSection = () => {
@@ -17,8 +19,12 @@ export const HomeSection = () => {
           </S.PresentationWrapper>
 
           <S.LinkWrapper>
-            <S.CustomLink href='#skills'>Minhas Skills</S.CustomLink>
-            <S.CustomLink href='#projects'>Meus projetos</S.CustomLink>
+            <S.CustomLink href='#skills'>
+              Minhas Skills <MdArrowOutward size={22} />
+            </S.CustomLink>
+            <S.CustomLink href='#projects'>
+              Meus projetos <MdArrowOutward size={22} />
+            </S.CustomLink>
           </S.LinkWrapper>
         </div>
 
