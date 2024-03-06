@@ -11,7 +11,7 @@ export const light = {
     lightBlue: '#00B3FF',
     darkBlue: '#3f70f3',
 
-    white: '#FAFAFA',
+    white: '#FCFCFD',
     black: '#030517',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',

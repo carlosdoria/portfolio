@@ -41,8 +41,18 @@ export const PresentationWrapper = styled.div`
   @media screen and (${device.tabletM}) {
     margin: 0 auto 4rem;
   }
+`
 
-  @media screen and (${device.desktopS}) {
+export const Text = styled.p`
+  font-size: 1.8rem;
+  text-align: center;
+
+  @media screen and (${device.tabletS}) {
+    font-size: 2.8rem;
+  }
+
+  @media screen and (${device.tabletL}) {
+    font-size: 3.2rem;
   }
 `
 
@@ -60,7 +70,7 @@ export const Title = styled.h1`
     text-align: start;
   }
 
-  @media screen and (${device.desktopS}) {
+  @media screen and (${device.tabletL}) {
     font-size: 6rem;
   }
 `
@@ -76,21 +86,8 @@ export const Subtitle = styled.p`
     text-align: start;
   }
 
-  @media screen and (${device.desktopS}) {
+  @media screen and (${device.tabletL}) {
     font-size: 4rem;
-  }
-`
-
-export const Text = styled.p`
-  font-size: 1.8rem;
-  text-align: center;
-
-  @media screen and (${device.tabletS}) {
-    font-size: 2.8rem;
-  }
-
-  @media screen and (${device.desktopS}) {
-    font-size: 3.2rem;
   }
 `
 
@@ -109,15 +106,18 @@ export const CustomLink = styled(Link)`
 
   padding: 1.2rem 1.6rem;
 
-  text-align: center;
-  font-size: 1.8rem;
-  color: ${({ theme }) => theme.colors.white};
-
-  border-radius: 1rem;
-  background: ${({ theme }) => theme.colors.secondary};
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.8rem;
+
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.secondary};
+
+  border-radius: 0.8rem;
+  border: ${({ theme }) => `2px ${theme.colors.secondary} solid`};
 
   @media screen and (${device.tabletS}) {
     width: fit-content;
@@ -125,23 +125,28 @@ export const CustomLink = styled(Link)`
 `
 
 export const OthersWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
 
   @media screen and (${device.tabletS}) {
-    justify-content: flex-end;
+    display: block;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
   }
 
-  svg {
-    @media screen and (${device.tabletM}) {
-      height: 300px;
-      width: 300px;
+  @media screen and (${device.tabletM}) {
+    img {
+      width: 250px;
+      height: 250px;
     }
+  }
 
-    @media screen and (${device.desktopS}) {
-      height: 350px;
-      width: 350px;
+  @media screen and (${device.tabletL}) {
+    img {
+      width: 300px;
+      height: 300px;
     }
   }
 `

@@ -1,9 +1,7 @@
 'use client'
 
-import { GiCoffeeCup } from 'react-icons/gi'
-
 import * as S from './styles'
-import { MdArrowOutward } from 'react-icons/md'
+import { GoArrowUpRight } from 'react-icons/go'
 
 import { Section } from 'components/Section'
 import Image from 'next/image'
@@ -23,10 +21,10 @@ export const HomeSection = () => {
 
           <S.LinkWrapper>
             <S.CustomLink href='#skills'>
-              Minhas Skills <MdArrowOutward size={22} />
+              Minhas Skills <GoArrowUpRight size={22} />
             </S.CustomLink>
             <S.CustomLink href='#projects'>
-              Meus projetos <MdArrowOutward size={22} />
+              Meus projetos <GoArrowUpRight size={22} />
             </S.CustomLink>
           </S.LinkWrapper>
         </div>

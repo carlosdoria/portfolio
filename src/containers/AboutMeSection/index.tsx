@@ -25,7 +25,7 @@ export const AboutMeSection = () => {
             Desenvolvedor Full-stack, graduado em direito. Apaixonado por
             tecnologia e resolver problemas através da programação, atualmente
             focado no desenvolvimento de aplicações web utilizando a stack
-            JavaScript ( ReactJS e NextJS ).
+            JavaScript ( ReactJS, NextJS e React Native ).
           </p>
           <p>
             Criador de conteúdo no Youtube, onde faço lives em pair programming

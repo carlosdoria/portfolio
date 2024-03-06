@@ -4,7 +4,7 @@ import { size } from 'styles/breakpoints'
 export const Footer = styled.footer`
   max-width: ${size.desktopM};
   margin: 0 auto;
-  padding: 6rem 0 3.2rem;
+  padding: 12rem 0 3.2rem;
 
   text-align: center;
 `
@@ -14,7 +14,7 @@ export const CopyRightText = styled.p`
 `
 
 export const FooterSocialMedias = styled.div`
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
   display: flex;
   justify-content: center;
 
@@ -27,13 +27,11 @@ export const Icon = styled.a`
   transform: scale(1);
   transition: transform 0.5s;
 
-  /* Define a animação para o hover */
   &:hover {
     animation: scaleHover 0.5s forwards;
     color: ${({ theme }) => theme.colors.secondary};
   }
 
-  /* Define a animação para quando o mouse sai */
   &:not(:hover) {
     animation: scaleLeave 0.5s forwards;
   }
@@ -43,7 +41,7 @@ export const Icon = styled.a`
       transform: scale(1);
     }
 
-    50% {
+    20% {
       transform: scale(1.4);
     }
 
