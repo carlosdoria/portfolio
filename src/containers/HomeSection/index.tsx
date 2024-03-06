@@ -6,6 +6,7 @@ import * as S from './styles'
 import { MdArrowOutward } from 'react-icons/md'
 
 import { Section } from 'components/Section'
+import Image from 'next/image'
 
 export const HomeSection = () => {
   return (
@@ -14,8 +15,10 @@ export const HomeSection = () => {
         <div>
           <S.PresentationWrapper>
             <S.Text>Seja bem vindo, sou</S.Text>
-            <S.Title>Carlos Dória</S.Title>
-            <S.Subtitle>Desenvolvedor FullStack</S.Subtitle>
+            <S.Title>
+              Carlos Dória
+              <S.Subtitle>Desenvolvedor FullStack</S.Subtitle>
+            </S.Title>
           </S.PresentationWrapper>
 
           <S.LinkWrapper>
@@ -29,7 +32,7 @@ export const HomeSection = () => {
         </div>
 
         <S.OthersWrapper>
-          <GiCoffeeCup size={200} />
+          <Image src='/img/rocket.gif' alt='' width={300} height={300} />
         </S.OthersWrapper>
       </S.Content>
     </Section>

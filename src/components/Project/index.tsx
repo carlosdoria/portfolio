@@ -35,7 +35,7 @@ export const Project = ({ data }: ProjectProps) => {
           </a>
 
           <a href={data.demoUrl} target='_blank' rel='noopener noreferrer'>
-            Demonstração
+            Demo
             <FiExternalLink />
           </a>
         </S.Footer>

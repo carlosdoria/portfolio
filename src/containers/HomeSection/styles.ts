@@ -3,7 +3,7 @@ import { device } from 'styles/breakpoints'
 import Link from 'next/link'
 
 export const Content = styled.div`
-  margin-top: 20rem;
+  margin-top: 12rem;
   padding: 0 16px;
 
   display: flex;
@@ -51,16 +51,6 @@ export const Title = styled.h1`
   text-align: center;
   color: ${({ theme }) => theme.colors.secondary};
 
-  /* background: linear-gradient(180deg, #02fbff, #746cfe);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-
-  text-shadow: ${({ theme }) =>
-    theme.title === 'dark'
-      ? `0 0 10px ${theme.colors.lightBlue}, 0 0 20px ${theme.colors.lightBlue}, 0 0 10px ${theme.colors.lightBlue}`
-      : ''};
-
   @media screen and (${device.mobileS}) {
     font-size: 4rem;
   }
@@ -75,7 +65,9 @@ export const Title = styled.h1`
   }
 `
 
-export const Subtitle = styled.h3`
+export const Subtitle = styled.p`
+  color: ${({ theme }) => theme.colors.darkGray};
+
   font-size: 2.4rem;
   text-align: center;
 

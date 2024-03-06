@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { size } from 'styles/breakpoints'
 
 export const Footer = styled.footer`
@@ -22,6 +22,42 @@ export const FooterSocialMedias = styled.div`
 `
 
 export const Icon = styled.a`
-  font-size: 4rem;
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
+
+  transform: scale(1);
+  transition: transform 0.5s;
+
+  /* Define a animação para o hover */
+  &:hover {
+    animation: scaleHover 0.5s forwards;
+    color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  /* Define a animação para quando o mouse sai */
+  &:not(:hover) {
+    animation: scaleLeave 0.5s forwards;
+  }
+
+  @keyframes scaleHover {
+    from {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.4);
+    }
+
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes scaleLeave {
+    from {
+      transform: scale(1.2);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
 `

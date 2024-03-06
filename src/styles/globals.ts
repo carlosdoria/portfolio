@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   section {
-    padding-bottom: 8rem;
+    padding-top: 8rem;
   }
 
   button {
